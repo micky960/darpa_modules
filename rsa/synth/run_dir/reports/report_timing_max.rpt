@@ -1,0 +1,883 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'modexp_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : modexp_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 08:16:05 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_21__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U135241/A0 (OAI21_X1M_A9TH)                                       0.00       3.73 f
+  U135241/Y (OAI21_X1M_A9TH)                                        0.12       3.84 r
+  n29571 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_21__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_21__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_45__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U135229/A0 (OAI21_X1M_A9TH)                                       0.00       3.73 f
+  U135229/Y (OAI21_X1M_A9TH)                                        0.12       3.84 r
+  n29547 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_45__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_45__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_77__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U135235/A0 (OAI21_X1M_A9TH)                                       0.00       3.73 f
+  U135235/Y (OAI21_X1M_A9TH)                                        0.12       3.84 r
+  n29515 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_77__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_77__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_101__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U135247/A0 (OAI21_X1M_A9TH)                                       0.00       3.73 f
+  U135247/Y (OAI21_X1M_A9TH)                                        0.12       3.84 r
+  n29491 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_101__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_101__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_1__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U86247/A0 (OAI21_X1M_A9TH)                                        0.00       3.73 f
+  U86247/Y (OAI21_X1M_A9TH)                                         0.12       3.84 r
+  n29591 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_1__31_/D (DFFQ_X1M_A9TH)     0.00      3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_1__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_46__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U86243/A0 (OAI21_X1M_A9TH)                                        0.00       3.73 f
+  U86243/Y (OAI21_X1M_A9TH)                                         0.12       3.84 r
+  n29546 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_46__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_46__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_78__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U86241/A0 (OAI21_X1M_A9TH)                                        0.00       3.73 f
+  U86241/Y (OAI21_X1M_A9TH)                                         0.12       3.84 r
+  n29514 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_78__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_78__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_81__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U86239/A0 (OAI21_X1M_A9TH)                                        0.00       3.73 f
+  U86239/Y (OAI21_X1M_A9TH)                                         0.12       3.84 r
+  n29511 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_81__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_81__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_49__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U86237/A0 (OAI21_X1M_A9TH)                                        0.00       3.73 f
+  U86237/Y (OAI21_X1M_A9TH)                                         0.12       3.84 r
+  n29543 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_49__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_49__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: core_inst_montprod_inst_s_mem_mem_reg_25__31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/CK (DFFQ_X4M_A9TH)     0.00 #     0.00 r
+  core_inst_montprod_inst_s_mem_tmp_read_data_reg_25_/Q (DFFQ_X4M_A9TH)     0.56     0.56 r
+  core_inst_montprod_result_data[25] (net)    134         0.14      0.00       0.56 r
+  U79288/B (AND2_X1M_A9TH)                                          0.00       0.56 r
+  U79288/Y (AND2_X1M_A9TH)                                          0.36       0.92 r
+  n80574 (net)                                  3         0.00      0.00       0.92 r
+  U80362/A (NOR2_X1A_A9TH)                                          0.00       0.92 r
+  U80362/Y (NOR2_X1A_A9TH)                                          0.09       1.02 f
+  n80571 (net)                                  3         0.00      0.00       1.02 f
+  U80306/A (OR2_X1M_A9TH)                                           0.00       1.02 f
+  U80306/Y (OR2_X1M_A9TH)                                           0.17       1.19 f
+  n80486 (net)                                  2         0.00      0.00       1.19 f
+  U80263/A (NOR2_X1A_A9TH)                                          0.00       1.19 f
+  U80263/Y (NOR2_X1A_A9TH)                                          0.10       1.29 r
+  n80488 (net)                                  2         0.00      0.00       1.29 r
+  U80022/B (AND2_X1P4M_A9TH)                                        0.00       1.29 r
+  U80022/Y (AND2_X1P4M_A9TH)                                        0.17       1.46 r
+  n80490 (net)                                  1         0.00      0.00       1.46 r
+  U79969/A1 (AOI21_X2M_A9TH)                                        0.00       1.46 r
+  U79969/Y (AOI21_X2M_A9TH)                                         0.11       1.56 f
+  n80844 (net)                                  2         0.00      0.00       1.56 f
+  U79853/A0 (OAI21_X2M_A9TH)                                        0.00       1.56 f
+  U79853/Y (OAI21_X2M_A9TH)                                         0.11       1.67 r
+  n80877 (net)                                  1         0.00      0.00       1.67 r
+  U79825/CI (ADDF_X1M_A9TH)                                         0.00       1.67 r
+  U79825/CO (ADDF_X1M_A9TH)                                         0.22       1.90 r
+  n80884 (net)                                  1         0.00      0.00       1.90 r
+  U79816/CI (ADDF_X1P4M_A9TH)                                       0.00       1.90 r
+  U79816/CO (ADDF_X1P4M_A9TH)                                       0.21       2.11 r
+  n80890 (net)                                  1         0.00      0.00       2.11 r
+  U86070/CI (ADDF_X1P4M_A9TH)                                       0.00       2.11 r
+  U86070/S (ADDF_X1P4M_A9TH)                                        0.37       2.47 f
+  n109333 (net)                                 2         0.00      0.00       2.47 f
+  U86071/B0 (AO22_X2M_A9TH)                                         0.00       2.47 f
+  U86071/Y (AO22_X2M_A9TH)                                          0.17       2.64 f
+  n80898 (net)                                  2         0.00      0.00       2.64 f
+  U86075/A (OR2_X2M_A9TH)                                           0.00       2.64 f
+  U86075/Y (OR2_X2M_A9TH)                                           0.13       2.77 f
+  n109329 (net)                                 2         0.00      0.00       2.77 f
+  U86077/A1 (AOI21_X2M_A9TH)                                        0.00       2.77 f
+  U86077/Y (AOI21_X2M_A9TH)                                         0.10       2.87 r
+  n80900 (net)                                  1         0.00      0.00       2.87 r
+  U79477/A (INV_X1P7M_A9TH)                                         0.00       2.87 r
+  U79477/Y (INV_X1P7M_A9TH)                                         0.06       2.92 f
+  n109177 (net)                                 1         0.00      0.00       2.92 f
+  U80910/CI (ADDF_X1M_A9TH)                                         0.00       2.92 f
+  U80910/S (ADDF_X1M_A9TH)                                          0.38       3.30 r
+  n80907 (net)                                  1         0.00      0.00       3.30 r
+  U79472/A0 (AOI21_X3M_A9TH)                                        0.00       3.30 r
+  U79472/Y (AOI21_X3M_A9TH)                                         0.11       3.41 f
+  n80954 (net)                                  3         0.01      0.00       3.41 f
+  U86180/A (BUFH_X3M_A9TH)                                          0.00       3.41 f
+  U86180/Y (BUFH_X3M_A9TH)                                          0.14       3.55 f
+  n109248 (net)                                 6         0.01      0.00       3.55 f
+  U122085/A (BUF_X1P7M_A9TH)                                        0.00       3.55 f
+  U122085/Y (BUF_X1P7M_A9TH)                                        0.18       3.73 f
+  n109234 (net)                                12         0.01      0.00       3.73 f
+  U86233/A0 (OAI21_X1M_A9TH)                                        0.00       3.73 f
+  U86233/Y (OAI21_X1M_A9TH)                                         0.12       3.84 r
+  n29567 (net)                                  1         0.00      0.00       3.84 r
+  core_inst_montprod_inst_s_mem_mem_reg_25__31_/D (DFFQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  core_inst_montprod_inst_s_mem_mem_reg_25__31_/CK (DFFQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+1

@@ -1,0 +1,349 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : gps_top
+Version: M-2016.12-SP2
+Date   : Tue Jul 10 10:35:09 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: gps_startRound_r_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                                7         0.02      0.00       0.00 r
+  U241630/B (NOR2_X1A_A9TH)                                         0.00       0.00 r
+  U241630/Y (NOR2_X1A_A9TH)                                         0.03       0.03 f
+  DFFQ_X0P5M_A9TH_DFXLAB_gps_startRound_r_reg_DFXLAB_Q_DFXLAB_gps_N9 (net)     1     0.00     0.00     0.03 f
+  gps_startRound_r_reg/D (DFFQ_X0P5M_A9TH)                          0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  gps_startRound_r_reg/CK (DFFQ_X0P5M_A9TH)                         0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: genNext_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                                7         0.02      0.00       0.00 r
+  U188767/B0 (AOI211_X1M_A9TH)                                      0.00       0.00 r
+  U188767/Y (AOI211_X1M_A9TH)                                       0.05       0.05 f
+  DFFQ_X0P5M_A9TH_DFXLAB_genNext_reg_DFXLAB_Q_DFXLAB_n107215 (net)     1     0.00     0.00     0.05 f
+  genNext_reg/D (DFFQ_X0P5M_A9TH)                                   0.00       0.05 f
+  data arrival time                                                            0.05
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  genNext_reg/CK (DFFQ_X0P5M_A9TH)                                  0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.05
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.04
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: genNext_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                                7         0.02      0.00       0.00 r
+  U188767/B0 (AOI211_X1M_A9TH)                                      0.00       0.00 r
+  U188767/Y (AOI211_X1M_A9TH)                                       0.05       0.05 f
+  DFFQ_X0P5M_A9TH_DFXLAB_genNext_reg_DFXLAB_Q_DFXLAB_n107215 (net)     1     0.00     0.00     0.05 f
+  genNext_reg/D (DFFQ_X0P5M_A9TH)                                   0.00       0.05 f
+  data arrival time                                                            0.05
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  genNext_reg/CK (DFFQ_X0P5M_A9TH)                                  0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.05
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.04
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: genNext_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                                7         0.02      0.00       0.00 r
+  U188767/B0 (AOI211_X1M_A9TH)                                      0.00       0.00 r
+  U188767/Y (AOI211_X1M_A9TH)                                       0.05       0.05 f
+  DFFQ_X0P5M_A9TH_DFXLAB_genNext_reg_DFXLAB_Q_DFXLAB_n107215 (net)     1     0.00     0.00     0.05 f
+  genNext_reg/D (DFFQ_X0P5M_A9TH)                                   0.00       0.05 f
+  data arrival time                                                            0.05
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  genNext_reg/CK (DFFQ_X0P5M_A9TH)                                  0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.05
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.04
+
+
+  Startpoint: fllkey_65_ (input port clocked by CLK)
+  Endpoint: gps_aes_r5_t0_t1_s0_out_reg_6_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  fllkey_65_ (in)                                                   0.00       0.00 f
+  fllkey_65_ (net)                              2         0.00      0.00       0.00 f
+  U136243/A0N (AO1B2_X2M_A9TH)                                      0.00       0.00 f
+  U136243/Y (AO1B2_X2M_A9TH)                                        0.03       0.03 r
+  n109020 (net)                                 1         0.00      0.00       0.03 r
+  U128720/B (NAND3_X2M_A9TH)                                        0.00       0.03 r
+  U128720/Y (NAND3_X2M_A9TH)                                        0.08       0.11 f
+  DFFQ_X0P5M_A9TH_DFXLAB_gps_aes_r5_t0_t1_s4_out_reg_7__DFXLAB_Q_DFXLAB_gps_aes_r5_t0_t1_s0_N872 (net)     2     0.00     0.00     0.11 f
+  gps_aes_r5_t0_t1_s0_out_reg_6_/D (DFFQ_X0P5M_A9TH)                0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  gps_aes_r5_t0_t1_s0_out_reg_6_/CK (DFFQ_X0P5M_A9TH)               0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: fllkey_65_ (input port clocked by CLK)
+  Endpoint: gps_aes_r5_t0_t1_s4_out_reg_7_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  fllkey_65_ (in)                                                   0.00       0.00 f
+  fllkey_65_ (net)                              2         0.00      0.00       0.00 f
+  U136243/A0N (AO1B2_X2M_A9TH)                                      0.00       0.00 f
+  U136243/Y (AO1B2_X2M_A9TH)                                        0.03       0.03 r
+  n109020 (net)                                 1         0.00      0.00       0.03 r
+  U128720/B (NAND3_X2M_A9TH)                                        0.00       0.03 r
+  U128720/Y (NAND3_X2M_A9TH)                                        0.08       0.11 f
+  DFFQ_X0P5M_A9TH_DFXLAB_gps_aes_r5_t0_t1_s4_out_reg_7__DFXLAB_Q_DFXLAB_gps_aes_r5_t0_t1_s0_N872 (net)     2     0.00     0.00     0.11 f
+  gps_aes_r5_t0_t1_s4_out_reg_7_/D (DFFQ_X0P5M_A9TH)                0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  gps_aes_r5_t0_t1_s4_out_reg_7_/CK (DFFQ_X0P5M_A9TH)               0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: fllkey_65_ (input port clocked by CLK)
+  Endpoint: gps_aes_r5_t0_t1_s0_out_reg_6_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  fllkey_65_ (in)                                                   0.00       0.00 f
+  fllkey_65_ (net)                              2         0.00      0.00       0.00 f
+  U136243/A0N (AO1B2_X2M_A9TH)                                      0.00       0.00 f
+  U136243/Y (AO1B2_X2M_A9TH)                                        0.03       0.03 r
+  n109020 (net)                                 1         0.00      0.00       0.03 r
+  U128720/B (NAND3_X2M_A9TH)                                        0.00       0.03 r
+  U128720/Y (NAND3_X2M_A9TH)                                        0.08       0.11 f
+  DFFQ_X0P5M_A9TH_DFXLAB_gps_aes_r5_t0_t1_s4_out_reg_7__DFXLAB_Q_DFXLAB_gps_aes_r5_t0_t1_s0_N872 (net)     2     0.00     0.00     0.11 f
+  gps_aes_r5_t0_t1_s0_out_reg_6_/D (DFFQ_X0P5M_A9TH)                0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  gps_aes_r5_t0_t1_s0_out_reg_6_/CK (DFFQ_X0P5M_A9TH)               0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: fllkey_65_ (input port clocked by CLK)
+  Endpoint: gps_aes_r5_t0_t1_s4_out_reg_7_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  fllkey_65_ (in)                                                   0.00       0.00 f
+  fllkey_65_ (net)                              2         0.00      0.00       0.00 f
+  U136243/A0N (AO1B2_X2M_A9TH)                                      0.00       0.00 f
+  U136243/Y (AO1B2_X2M_A9TH)                                        0.03       0.03 r
+  n109020 (net)                                 1         0.00      0.00       0.03 r
+  U128720/B (NAND3_X2M_A9TH)                                        0.00       0.03 r
+  U128720/Y (NAND3_X2M_A9TH)                                        0.08       0.11 f
+  DFFQ_X0P5M_A9TH_DFXLAB_gps_aes_r5_t0_t1_s4_out_reg_7__DFXLAB_Q_DFXLAB_gps_aes_r5_t0_t1_s0_N872 (net)     2     0.00     0.00     0.11 f
+  gps_aes_r5_t0_t1_s4_out_reg_7_/D (DFFQ_X0P5M_A9TH)                0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  gps_aes_r5_t0_t1_s4_out_reg_7_/CK (DFFQ_X0P5M_A9TH)               0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: fllkey_65_ (input port clocked by CLK)
+  Endpoint: gps_aes_r5_t0_t1_s0_out_reg_6_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  fllkey_65_ (in)                                                   0.00       0.00 f
+  fllkey_65_ (net)                              2         0.00      0.00       0.00 f
+  U136243/A0N (AO1B2_X2M_A9TH)                                      0.00       0.00 f
+  U136243/Y (AO1B2_X2M_A9TH)                                        0.03       0.03 r
+  n109020 (net)                                 1         0.00      0.00       0.03 r
+  U128720/B (NAND3_X2M_A9TH)                                        0.00       0.03 r
+  U128720/Y (NAND3_X2M_A9TH)                                        0.08       0.11 f
+  DFFQ_X0P5M_A9TH_DFXLAB_gps_aes_r5_t0_t1_s4_out_reg_7__DFXLAB_Q_DFXLAB_gps_aes_r5_t0_t1_s0_N872 (net)     2     0.00     0.00     0.11 f
+  gps_aes_r5_t0_t1_s0_out_reg_6_/D (DFFQ_X0P5M_A9TH)                0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  gps_aes_r5_t0_t1_s0_out_reg_6_/CK (DFFQ_X0P5M_A9TH)               0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: fllkey_65_ (input port clocked by CLK)
+  Endpoint: gps_aes_r5_t0_t1_s4_out_reg_7_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  fllkey_65_ (in)                                                   0.00       0.00 f
+  fllkey_65_ (net)                              2         0.00      0.00       0.00 f
+  U136243/A0N (AO1B2_X2M_A9TH)                                      0.00       0.00 f
+  U136243/Y (AO1B2_X2M_A9TH)                                        0.03       0.03 r
+  n109020 (net)                                 1         0.00      0.00       0.03 r
+  U128720/B (NAND3_X2M_A9TH)                                        0.00       0.03 r
+  U128720/Y (NAND3_X2M_A9TH)                                        0.08       0.11 f
+  DFFQ_X0P5M_A9TH_DFXLAB_gps_aes_r5_t0_t1_s4_out_reg_7__DFXLAB_Q_DFXLAB_gps_aes_r5_t0_t1_s0_N872 (net)     2     0.00     0.00     0.11 f
+  gps_aes_r5_t0_t1_s4_out_reg_7_/D (DFFQ_X0P5M_A9TH)                0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  gps_aes_r5_t0_t1_s4_out_reg_7_/CK (DFFQ_X0P5M_A9TH)               0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+1

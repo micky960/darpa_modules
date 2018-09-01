@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : uart_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:45:35 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+Number of ports:                           38
+Number of nets:                          1949
+Number of cells:                         1928
+Number of combinational cells:           1375
+Number of sequential cells:               553
+Number of macros/black boxes:               0
+Number of buf/inv:                        276
+Number of references:                      50
+
+Combinational area:               2765.160042
+Buf/Inv area:                      298.080012
+Noncombinational area:            5432.400052
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  8197.560094
+Total area:                 undefined
+1

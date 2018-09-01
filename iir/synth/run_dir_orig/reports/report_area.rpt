@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : iir_top
+Version: M-2016.12-SP2
+Date   : Tue Jul 10 11:58:29 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+Number of ports:                          188
+Number of nets:                         12159
+Number of cells:                        11625
+Number of combinational cells:           8785
+Number of sequential cells:              2840
+Number of macros/black boxes:               0
+Number of buf/inv:                       1644
+Number of references:                     102
+
+Combinational area:              22310.280185
+Buf/Inv area:                     1820.160071
+Noncombinational area:           22224.240088
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 44534.520273
+Total area:                 undefined
+1

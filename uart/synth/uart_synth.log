@@ -1,0 +1,1480 @@
+set compile_seqmap_propagate_constants     false
+false
+set compile_seqmap_propagate_high_effort   false
+false
+set compile_enable_register_merging        false
+false
+set write_sdc_output_net_resistance        false
+false
+set timing_separate_clock_gating_group     true
+true
+set_host_options -max_cores 8
+1
+set PROJECT_MODULES [getenv "PROJECT_MODULES"]
+/home/projects/vlsi/CEP/design/modules
+set run_dir  run_dir
+run_dir
+set design uart_top
+uart_top
+set clkin  wb_clk_i
+wb_clk_i
+if {[file exist $run_dir]} {
+  sh rm -rf $run_dir
+}
+sh mkdir -p $run_dir/reports
+sh mkdir -p $run_dir/netlist
+set search_path [concat * $search_path]
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver
+sh rm -rf ./work
+define_design_lib WORK -path ./work
+1
+set target_library {/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db}
+/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db
+set link_library   { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                       /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                           /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                      }
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                       /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                           /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                      
+analyze -library WORK -format sverilog "     $PROJECT_MODULES/top/rtl/orpsoc-defines.v        $PROJECT_MODULES/uart/rtl/uart_defines.v         $PROJECT_MODULES/uart/rtl/uart_debug_if.v        $PROJECT_MODULES/uart/rtl/uart_receiver.v        $PROJECT_MODULES/uart/rtl/uart_regs.v            $PROJECT_MODULES/uart/rtl/uart_rfifo.v           $PROJECT_MODULES/uart/rtl/uart_sync_flops.v      $PROJECT_MODULES/uart/rtl/uart_tfifo.v           $PROJECT_MODULES/uart/rtl/uart_transmitter.v     $PROJECT_MODULES/uart/rtl/uart_wb.v              $PROJECT_MODULES/uart/rtl/raminfr.v              $PROJECT_MODULES/uart/rtl/uart_top.v"
+Running PRESTO HDLC
+Compiling source file /home/projects/vlsi/CEP/design/modules/top/rtl/orpsoc-defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_debug_if.v
+Opening include file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v
+Opening include file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v
+Opening include file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:279: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:280: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:281: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:282: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:283: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:284: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:285: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:286: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:287: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:288: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:289: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:296: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:297: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:298: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:301: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:305: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:308: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:310: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:311: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:315: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:316: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:317: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:318: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:322: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:323: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:324: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:327: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:328: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:332: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:335: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:336: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:337: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:338: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:340: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:345: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:348: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:349: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:353: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:354: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:356: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:361: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:362: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:364: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:367: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:368: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:369: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:373: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:374: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:375: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:376: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:378: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:379: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:383: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:384: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:387: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:391: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:392: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:394: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:402: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:404: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:405: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:406: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:410: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:411: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:412: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:413: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:417: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:427: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:457: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:460: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:463: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:473: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:476: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v:479: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:400: the undeclared symbol 'rf_overrun' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:400: the undeclared symbol 'rf_push_pulse' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v
+Opening include file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:424: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:427: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:430: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:449: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:451: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:461: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:464: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:467: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:477: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:480: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:486: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:487: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:493: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:496: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:502: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:503: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:504: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:507: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:508: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:509: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:511: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:512: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:518: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:521: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:527: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:530: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:536: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:537: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:538: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:544: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:545: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:546: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:550: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:551: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:555: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:556: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:578: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:579: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:582: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:584: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:585: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:606: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:607: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:610: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:611: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:618: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:619: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:622: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:623: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:629: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:630: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:633: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:634: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:640: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:641: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:644: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:645: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:651: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:652: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:655: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:656: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:662: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:663: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:666: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:667: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:673: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:674: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:677: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:678: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:684: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:685: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:688: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:689: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:695: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:698: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:700: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:707: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:710: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:712: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:732: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:735: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:738: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:763: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:764: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:767: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:768: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:771: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:772: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:775: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:776: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:779: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:780: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:805: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:807: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:812: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:814: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:819: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:821: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:826: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:828: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:833: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:835: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:844: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:846: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:860: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:864: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:865: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:869: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:870: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:874: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:875: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:879: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:880: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:884: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:885: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:888: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v:889: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_sync_flops.v
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:210: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:211: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:212: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:214: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:215: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:216: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:217: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:220: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:221: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:222: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:223: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:224: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:225: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:226: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:227: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:228: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:232: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:233: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:234: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:235: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:236: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:237: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:238: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:239: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:241: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:242: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:243: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:244: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:245: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:246: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:247: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:248: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:249: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:250: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:257: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:258: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:259: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:263: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:264: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:265: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:268: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:269: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:270: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:280: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:283: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v:286: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v
+Opening include file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_sync_flops.v:106: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_sync_flops.v:108: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_sync_flops.v:115: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_sync_flops.v:117: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_sync_flops.v:119: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v
+Opening include file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:199: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:200: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:201: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:205: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:206: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:207: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:214: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:215: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:220: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:223: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:224: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:234: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:237: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v
+Opening include file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:214: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:215: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:216: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:217: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:220: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:221: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:229: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:230: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:234: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:235: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:236: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:239: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:242: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:243: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:246: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:247: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:250: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:251: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:254: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:255: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:258: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:259: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:262: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:264: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:268: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:269: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:272: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:273: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:277: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:283: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:284: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:285: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:290: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:295: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:296: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:297: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:298: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:300: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:302: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:305: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:306: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:310: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:314: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:315: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:318: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:319: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:325: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:326: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:327: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:333: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:334: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:337: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:338: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:342: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v:346: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/raminfr.v
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:197: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:198: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:199: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:204: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:205: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:206: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:208: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:209: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:214: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:215: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:220: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:230: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:231: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:232: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:233: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:234: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:235: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:237: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:238: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:239: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:241: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:242: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:248: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v:250: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Compiling source file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_top.v
+Opening include file /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/uart/rtl/uart_top.v:324: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+Information: Using CCS timing libraries. (TIM-024)
+1
+elaborate $design
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/gtech.db'
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c'
+  Loading link library 'RGO_CSM65_25V33_LPE_50C_SS_108_297_125'
+  Loading link library 'USERLIB_ccs_ss_1p08v_1p08v_125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'uart_top'.
+Information: Building the design 'uart_wb'. (HDL-193)
+
+Statistics for case statements in always block at line 195 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           201            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine uart_wb line 195 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       wre_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    wb_ack_o_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     wbstate_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_wb line 228 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wb_dat_is_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wb_adr_is_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wb_we_is_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    wb_cyc_is_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    wb_stb_is_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_wb line 246 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_wb.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wb_dat_o_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'uart_regs'. (HDL-193)
+
+Statistics for case statements in always block at line 404 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           407            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 560 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           561            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 716 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           717            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine uart_regs line 421 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rf_pop_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 446 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   lsr_mask_d_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 458 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    msi_reset_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 475 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       lcr_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       lcr_reg       | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 483 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       dl_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ier_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 500 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    tx_reset_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       fcr_reg       | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    rx_reset_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 516 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mcr_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 525 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     scratch_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 533 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    start_dlc_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       dl_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     tf_push_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 574 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| delayed_modem_signals_reg | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|          msr_reg          | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 605 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lsr0_d_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 609 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lsr0r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 617 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lsr1_d_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 621 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lsr1r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 628 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lsr2_d_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 632 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lsr2r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 639 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lsr3_d_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 643 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lsr3r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 650 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lsr4_d_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 654 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lsr4r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 661 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lsr5_d_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 665 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lsr5r_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 672 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lsr6_d_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 676 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lsr6r_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 683 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lsr7_d_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 687 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lsr7r_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 692 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       dlc_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 704 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     enable_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 729 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    block_cnt_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 762 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rls_int_d_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 766 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rda_int_d_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 770 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   thre_int_d_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 774 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ms_int_d_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 778 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ti_int_d_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 804 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rls_int_pnd_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 811 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rda_int_pnd_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 818 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  thre_int_pnd_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 825 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   ms_int_pnd_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 832 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   ti_int_pnd_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 841 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      int_o_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_regs line 857 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_regs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       iir_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       iir_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'uart_transmitter'. (HDL-193)
+
+Statistics for case statements in always block at line 210 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           226            |    auto/auto     |
+|           240            |    auto/auto     |
+|           294            |    auto/auto     |
+|           324            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine uart_transmitter line 210 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_transmitter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   bit_counter_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     tstate_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    stx_o_tmp_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     counter_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    shift_out_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     bit_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   parity_xor_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     tf_pop_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'uart_sync_flops' instantiated from design 'uart_regs' with
+	the parameters "width=1,init_value=1'h1". (HDL-193)
+
+Inferred memory devices in process
+	in routine uart_sync_flops_1_1 line 103 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_sync_flops.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     flop_0_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_sync_flops_1_1 line 112 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_sync_flops.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   sync_dat_o_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'uart_receiver'. (HDL-193)
+
+Statistics for case statements in always block at line 275 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           294            |    auto/auto     |
+|           314            |    auto/auto     |
+|           334            |    auto/auto     |
+|           372            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 439 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           440            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine uart_receiver line 275 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rf_data_in_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rstate_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   rcounter16_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  rbit_counter_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   rparity_xor_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| rframing_error_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  rparity_error_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     rparity_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     rshift_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rf_push_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_receiver line 422 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rf_push_q_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_receiver line 454 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    counter_b_reg    | Flip-flop |   6   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    counter_b_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_receiver line 470 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_receiver.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    counter_t_reg    | Flip-flop |   8   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    counter_t_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'uart_tfifo'. (HDL-193)
+
+Statistics for case statements in always block at line 195 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           211            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine uart_tfifo line 195 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       top_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     bottom_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_tfifo line 231 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_tfifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     overrun_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'uart_rfifo' instantiated from design 'uart_receiver' with
+	the parameters "11". (HDL-193)
+
+Statistics for case statements in always block at line 206 in file
+	'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           254            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine uart_rfifo_fifo_width11 line 206 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      fifo_reg       | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       top_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     bottom_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine uart_rfifo_fifo_width11 line 277 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/uart_rfifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     overrun_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=================================================================
+|      block name/line        | Inputs | Outputs | # sel inputs |
+=================================================================
+| uart_rfifo_fifo_width11/291 |   16   |    3    |      4       |
+=================================================================
+Presto compilation completed successfully.
+Information: Building the design 'raminfr' instantiated from design 'uart_tfifo' with
+	the parameters "4,8,16". (HDL-193)
+
+Inferred memory devices in process
+	in routine raminfr_addr_width4_data_width8_depth16 line 104 in file
+		'/home/projects/vlsi/CEP/design/modules/uart/rtl/raminfr.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ram_reg       | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=================================================================================
+|              block name/line                | Inputs | Outputs | # sel inputs |
+=================================================================================
+| raminfr_addr_width4_data_width8_depth16/109 |   16   |    8    |      4       |
+=================================================================================
+Presto compilation completed successfully.
+1
+ungroup -all -flatten
+Information: Updating graph... (UID-83)
+1
+set_dont_use [get_lib_cells sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c/*X0P*]
+1
+create_clock -name CLK  -period 4  -waveform {0 2} $clkin
+1
+set input_ports [remove_from_collection [all_inputs] {$clkin}]
+Warning: Nothing implicitly matched '$clkin' (SEL-003)
+{wb_clk_i wb_rst_i wb_adr_i[2] wb_adr_i[1] wb_adr_i[0] wb_dat_i[7] wb_dat_i[6] wb_dat_i[5] wb_dat_i[4] wb_dat_i[3] wb_dat_i[2] wb_dat_i[1] wb_dat_i[0] wb_we_i wb_stb_i wb_cyc_i wb_sel_i[3] wb_sel_i[2] wb_sel_i[1] wb_sel_i[0] srx_pad_i cts_pad_i dsr_pad_i ri_pad_i dcd_pad_i}
+set output_ports [all_outputs]
+{wb_dat_o[7] wb_dat_o[6] wb_dat_o[5] wb_dat_o[4] wb_dat_o[3] wb_dat_o[2] wb_dat_o[1] wb_dat_o[0] wb_ack_o int_o stx_pad_o rts_pad_o dtr_pad_o}
+set_input_delay -max 1 [get_ports $input_ports ] -clock CLK
+1
+set_input_delay -min 0 [get_ports $input_ports ] -clock CLK
+1
+set_output_delay -max 1 [get_ports $output_ports ] -clock CLK
+1
+set_output_delay -min 3 [get_ports $output_ports ] -clock CLK
+1
+date
+Wed Jul  4 09:44:57 2018
+#compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -gate_clock
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.2 |     *     |
+| Licensed DW Building Blocks        | M-2016.12-DWBB_201612.2 |     *     |
+============================================================================
+
+
+Information: There are 24 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'uart_top'
+Information: The register 'regs/transmitter/fifo_tx/overrun_reg' will be removed. (OPT-1207)
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'uart_top'
+Information: Added key list 'DesignWare' to design 'uart_top'. (DDB-72)
+ Implement Synthetic for 'uart_top'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:12    8153.6      0.00       0.0       0.1                              0.2329
+    0:00:12    8153.6      0.00       0.0       0.1                              0.2329
+    0:00:12    8153.6      0.00       0.0       0.1                              0.2329
+    0:00:13    8153.6      0.00       0.0       0.1                              0.2329
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:13    8147.9      0.00       0.0       0.1                              0.2327
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14    8147.9      0.00       0.0       0.1                              0.2323
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:14    8149.0      0.00       0.0       0.0                              0.2324
+    0:00:14    8149.0      0.00       0.0       0.0                              0.2324
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14    8149.0      0.00       0.0       0.0                              0.2324
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:00:14    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:14    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:14    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:15    8145.4      0.00       0.0       0.0                              0.2304
+    0:00:15    8144.3      0.00       0.0       0.0                              0.2303
+    0:00:15    8144.3      0.00       0.0       0.0                              0.2303
+    0:00:15    8144.3      0.00       0.0       0.0                              0.2303
+    0:00:15    8144.3      0.00       0.0       0.0                              0.2303
+    0:00:16    8144.3      0.00       0.0       0.0                              0.2303
+    0:00:16    8144.3      0.00       0.0       0.0                              0.2303
+    0:00:16    8144.3      0.00       0.0       0.0                              0.2303
+    0:00:16    8144.3      0.00       0.0       0.0                              0.2303
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+date
+Wed Jul  4 09:45:17 2018
+optimize_netlist -area
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+
+  Beginning Area Optimization
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02    8144.3      0.00       0.0       0.0                              0.2303
+    0:00:05    8139.6      0.00       0.0       0.0                              0.2301
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+date
+Wed Jul  4 09:45:26 2018
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01    8139.6      0.00       0.0       0.0                              0.2301
+    0:00:01    8139.6      0.00       0.0       0.0                              0.2301
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2301
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2301
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:02    8139.6      0.00       0.0       0.0                              0.2300
+    0:00:03    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:03    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:04    8198.6      0.00       0.0       0.0                              0.2230
+    0:00:05    8197.6      0.00       0.0       0.0                              0.2228
+    0:00:05    8197.6      0.00       0.0       0.0                              0.2228
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+mem -all -verbose
+Multicore compile mem-peak:   482 Mb
+Main process mem-peak:    397 Mb
+Child "J1" called 1 time , mem-peak:    286 Mb
+
+406556
+change_names -hier -rule verilog
+1
+write_file -hierarchy -format verilog -output "$run_dir/netlist/$design.v"
+Writing verilog file '/home/projects/vlsi/CEP/design/modules/uart/synth/run_dir/netlist/uart_top.v'.
+1
+write_sdc "$run_dir/netlist/$design.sdc"
+1
+set_switching_activity -toggle_rate 5 -period 100  -static_probability 0.50 -type inputs
+set_switching_activity applied to 25 selected objects
+1
+propagate_switching_activity
+Warning: Use of propagate_switching_activity is not recommended. This feature will be obsolete in a future release. Check the man page for more information. (PWR-800)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.500000) for the clock net 'wb_clk_i' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+1
+report_timing -delay max  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_max.rpt
+report_timing -delay min  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_min.rpt
+report_constraint -all_violators -verbose  -nosplit                             > $run_dir/reports/report_constraint.rpt
+check_design -nosplit                                                           > $run_dir/reports/check_design.rpt
+report_design                                                                   > $run_dir/reports/report_design.rpt
+report_area                                                                     > $run_dir/reports/report_area.rpt
+report_timing -loop                                                             > $run_dir/reports/timing_loop.rpt
+report_power -analysis_effort high                                              > $run_dir/reports/report_power.rpt
+report_qor                                                                      > $run_dir/reports/report_qor.rpt
+sh touch ~/$design
+# 
+#
+#
+#  compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+exit
+
+Thank you...

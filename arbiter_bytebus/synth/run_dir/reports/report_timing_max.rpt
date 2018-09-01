@@ -1,0 +1,450 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : arbiter_bytebus
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:43:56 2018
+****************************************
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_dat_i[7]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U113/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U113/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n56 (net)                      1         0.00      0.00       1.81 r
+  U114/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U114/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[7] (net)            5         0.00      0.00       1.89 f
+  wbs0_dat_i[7] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_dat_i[6]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U125/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U125/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n64 (net)                      1         0.00      0.00       1.81 r
+  U126/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U126/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[6] (net)            5         0.00      0.00       1.89 f
+  wbs0_dat_i[6] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_dat_i[5]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U128/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U128/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n66 (net)                      1         0.00      0.00       1.81 r
+  U129/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U129/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[5] (net)            5         0.00      0.00       1.89 f
+  wbs0_dat_i[5] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_dat_i[4]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U134/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U134/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n72 (net)                      1         0.00      0.00       1.81 r
+  U135/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U135/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[4] (net)            5         0.00      0.00       1.89 f
+  wbs0_dat_i[4] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_dat_i[3]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U131/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U131/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n68 (net)                      1         0.00      0.00       1.81 r
+  U132/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U132/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[3] (net)            5         0.00      0.00       1.89 f
+  wbs0_dat_i[3] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_dat_i[2]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U122/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U122/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n62 (net)                      1         0.00      0.00       1.81 r
+  U123/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U123/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[2] (net)            5         0.00      0.00       1.89 f
+  wbs0_dat_i[2] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_dat_i[1]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U116/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U116/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n58 (net)                      1         0.00      0.00       1.81 r
+  U117/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U117/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[1] (net)            5         0.00      0.00       1.89 f
+  wbs0_dat_i[1] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_dat_i[0]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U119/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U119/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n60 (net)                      1         0.00      0.00       1.81 r
+  U120/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U120/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[0] (net)            5         0.00      0.00       1.89 f
+  wbs0_dat_i[0] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs1_dat_i[1]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U116/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U116/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n58 (net)                      1         0.00      0.00       1.81 r
+  U117/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U117/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[1] (net)            5         0.00      0.00       1.89 f
+  wbs1_dat_i[1] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+  Startpoint: wbm0_sel_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs1_dat_i[0]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wbm0_sel_o[3] (in)                                 0.00       1.00 r
+  wbm0_sel_o[3] (net)           11         0.01      0.00       1.00 r
+  U104/A (INV_X1B_A9TH)                              0.00       1.00 r
+  U104/Y (INV_X1B_A9TH)                              0.14       1.14 f
+  n98 (net)                      9         0.01      0.00       1.14 f
+  U110/B (NAND2_X1M_A9TH)                            0.00       1.14 f
+  U110/Y (NAND2_X1M_A9TH)                            0.25       1.38 r
+  n89 (net)                      9         0.01      0.00       1.38 r
+  U94/A (INV_X1B_A9TH)                               0.00       1.38 r
+  U94/Y (INV_X1B_A9TH)                               0.24       1.62 f
+  n71 (net)                      8         0.01      0.00       1.62 f
+  U119/A0 (AOI22_X1M_A9TH)                           0.00       1.62 f
+  U119/Y (AOI22_X1M_A9TH)                            0.19       1.81 r
+  n60 (net)                      1         0.00      0.00       1.81 r
+  U120/B (NAND2_X1M_A9TH)                            0.00       1.81 r
+  U120/Y (NAND2_X1M_A9TH)                            0.08       1.89 f
+  wbs0_dat_i[0] (net)            5         0.00      0.00       1.89 f
+  wbs1_dat_i[0] (out)                                0.00       1.89 f
+  data arrival time                                             1.89
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -1.89
+  ---------------------------------------------------------------------
+  slack (MET)                                                   1.11
+
+
+1

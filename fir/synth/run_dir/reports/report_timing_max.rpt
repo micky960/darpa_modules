@@ -1,0 +1,693 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'fir_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : fir_top
+Version: M-2016.12-SP2
+Date   : Thu Jul  5 12:37:51 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: coef[3] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_0__24_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 r
+  coef[3] (in)                                                      0.00       1.00 r
+  coef[3] (net)                                 1         0.00      0.00       1.00 r
+  U4391/A (INV_X2M_A9TH)                                            0.00       1.00 r
+  U4391/Y (INV_X2M_A9TH)                                            0.12       1.12 f
+  n4551 (net)                                  29         0.03      0.00       1.12 f
+  U4151/A (NOR2_X1M_A9TH)                                           0.00       1.12 f
+  U4151/Y (NOR2_X1M_A9TH)                                           0.18       1.30 r
+  n4033 (net)                                   1         0.00      0.00       1.30 r
+  U4899/B (ADDF_X1M_A9TH)                                           0.00       1.30 r
+  U4899/S (ADDF_X1M_A9TH)                                           0.45       1.75 f
+  n4045 (net)                                   1         0.00      0.00       1.75 f
+  U4911/B (ADDF_X1M_A9TH)                                           0.00       1.75 f
+  U4911/CO (ADDF_X1M_A9TH)                                          0.27       2.02 f
+  n4053 (net)                                   1         0.00      0.00       2.02 f
+  U4922/CI (ADDF_X1M_A9TH)                                          0.00       2.02 f
+  U4922/S (ADDF_X1M_A9TH)                                           0.40       2.42 r
+  n4065 (net)                                   1         0.00      0.00       2.42 r
+  U4928/CI (ADDF_X1M_A9TH)                                          0.00       2.42 r
+  U4928/S (ADDF_X1M_A9TH)                                           0.37       2.79 f
+  n4329 (net)                                   2         0.00      0.00       2.79 f
+  U8886/A (NOR2_X1M_A9TH)                                           0.00       2.79 f
+  U8886/Y (NOR2_X1M_A9TH)                                           0.12       2.91 r
+  n4715 (net)                                   3         0.00      0.00       2.91 r
+  U5153/A0 (OAI21_X1M_A9TH)                                         0.00       2.91 r
+  U5153/Y (OAI21_X1M_A9TH)                                          0.15       3.06 f
+  n4708 (net)                                   3         0.00      0.00       3.06 f
+  U5157/A1 (AOI21_X1M_A9TH)                                         0.00       3.06 f
+  U5157/Y (AOI21_X1M_A9TH)                                          0.18       3.23 r
+  n4692 (net)                                   3         0.00      0.00       3.23 r
+  U5165/A0 (OAI21_X1M_A9TH)                                         0.00       3.23 r
+  U5165/Y (OAI21_X1M_A9TH)                                          0.14       3.37 f
+  n4348 (net)                                   1         0.00      0.00       3.37 f
+  U5166/B0 (AOI21_X2M_A9TH)                                         0.00       3.37 f
+  U5166/Y (AOI21_X2M_A9TH)                                          0.18       3.55 r
+  n4659 (net)                                  10         0.01      0.00       3.55 r
+  U4538/A0 (OAI21B_X1M_A9TH)                                        0.00       3.55 r
+  U4538/Y (OAI21B_X1M_A9TH)                                         0.18       3.73 f
+  n4649 (net)                                   1         0.00      0.00       3.73 f
+  U5384/A (XNOR2_X1M_A9TH)                                          0.00       3.73 f
+  U5384/Y (XNOR2_X1M_A9TH)                                          0.12       3.85 f
+  FIR_filter_my_acm_filter_firBlock_left_multProducts[24] (net)     1     0.00     0.00     3.85 f
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_0__24_/D (DFFRPQ_X1M_A9TH)     0.00     3.85 f
+  data arrival time                                                            3.85
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_0__24_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.15       3.85
+  data required time                                                           3.85
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.85
+  data arrival time                                                           -3.85
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[3] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_0__30_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 r
+  coef[3] (in)                                                      0.00       1.00 r
+  coef[3] (net)                                 1         0.00      0.00       1.00 r
+  U4391/A (INV_X2M_A9TH)                                            0.00       1.00 r
+  U4391/Y (INV_X2M_A9TH)                                            0.12       1.12 f
+  n4551 (net)                                  29         0.03      0.00       1.12 f
+  U4151/A (NOR2_X1M_A9TH)                                           0.00       1.12 f
+  U4151/Y (NOR2_X1M_A9TH)                                           0.18       1.30 r
+  n4033 (net)                                   1         0.00      0.00       1.30 r
+  U4899/B (ADDF_X1M_A9TH)                                           0.00       1.30 r
+  U4899/S (ADDF_X1M_A9TH)                                           0.45       1.75 f
+  n4045 (net)                                   1         0.00      0.00       1.75 f
+  U4911/B (ADDF_X1M_A9TH)                                           0.00       1.75 f
+  U4911/CO (ADDF_X1M_A9TH)                                          0.27       2.02 f
+  n4053 (net)                                   1         0.00      0.00       2.02 f
+  U4922/CI (ADDF_X1M_A9TH)                                          0.00       2.02 f
+  U4922/S (ADDF_X1M_A9TH)                                           0.40       2.42 r
+  n4065 (net)                                   1         0.00      0.00       2.42 r
+  U4928/CI (ADDF_X1M_A9TH)                                          0.00       2.42 r
+  U4928/S (ADDF_X1M_A9TH)                                           0.37       2.79 f
+  n4329 (net)                                   2         0.00      0.00       2.79 f
+  U8886/A (NOR2_X1M_A9TH)                                           0.00       2.79 f
+  U8886/Y (NOR2_X1M_A9TH)                                           0.12       2.91 r
+  n4715 (net)                                   3         0.00      0.00       2.91 r
+  U5153/A0 (OAI21_X1M_A9TH)                                         0.00       2.91 r
+  U5153/Y (OAI21_X1M_A9TH)                                          0.15       3.06 f
+  n4708 (net)                                   3         0.00      0.00       3.06 f
+  U5157/A1 (AOI21_X1M_A9TH)                                         0.00       3.06 f
+  U5157/Y (AOI21_X1M_A9TH)                                          0.18       3.23 r
+  n4692 (net)                                   3         0.00      0.00       3.23 r
+  U5165/A0 (OAI21_X1M_A9TH)                                         0.00       3.23 r
+  U5165/Y (OAI21_X1M_A9TH)                                          0.14       3.37 f
+  n4348 (net)                                   1         0.00      0.00       3.37 f
+  U5166/B0 (AOI21_X2M_A9TH)                                         0.00       3.37 f
+  U5166/Y (AOI21_X2M_A9TH)                                          0.18       3.55 r
+  n4659 (net)                                  10         0.01      0.00       3.55 r
+  U4576/A0 (OAI21B_X1M_A9TH)                                        0.00       3.55 r
+  U4576/Y (OAI21B_X1M_A9TH)                                         0.18       3.73 f
+  n4595 (net)                                   1         0.00      0.00       3.73 f
+  U5354/A (XNOR2_X1M_A9TH)                                          0.00       3.73 f
+  U5354/Y (XNOR2_X1M_A9TH)                                          0.12       3.85 f
+  FIR_filter_my_acm_filter_firBlock_left_multProducts[30] (net)     1     0.00     0.00     3.85 f
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_0__30_/D (DFFRPQ_X1M_A9TH)     0.00     3.85 f
+  data arrival time                                                            3.85
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_0__30_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.15       3.85
+  data required time                                                           3.85
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.85
+  data arrival time                                                           -3.85
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[51] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__28_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 f
+  coef[51] (in)                                                     0.00       1.00 f
+  coef[51] (net)                                2         0.00      0.00       1.00 f
+  U4163/A (INV_X1M_A9TH)                                            0.00       1.00 f
+  U4163/Y (INV_X1M_A9TH)                                            0.12       1.12 r
+  n3978 (net)                                  12         0.01      0.00       1.12 r
+  U8802/A (NOR2_X1A_A9TH)                                           0.00       1.12 r
+  U8802/Y (NOR2_X1A_A9TH)                                           0.16       1.28 f
+  n9287 (net)                                   1         0.00      0.00       1.28 f
+  U8915/B (ADDF_X1M_A9TH)                                           0.00       1.28 f
+  U8915/CO (ADDF_X1M_A9TH)                                          0.33       1.61 f
+  n9302 (net)                                   1         0.00      0.00       1.61 f
+  U8929/B (ADDF_X1M_A9TH)                                           0.00       1.61 f
+  U8929/S (ADDF_X1M_A9TH)                                           0.42       2.03 r
+  n9299 (net)                                   1         0.00      0.00       2.03 r
+  U8928/B (ADDF_X1M_A9TH)                                           0.00       2.03 r
+  U8928/S (ADDF_X1M_A9TH)                                           0.39       2.43 f
+  n9315 (net)                                   1         0.00      0.00       2.43 f
+  U8934/CI (ADDF_X1M_A9TH)                                          0.00       2.43 f
+  U8934/S (ADDF_X1M_A9TH)                                           0.39       2.82 r
+  n9441 (net)                                   2         0.00      0.00       2.82 r
+  U9040/A (NAND2_X1M_A9TH)                                          0.00       2.82 r
+  U9040/Y (NAND2_X1M_A9TH)                                          0.10       2.92 f
+  n9859 (net)                                   3         0.00      0.00       2.92 f
+  U9042/A1 (OAI21_X1M_A9TH)                                         0.00       2.92 f
+  U9042/Y (OAI21_X1M_A9TH)                                          0.16       3.07 r
+  n9846 (net)                                   3         0.00      0.00       3.07 r
+  U9046/A1 (AOI21_X1M_A9TH)                                         0.00       3.07 r
+  U9046/Y (AOI21_X1M_A9TH)                                          0.17       3.24 f
+  n9830 (net)                                   3         0.00      0.00       3.24 f
+  U9054/A0 (OAI21_X1M_A9TH)                                         0.00       3.24 f
+  U9054/Y (OAI21_X1M_A9TH)                                          0.14       3.38 r
+  n9462 (net)                                   1         0.00      0.00       3.38 r
+  U9055/B0 (AOI21_X2M_A9TH)                                         0.00       3.38 r
+  U9055/Y (AOI21_X2M_A9TH)                                          0.15       3.53 f
+  n9797 (net)                                  10         0.01      0.00       3.53 f
+  U9266/A0 (OAI21_X1M_A9TH)                                         0.00       3.53 f
+  U9266/Y (OAI21_X1M_A9TH)                                          0.18       3.70 r
+  n9753 (net)                                   1         0.00      0.00       3.70 r
+  U9268/A (XNOR2_X1M_A9TH)                                          0.00       3.70 r
+  U9268/Y (XNOR2_X1M_A9TH)                                          0.14       3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_N189 (net)     1     0.00     0.00     3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__28_/D (DFFRPQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__28_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[51] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__23_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 f
+  coef[51] (in)                                                     0.00       1.00 f
+  coef[51] (net)                                2         0.00      0.00       1.00 f
+  U4163/A (INV_X1M_A9TH)                                            0.00       1.00 f
+  U4163/Y (INV_X1M_A9TH)                                            0.12       1.12 r
+  n3978 (net)                                  12         0.01      0.00       1.12 r
+  U8802/A (NOR2_X1A_A9TH)                                           0.00       1.12 r
+  U8802/Y (NOR2_X1A_A9TH)                                           0.16       1.28 f
+  n9287 (net)                                   1         0.00      0.00       1.28 f
+  U8915/B (ADDF_X1M_A9TH)                                           0.00       1.28 f
+  U8915/CO (ADDF_X1M_A9TH)                                          0.33       1.61 f
+  n9302 (net)                                   1         0.00      0.00       1.61 f
+  U8929/B (ADDF_X1M_A9TH)                                           0.00       1.61 f
+  U8929/S (ADDF_X1M_A9TH)                                           0.42       2.03 r
+  n9299 (net)                                   1         0.00      0.00       2.03 r
+  U8928/B (ADDF_X1M_A9TH)                                           0.00       2.03 r
+  U8928/S (ADDF_X1M_A9TH)                                           0.39       2.43 f
+  n9315 (net)                                   1         0.00      0.00       2.43 f
+  U8934/CI (ADDF_X1M_A9TH)                                          0.00       2.43 f
+  U8934/S (ADDF_X1M_A9TH)                                           0.39       2.82 r
+  n9441 (net)                                   2         0.00      0.00       2.82 r
+  U9040/A (NAND2_X1M_A9TH)                                          0.00       2.82 r
+  U9040/Y (NAND2_X1M_A9TH)                                          0.10       2.92 f
+  n9859 (net)                                   3         0.00      0.00       2.92 f
+  U9042/A1 (OAI21_X1M_A9TH)                                         0.00       2.92 f
+  U9042/Y (OAI21_X1M_A9TH)                                          0.16       3.07 r
+  n9846 (net)                                   3         0.00      0.00       3.07 r
+  U9046/A1 (AOI21_X1M_A9TH)                                         0.00       3.07 r
+  U9046/Y (AOI21_X1M_A9TH)                                          0.17       3.24 f
+  n9830 (net)                                   3         0.00      0.00       3.24 f
+  U9054/A0 (OAI21_X1M_A9TH)                                         0.00       3.24 f
+  U9054/Y (OAI21_X1M_A9TH)                                          0.14       3.38 r
+  n9462 (net)                                   1         0.00      0.00       3.38 r
+  U9055/B0 (AOI21_X2M_A9TH)                                         0.00       3.38 r
+  U9055/Y (AOI21_X2M_A9TH)                                          0.15       3.53 f
+  n9797 (net)                                  10         0.01      0.00       3.53 f
+  U9285/A0 (OAI21_X1M_A9TH)                                         0.00       3.53 f
+  U9285/Y (OAI21_X1M_A9TH)                                          0.18       3.70 r
+  n9792 (net)                                   1         0.00      0.00       3.70 r
+  U9287/A (XNOR2_X1M_A9TH)                                          0.00       3.70 r
+  U9287/Y (XNOR2_X1M_A9TH)                                          0.14       3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_N184 (net)     1     0.00     0.00     3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__23_/D (DFFRPQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__23_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[51] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__27_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 f
+  coef[51] (in)                                                     0.00       1.00 f
+  coef[51] (net)                                2         0.00      0.00       1.00 f
+  U4163/A (INV_X1M_A9TH)                                            0.00       1.00 f
+  U4163/Y (INV_X1M_A9TH)                                            0.12       1.12 r
+  n3978 (net)                                  12         0.01      0.00       1.12 r
+  U8802/A (NOR2_X1A_A9TH)                                           0.00       1.12 r
+  U8802/Y (NOR2_X1A_A9TH)                                           0.16       1.28 f
+  n9287 (net)                                   1         0.00      0.00       1.28 f
+  U8915/B (ADDF_X1M_A9TH)                                           0.00       1.28 f
+  U8915/CO (ADDF_X1M_A9TH)                                          0.33       1.61 f
+  n9302 (net)                                   1         0.00      0.00       1.61 f
+  U8929/B (ADDF_X1M_A9TH)                                           0.00       1.61 f
+  U8929/S (ADDF_X1M_A9TH)                                           0.42       2.03 r
+  n9299 (net)                                   1         0.00      0.00       2.03 r
+  U8928/B (ADDF_X1M_A9TH)                                           0.00       2.03 r
+  U8928/S (ADDF_X1M_A9TH)                                           0.39       2.43 f
+  n9315 (net)                                   1         0.00      0.00       2.43 f
+  U8934/CI (ADDF_X1M_A9TH)                                          0.00       2.43 f
+  U8934/S (ADDF_X1M_A9TH)                                           0.39       2.82 r
+  n9441 (net)                                   2         0.00      0.00       2.82 r
+  U9040/A (NAND2_X1M_A9TH)                                          0.00       2.82 r
+  U9040/Y (NAND2_X1M_A9TH)                                          0.10       2.92 f
+  n9859 (net)                                   3         0.00      0.00       2.92 f
+  U9042/A1 (OAI21_X1M_A9TH)                                         0.00       2.92 f
+  U9042/Y (OAI21_X1M_A9TH)                                          0.16       3.07 r
+  n9846 (net)                                   3         0.00      0.00       3.07 r
+  U9046/A1 (AOI21_X1M_A9TH)                                         0.00       3.07 r
+  U9046/Y (AOI21_X1M_A9TH)                                          0.17       3.24 f
+  n9830 (net)                                   3         0.00      0.00       3.24 f
+  U9054/A0 (OAI21_X1M_A9TH)                                         0.00       3.24 f
+  U9054/Y (OAI21_X1M_A9TH)                                          0.14       3.38 r
+  n9462 (net)                                   1         0.00      0.00       3.38 r
+  U9055/B0 (AOI21_X2M_A9TH)                                         0.00       3.38 r
+  U9055/Y (AOI21_X2M_A9TH)                                          0.15       3.53 f
+  n9797 (net)                                  10         0.01      0.00       3.53 f
+  U9271/A0 (OAI21_X1M_A9TH)                                         0.00       3.53 f
+  U9271/Y (OAI21_X1M_A9TH)                                          0.18       3.70 r
+  n9764 (net)                                   1         0.00      0.00       3.70 r
+  U9273/A (XNOR2_X1M_A9TH)                                          0.00       3.70 r
+  U9273/Y (XNOR2_X1M_A9TH)                                          0.14       3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_N188 (net)     1     0.00     0.00     3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__27_/D (DFFRPQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__27_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[51] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__29_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 f
+  coef[51] (in)                                                     0.00       1.00 f
+  coef[51] (net)                                2         0.00      0.00       1.00 f
+  U4163/A (INV_X1M_A9TH)                                            0.00       1.00 f
+  U4163/Y (INV_X1M_A9TH)                                            0.12       1.12 r
+  n3978 (net)                                  12         0.01      0.00       1.12 r
+  U8802/A (NOR2_X1A_A9TH)                                           0.00       1.12 r
+  U8802/Y (NOR2_X1A_A9TH)                                           0.16       1.28 f
+  n9287 (net)                                   1         0.00      0.00       1.28 f
+  U8915/B (ADDF_X1M_A9TH)                                           0.00       1.28 f
+  U8915/CO (ADDF_X1M_A9TH)                                          0.33       1.61 f
+  n9302 (net)                                   1         0.00      0.00       1.61 f
+  U8929/B (ADDF_X1M_A9TH)                                           0.00       1.61 f
+  U8929/S (ADDF_X1M_A9TH)                                           0.42       2.03 r
+  n9299 (net)                                   1         0.00      0.00       2.03 r
+  U8928/B (ADDF_X1M_A9TH)                                           0.00       2.03 r
+  U8928/S (ADDF_X1M_A9TH)                                           0.39       2.43 f
+  n9315 (net)                                   1         0.00      0.00       2.43 f
+  U8934/CI (ADDF_X1M_A9TH)                                          0.00       2.43 f
+  U8934/S (ADDF_X1M_A9TH)                                           0.39       2.82 r
+  n9441 (net)                                   2         0.00      0.00       2.82 r
+  U9040/A (NAND2_X1M_A9TH)                                          0.00       2.82 r
+  U9040/Y (NAND2_X1M_A9TH)                                          0.10       2.92 f
+  n9859 (net)                                   3         0.00      0.00       2.92 f
+  U9042/A1 (OAI21_X1M_A9TH)                                         0.00       2.92 f
+  U9042/Y (OAI21_X1M_A9TH)                                          0.16       3.07 r
+  n9846 (net)                                   3         0.00      0.00       3.07 r
+  U9046/A1 (AOI21_X1M_A9TH)                                         0.00       3.07 r
+  U9046/Y (AOI21_X1M_A9TH)                                          0.17       3.24 f
+  n9830 (net)                                   3         0.00      0.00       3.24 f
+  U9054/A0 (OAI21_X1M_A9TH)                                         0.00       3.24 f
+  U9054/Y (OAI21_X1M_A9TH)                                          0.14       3.38 r
+  n9462 (net)                                   1         0.00      0.00       3.38 r
+  U9055/B0 (AOI21_X2M_A9TH)                                         0.00       3.38 r
+  U9055/Y (AOI21_X2M_A9TH)                                          0.15       3.53 f
+  n9797 (net)                                  10         0.01      0.00       3.53 f
+  U9261/A0 (OAI21_X1M_A9TH)                                         0.00       3.53 f
+  U9261/Y (OAI21_X1M_A9TH)                                          0.18       3.70 r
+  n9744 (net)                                   1         0.00      0.00       3.70 r
+  U9263/A (XNOR2_X1M_A9TH)                                          0.00       3.70 r
+  U9263/Y (XNOR2_X1M_A9TH)                                          0.14       3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_N190 (net)     1     0.00     0.00     3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__29_/D (DFFRPQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__29_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[51] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__25_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 f
+  coef[51] (in)                                                     0.00       1.00 f
+  coef[51] (net)                                2         0.00      0.00       1.00 f
+  U4163/A (INV_X1M_A9TH)                                            0.00       1.00 f
+  U4163/Y (INV_X1M_A9TH)                                            0.12       1.12 r
+  n3978 (net)                                  12         0.01      0.00       1.12 r
+  U8802/A (NOR2_X1A_A9TH)                                           0.00       1.12 r
+  U8802/Y (NOR2_X1A_A9TH)                                           0.16       1.28 f
+  n9287 (net)                                   1         0.00      0.00       1.28 f
+  U8915/B (ADDF_X1M_A9TH)                                           0.00       1.28 f
+  U8915/CO (ADDF_X1M_A9TH)                                          0.33       1.61 f
+  n9302 (net)                                   1         0.00      0.00       1.61 f
+  U8929/B (ADDF_X1M_A9TH)                                           0.00       1.61 f
+  U8929/S (ADDF_X1M_A9TH)                                           0.42       2.03 r
+  n9299 (net)                                   1         0.00      0.00       2.03 r
+  U8928/B (ADDF_X1M_A9TH)                                           0.00       2.03 r
+  U8928/S (ADDF_X1M_A9TH)                                           0.39       2.43 f
+  n9315 (net)                                   1         0.00      0.00       2.43 f
+  U8934/CI (ADDF_X1M_A9TH)                                          0.00       2.43 f
+  U8934/S (ADDF_X1M_A9TH)                                           0.39       2.82 r
+  n9441 (net)                                   2         0.00      0.00       2.82 r
+  U9040/A (NAND2_X1M_A9TH)                                          0.00       2.82 r
+  U9040/Y (NAND2_X1M_A9TH)                                          0.10       2.92 f
+  n9859 (net)                                   3         0.00      0.00       2.92 f
+  U9042/A1 (OAI21_X1M_A9TH)                                         0.00       2.92 f
+  U9042/Y (OAI21_X1M_A9TH)                                          0.16       3.07 r
+  n9846 (net)                                   3         0.00      0.00       3.07 r
+  U9046/A1 (AOI21_X1M_A9TH)                                         0.00       3.07 r
+  U9046/Y (AOI21_X1M_A9TH)                                          0.17       3.24 f
+  n9830 (net)                                   3         0.00      0.00       3.24 f
+  U9054/A0 (OAI21_X1M_A9TH)                                         0.00       3.24 f
+  U9054/Y (OAI21_X1M_A9TH)                                          0.14       3.38 r
+  n9462 (net)                                   1         0.00      0.00       3.38 r
+  U9055/B0 (AOI21_X2M_A9TH)                                         0.00       3.38 r
+  U9055/Y (AOI21_X2M_A9TH)                                          0.15       3.53 f
+  n9797 (net)                                  10         0.01      0.00       3.53 f
+  U9279/A0 (OAI21_X1M_A9TH)                                         0.00       3.53 f
+  U9279/Y (OAI21_X1M_A9TH)                                          0.18       3.70 r
+  n9779 (net)                                   1         0.00      0.00       3.70 r
+  U9281/A (XNOR2_X1M_A9TH)                                          0.00       3.70 r
+  U9281/Y (XNOR2_X1M_A9TH)                                          0.14       3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_N186 (net)     1     0.00     0.00     3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__25_/D (DFFRPQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_6__25_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[35] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_4__28_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 f
+  coef[35] (in)                                                     0.00       1.00 f
+  coef[35] (net)                                2         0.00      0.00       1.00 f
+  U4159/A (INV_X1M_A9TH)                                            0.00       1.00 f
+  U4159/Y (INV_X1M_A9TH)                                            0.12       1.12 r
+  n3974 (net)                                  12         0.01      0.00       1.12 r
+  U7495/A (NOR2_X1A_A9TH)                                           0.00       1.12 r
+  U7495/Y (NOR2_X1A_A9TH)                                           0.16       1.28 f
+  n7569 (net)                                   1         0.00      0.00       1.28 f
+  U7608/B (ADDF_X1M_A9TH)                                           0.00       1.28 f
+  U7608/CO (ADDF_X1M_A9TH)                                          0.33       1.61 f
+  n7585 (net)                                   1         0.00      0.00       1.61 f
+  U7622/B (ADDF_X1M_A9TH)                                           0.00       1.61 f
+  U7622/S (ADDF_X1M_A9TH)                                           0.42       2.03 r
+  n7582 (net)                                   1         0.00      0.00       2.03 r
+  U7621/B (ADDF_X1M_A9TH)                                           0.00       2.03 r
+  U7621/S (ADDF_X1M_A9TH)                                           0.39       2.43 f
+  n7598 (net)                                   1         0.00      0.00       2.43 f
+  U7627/CI (ADDF_X1M_A9TH)                                          0.00       2.43 f
+  U7627/S (ADDF_X1M_A9TH)                                           0.39       2.82 r
+  n7722 (net)                                   2         0.00      0.00       2.82 r
+  U7732/A (NAND2_X1M_A9TH)                                          0.00       2.82 r
+  U7732/Y (NAND2_X1M_A9TH)                                          0.10       2.92 f
+  n8139 (net)                                   3         0.00      0.00       2.92 f
+  U7734/A1 (OAI21_X1M_A9TH)                                         0.00       2.92 f
+  U7734/Y (OAI21_X1M_A9TH)                                          0.16       3.07 r
+  n8126 (net)                                   3         0.00      0.00       3.07 r
+  U7738/A1 (AOI21_X1M_A9TH)                                         0.00       3.07 r
+  U7738/Y (AOI21_X1M_A9TH)                                          0.17       3.24 f
+  n8110 (net)                                   3         0.00      0.00       3.24 f
+  U7746/A0 (OAI21_X1M_A9TH)                                         0.00       3.24 f
+  U7746/Y (OAI21_X1M_A9TH)                                          0.14       3.38 r
+  n7743 (net)                                   1         0.00      0.00       3.38 r
+  U7747/B0 (AOI21_X2M_A9TH)                                         0.00       3.38 r
+  U7747/Y (AOI21_X2M_A9TH)                                          0.15       3.53 f
+  n8077 (net)                                  10         0.01      0.00       3.53 f
+  U7958/A0 (OAI21_X1M_A9TH)                                         0.00       3.53 f
+  U7958/Y (OAI21_X1M_A9TH)                                          0.18       3.70 r
+  n8033 (net)                                   1         0.00      0.00       3.70 r
+  U7960/A (XNOR2_X1M_A9TH)                                          0.00       3.70 r
+  U7960/Y (XNOR2_X1M_A9TH)                                          0.14       3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_N125 (net)     1     0.00     0.00     3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_4__28_/D (DFFRPQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_4__28_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[19] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_2__28_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 f
+  coef[19] (in)                                                     0.00       1.00 f
+  coef[19] (net)                                2         0.00      0.00       1.00 f
+  U4160/A (INV_X1M_A9TH)                                            0.00       1.00 f
+  U4160/Y (INV_X1M_A9TH)                                            0.12       1.12 r
+  n3975 (net)                                  12         0.01      0.00       1.12 r
+  U6199/A (NOR2_X1A_A9TH)                                           0.00       1.12 r
+  U6199/Y (NOR2_X1A_A9TH)                                           0.16       1.28 f
+  n5860 (net)                                   1         0.00      0.00       1.28 f
+  U6312/B (ADDF_X1M_A9TH)                                           0.00       1.28 f
+  U6312/CO (ADDF_X1M_A9TH)                                          0.33       1.61 f
+  n5875 (net)                                   1         0.00      0.00       1.61 f
+  U6326/B (ADDF_X1M_A9TH)                                           0.00       1.61 f
+  U6326/S (ADDF_X1M_A9TH)                                           0.42       2.03 r
+  n5872 (net)                                   1         0.00      0.00       2.03 r
+  U6325/B (ADDF_X1M_A9TH)                                           0.00       2.03 r
+  U6325/S (ADDF_X1M_A9TH)                                           0.39       2.43 f
+  n5888 (net)                                   1         0.00      0.00       2.43 f
+  U6331/CI (ADDF_X1M_A9TH)                                          0.00       2.43 f
+  U6331/S (ADDF_X1M_A9TH)                                           0.39       2.82 r
+  n6013 (net)                                   2         0.00      0.00       2.82 r
+  U6436/A (NAND2_X1M_A9TH)                                          0.00       2.82 r
+  U6436/Y (NAND2_X1M_A9TH)                                          0.10       2.92 f
+  n6430 (net)                                   3         0.00      0.00       2.92 f
+  U6438/A1 (OAI21_X1M_A9TH)                                         0.00       2.92 f
+  U6438/Y (OAI21_X1M_A9TH)                                          0.16       3.07 r
+  n6417 (net)                                   3         0.00      0.00       3.07 r
+  U6442/A1 (AOI21_X1M_A9TH)                                         0.00       3.07 r
+  U6442/Y (AOI21_X1M_A9TH)                                          0.17       3.24 f
+  n6401 (net)                                   3         0.00      0.00       3.24 f
+  U6450/A0 (OAI21_X1M_A9TH)                                         0.00       3.24 f
+  U6450/Y (OAI21_X1M_A9TH)                                          0.14       3.38 r
+  n6034 (net)                                   1         0.00      0.00       3.38 r
+  U6451/B0 (AOI21_X2M_A9TH)                                         0.00       3.38 r
+  U6451/Y (AOI21_X2M_A9TH)                                          0.15       3.53 f
+  n6368 (net)                                  10         0.01      0.00       3.53 f
+  U6662/A0 (OAI21_X1M_A9TH)                                         0.00       3.53 f
+  U6662/Y (OAI21_X1M_A9TH)                                          0.18       3.70 r
+  n6324 (net)                                   1         0.00      0.00       3.70 r
+  U6664/A (XNOR2_X1M_A9TH)                                          0.00       3.70 r
+  U6664/Y (XNOR2_X1M_A9TH)                                          0.14       3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_N61 (net)     1     0.00     0.00     3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_2__28_/D (DFFRPQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_2__28_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: coef[19] (input port clocked by CLK)
+  Endpoint: FIR_filter_my_acm_filter_firBlock_left_firStep_reg_2__23_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.00       1.00 f
+  coef[19] (in)                                                     0.00       1.00 f
+  coef[19] (net)                                2         0.00      0.00       1.00 f
+  U4160/A (INV_X1M_A9TH)                                            0.00       1.00 f
+  U4160/Y (INV_X1M_A9TH)                                            0.12       1.12 r
+  n3975 (net)                                  12         0.01      0.00       1.12 r
+  U6199/A (NOR2_X1A_A9TH)                                           0.00       1.12 r
+  U6199/Y (NOR2_X1A_A9TH)                                           0.16       1.28 f
+  n5860 (net)                                   1         0.00      0.00       1.28 f
+  U6312/B (ADDF_X1M_A9TH)                                           0.00       1.28 f
+  U6312/CO (ADDF_X1M_A9TH)                                          0.33       1.61 f
+  n5875 (net)                                   1         0.00      0.00       1.61 f
+  U6326/B (ADDF_X1M_A9TH)                                           0.00       1.61 f
+  U6326/S (ADDF_X1M_A9TH)                                           0.42       2.03 r
+  n5872 (net)                                   1         0.00      0.00       2.03 r
+  U6325/B (ADDF_X1M_A9TH)                                           0.00       2.03 r
+  U6325/S (ADDF_X1M_A9TH)                                           0.39       2.43 f
+  n5888 (net)                                   1         0.00      0.00       2.43 f
+  U6331/CI (ADDF_X1M_A9TH)                                          0.00       2.43 f
+  U6331/S (ADDF_X1M_A9TH)                                           0.39       2.82 r
+  n6013 (net)                                   2         0.00      0.00       2.82 r
+  U6436/A (NAND2_X1M_A9TH)                                          0.00       2.82 r
+  U6436/Y (NAND2_X1M_A9TH)                                          0.10       2.92 f
+  n6430 (net)                                   3         0.00      0.00       2.92 f
+  U6438/A1 (OAI21_X1M_A9TH)                                         0.00       2.92 f
+  U6438/Y (OAI21_X1M_A9TH)                                          0.16       3.07 r
+  n6417 (net)                                   3         0.00      0.00       3.07 r
+  U6442/A1 (AOI21_X1M_A9TH)                                         0.00       3.07 r
+  U6442/Y (AOI21_X1M_A9TH)                                          0.17       3.24 f
+  n6401 (net)                                   3         0.00      0.00       3.24 f
+  U6450/A0 (OAI21_X1M_A9TH)                                         0.00       3.24 f
+  U6450/Y (OAI21_X1M_A9TH)                                          0.14       3.38 r
+  n6034 (net)                                   1         0.00      0.00       3.38 r
+  U6451/B0 (AOI21_X2M_A9TH)                                         0.00       3.38 r
+  U6451/Y (AOI21_X2M_A9TH)                                          0.15       3.53 f
+  n6368 (net)                                  10         0.01      0.00       3.53 f
+  U6681/A0 (OAI21_X1M_A9TH)                                         0.00       3.53 f
+  U6681/Y (OAI21_X1M_A9TH)                                          0.18       3.70 r
+  n6363 (net)                                   1         0.00      0.00       3.70 r
+  U6683/A (XNOR2_X1M_A9TH)                                          0.00       3.70 r
+  U6683/Y (XNOR2_X1M_A9TH)                                          0.14       3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_N56 (net)     1     0.00     0.00     3.84 r
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_2__23_/D (DFFRPQ_X1M_A9TH)     0.00     3.84 r
+  data arrival time                                                            3.84
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  FIR_filter_my_acm_filter_firBlock_left_firStep_reg_2__23_/CK (DFFRPQ_X1M_A9TH)     0.00     4.00 r
+  library setup time                                               -0.16       3.84
+  data required time                                                           3.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.84
+  data arrival time                                                           -3.84
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+1

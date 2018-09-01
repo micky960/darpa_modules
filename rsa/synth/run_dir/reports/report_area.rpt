@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : modexp_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 08:16:09 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+Number of ports:                          108
+Number of nets:                        228171
+Number of cells:                       228088
+Number of combinational cells:         170015
+Number of sequential cells:             58073
+Number of macros/black boxes:               0
+Number of buf/inv:                      17593
+Number of references:                     154
+
+Combinational area:             397955.162328
+Buf/Inv area:                    20713.320800
+Noncombinational area:          439403.396783
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                837358.559110
+Total area:                 undefined
+1

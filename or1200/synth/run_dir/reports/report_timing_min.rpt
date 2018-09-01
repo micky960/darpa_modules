@@ -1,0 +1,357 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : or1200_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 11:50:58 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: dbg_stb_i (input port clocked by CLK)
+  Endpoint: or1200_du_dbg_ack_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  dbg_stb_i (in)                                                    0.00       0.00 f
+  dbg_stb_i (net)                              23         0.06      0.00       0.00 f
+  or1200_du_dbg_ack_reg/D (DFFRPQ_X1M_A9TH)                         0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_du_dbg_ack_reg/CK (DFFRPQ_X1M_A9TH)                        0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: dbg_stb_i (input port clocked by CLK)
+  Endpoint: or1200_du_dbg_ack_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  dbg_stb_i (in)                                                    0.00       0.00 r
+  dbg_stb_i (net)                              23         0.06      0.00       0.00 r
+  or1200_du_dbg_ack_reg/D (DFFRPQ_X1M_A9TH)                         0.00       0.00 r
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_du_dbg_ack_reg/CK (DFFRPQ_X1M_A9TH)                        0.00       0.00 r
+  library hold time                                                -0.03      -0.03
+  data required time                                                          -0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                          -0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.03
+
+
+  Startpoint: iwb_dat_i[22]
+              (input port clocked by CLK)
+  Endpoint: or1200_cpu_or1200_ctrl_id_insn_reg_22_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  iwb_dat_i[22] (in)                                                0.00       0.00 f
+  iwb_dat_i[22] (net)                           2         0.00      0.00       0.00 f
+  U17528/A (INV_X1B_A9TH)                                           0.00       0.00 f
+  U17528/Y (INV_X1B_A9TH)                                           0.02       0.02 r
+  n15298 (net)                                  1         0.00      0.00       0.02 r
+  U17531/A0 (OAI22_X1M_A9TH)                                        0.00       0.02 r
+  U17531/Y (OAI22_X1M_A9TH)                                         0.07       0.09 f
+  n8520 (net)                                   1         0.00      0.00       0.09 f
+  or1200_cpu_or1200_ctrl_id_insn_reg_22_/D (DFFSQ_X1M_A9TH)         0.00       0.09 f
+  data arrival time                                                            0.09
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_cpu_or1200_ctrl_id_insn_reg_22_/CK (DFFSQ_X1M_A9TH)        0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                           -0.09
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.07
+
+
+  Startpoint: iwb_dat_i[22]
+              (input port clocked by CLK)
+  Endpoint: or1200_cpu_or1200_ctrl_id_insn_reg_22_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  iwb_dat_i[22] (in)                                                0.00       0.00 f
+  iwb_dat_i[22] (net)                           2         0.00      0.00       0.00 f
+  U17528/A (INV_X1B_A9TH)                                           0.00       0.00 f
+  U17528/Y (INV_X1B_A9TH)                                           0.02       0.02 r
+  n15298 (net)                                  1         0.00      0.00       0.02 r
+  U17531/A0 (OAI22_X1M_A9TH)                                        0.00       0.02 r
+  U17531/Y (OAI22_X1M_A9TH)                                         0.08       0.10 f
+  n8520 (net)                                   1         0.00      0.00       0.10 f
+  or1200_cpu_or1200_ctrl_id_insn_reg_22_/D (DFFSQ_X1M_A9TH)         0.00       0.10 f
+  data arrival time                                                            0.10
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_cpu_or1200_ctrl_id_insn_reg_22_/CK (DFFSQ_X1M_A9TH)        0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                           -0.10
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.08
+
+
+  Startpoint: iwb_dat_i[21]
+              (input port clocked by CLK)
+  Endpoint: or1200_cpu_or1200_if_insn_saved_reg_21_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  iwb_dat_i[21] (in)                                                0.00       0.00 f
+  iwb_dat_i[21] (net)                           2         0.00      0.00       0.00 f
+  U17540/A (INV_X1B_A9TH)                                           0.00       0.00 f
+  U17540/Y (INV_X1B_A9TH)                                           0.02       0.02 r
+  n15303 (net)                                  1         0.00      0.00       0.02 r
+  U17541/B1 (OAI22_X1M_A9TH)                                        0.00       0.02 r
+  U17541/Y (OAI22_X1M_A9TH)                                         0.06       0.08 f
+  n8336 (net)                                   1         0.00      0.00       0.08 f
+  or1200_cpu_or1200_if_insn_saved_reg_21_/D (DFFRPQ_X1M_A9TH)       0.00       0.08 f
+  data arrival time                                                            0.08
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_cpu_or1200_if_insn_saved_reg_21_/CK (DFFRPQ_X1M_A9TH)      0.00       0.00 r
+  library hold time                                                 0.00       0.00
+  data required time                                                           0.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.00
+  data arrival time                                                           -0.08
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.08
+
+
+  Startpoint: pic_ints_i[1]
+              (input port clocked by CLK)
+  Endpoint: or1200_pic_picsr_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  pic_ints_i[1] (in)                                                0.00       0.00 f
+  pic_ints_i[1] (net)                           2         0.00      0.00       0.00 f
+  U9235/B0 (AOI21_X1M_A9TH)                                         0.00       0.00 f
+  U9235/Y (AOI21_X1M_A9TH)                                          0.04       0.04 r
+  n22821 (net)                                  1         0.00      0.00       0.04 r
+  U9233/B0 (OAI2XB1_X1M_A9TH)                                       0.00       0.04 r
+  U9233/Y (OAI2XB1_X1M_A9TH)                                        0.06       0.09 f
+  or1200_pic_N70 (net)                          1         0.00      0.00       0.09 f
+  or1200_pic_picsr_reg_1_/D (DFFRPQ_X1M_A9TH)                       0.00       0.09 f
+  data arrival time                                                            0.09
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_pic_picsr_reg_1_/CK (DFFRPQ_X1M_A9TH)                      0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.09
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: dbg_dat_i[17]
+              (input port clocked by CLK)
+  Endpoint: or1200_du_dbg_dat_o_reg_17_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  dbg_dat_i[17] (in)                                                0.00       0.00 f
+  dbg_dat_i[17] (net)                           2         0.00      0.00       0.00 f
+  U25505/B1 (AOI22_X1M_A9TH)                                        0.00       0.00 f
+  U25505/Y (AOI22_X1M_A9TH)                                         0.05       0.05 r
+  n22344 (net)                                  1         0.00      0.00       0.05 r
+  U25506/B0 (OAI21_X1M_A9TH)                                        0.00       0.05 r
+  U25506/Y (OAI21_X1M_A9TH)                                         0.06       0.11 f
+  n8700 (net)                                   1         0.00      0.00       0.11 f
+  or1200_du_dbg_dat_o_reg_17_/D (DFFQ_X1M_A9TH)                     0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_du_dbg_dat_o_reg_17_/CK (DFFQ_X1M_A9TH)                    0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: dbg_dat_i[10]
+              (input port clocked by CLK)
+  Endpoint: or1200_du_dbg_dat_o_reg_10_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  dbg_dat_i[10] (in)                                                0.00       0.00 f
+  dbg_dat_i[10] (net)                           2         0.00      0.00       0.00 f
+  U25493/B1 (AOI22_X1M_A9TH)                                        0.00       0.00 f
+  U25493/Y (AOI22_X1M_A9TH)                                         0.05       0.05 r
+  n22331 (net)                                  1         0.00      0.00       0.05 r
+  U25494/B0 (OAI21_X1M_A9TH)                                        0.00       0.05 r
+  U25494/Y (OAI21_X1M_A9TH)                                         0.06       0.11 f
+  n8693 (net)                                   1         0.00      0.00       0.11 f
+  or1200_du_dbg_dat_o_reg_10_/D (DFFQ_X1M_A9TH)                     0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_du_dbg_dat_o_reg_10_/CK (DFFQ_X1M_A9TH)                    0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: dbg_dat_i[13]
+              (input port clocked by CLK)
+  Endpoint: or1200_du_dbg_dat_o_reg_13_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  dbg_dat_i[13] (in)                                                0.00       0.00 f
+  dbg_dat_i[13] (net)                           2         0.00      0.00       0.00 f
+  U25497/B1 (AOI22_X1M_A9TH)                                        0.00       0.00 f
+  U25497/Y (AOI22_X1M_A9TH)                                         0.05       0.05 r
+  n22335 (net)                                  1         0.00      0.00       0.05 r
+  U25498/B0 (OAI21_X1M_A9TH)                                        0.00       0.05 r
+  U25498/Y (OAI21_X1M_A9TH)                                         0.06       0.11 f
+  n8696 (net)                                   1         0.00      0.00       0.11 f
+  or1200_du_dbg_dat_o_reg_13_/D (DFFQ_X1M_A9TH)                     0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_du_dbg_dat_o_reg_13_/CK (DFFQ_X1M_A9TH)                    0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+  Startpoint: dbg_dat_i[8]
+              (input port clocked by CLK)
+  Endpoint: or1200_du_dbg_dat_o_reg_8_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  dbg_dat_i[8] (in)                                                 0.00       0.00 f
+  dbg_dat_i[8] (net)                            3         0.00      0.00       0.00 f
+  U25489/B1 (AOI22_X1M_A9TH)                                        0.00       0.00 f
+  U25489/Y (AOI22_X1M_A9TH)                                         0.05       0.05 r
+  n22327 (net)                                  1         0.00      0.00       0.05 r
+  U25490/B0 (OAI21_X1M_A9TH)                                        0.00       0.05 r
+  U25490/Y (OAI21_X1M_A9TH)                                         0.06       0.11 f
+  n8691 (net)                                   1         0.00      0.00       0.11 f
+  or1200_du_dbg_dat_o_reg_8_/D (DFFQ_X1M_A9TH)                      0.00       0.11 f
+  data arrival time                                                            0.11
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  or1200_du_dbg_dat_o_reg_8_/CK (DFFQ_X1M_A9TH)                     0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.11
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+1

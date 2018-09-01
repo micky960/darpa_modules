@@ -1,0 +1,331 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : dft_top_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 08:35:59 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage2_instPerm53158_state2_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U111548/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U111548/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage2_instPerm53158_N59 (net)        1         0.00      0.00       0.03 f
+  dft_top_stage2_instPerm53158_state2_reg/D (DFFQ_X1M_A9TH)         0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage2_instPerm53158_state2_reg/CK (DFFQ_X1M_A9TH)        0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage0_instPerm53117_state3_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U111632/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U111632/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage0_instPerm53117_N257 (net)       1         0.00      0.00       0.03 f
+  dft_top_stage0_instPerm53117_state3_reg/D (DFFQ_X1M_A9TH)         0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage0_instPerm53117_state3_reg/CK (DFFQ_X1M_A9TH)        0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage5_instPerm53195_state2_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U111562/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U111562/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage5_instPerm53195_N80 (net)        1         0.00      0.00       0.03 f
+  dft_top_stage5_instPerm53195_state2_reg/D (DFFQ_X1M_A9TH)         0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage5_instPerm53195_state2_reg/CK (DFFQ_X1M_A9TH)        0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage2_instPerm53158_state3_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U111550/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U111550/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage2_instPerm53158_N83 (net)        1         0.00      0.00       0.03 f
+  dft_top_stage2_instPerm53158_state3_reg/D (DFFQ_X1M_A9TH)         0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage2_instPerm53158_state3_reg/CK (DFFQ_X1M_A9TH)        0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage11_instPerm53269_state2_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U111902/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U111902/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage11_instPerm53269_N146 (net)      1         0.00      0.00       0.03 f
+  dft_top_stage11_instPerm53269_state2_reg/D (DFFQ_X1M_A9TH)        0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage11_instPerm53269_state2_reg/CK (DFFQ_X1M_A9TH)       0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage14_instPerm53314_state2_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U111996/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U111996/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage14_instPerm53314_N217 (net)      1         0.00      0.00       0.03 f
+  dft_top_stage14_instPerm53314_state2_reg/D (DFFQ_X1M_A9TH)        0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage14_instPerm53314_state2_reg/CK (DFFQ_X1M_A9TH)       0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage17_instPerm53359_state2_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U112084/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U112084/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage17_instPerm53359_N217 (net)      1         0.00      0.00       0.03 f
+  dft_top_stage17_instPerm53359_state2_reg/D (DFFQ_X1M_A9TH)        0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage17_instPerm53359_state2_reg/CK (DFFQ_X1M_A9TH)       0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage14_instPerm53314_state3_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U112003/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U112003/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage14_instPerm53314_N257 (net)      1         0.00      0.00       0.03 f
+  dft_top_stage14_instPerm53314_state3_reg/D (DFFQ_X1M_A9TH)        0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage14_instPerm53314_state3_reg/CK (DFFQ_X1M_A9TH)       0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage17_instPerm53359_state3_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U112091/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U112091/Y (NOR2_X1M_A9TH)                                         0.03       0.03 f
+  dft_top_stage17_instPerm53359_N257 (net)      1         0.00      0.00       0.03 f
+  dft_top_stage17_instPerm53359_state3_reg/D (DFFQ_X1M_A9TH)        0.00       0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage17_instPerm53359_state3_reg/CK (DFFQ_X1M_A9TH)       0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: dft_top_stage5_instPerm53195_state3_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               79         0.09      0.00       0.00 r
+  U111564/A (NOR2_X1M_A9TH)                                         0.00       0.00 r
+  U111564/Y (NOR2_X1M_A9TH)                                         0.04       0.04 f
+  dft_top_stage5_instPerm53195_N106 (net)       2         0.00      0.00       0.04 f
+  dft_top_stage5_instPerm53195_state3_reg/D (DFFQ_X1M_A9TH)         0.00       0.04 f
+  data arrival time                                                            0.04
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  dft_top_stage5_instPerm53195_state3_reg/CK (DFFQ_X1M_A9TH)        0.00       0.00 r
+  library hold time                                                 0.01       0.01
+  data required time                                                           0.01
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.01
+  data arrival time                                                           -0.04
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.03
+
+
+1

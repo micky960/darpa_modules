@@ -1,0 +1,52 @@
+Information: Propagating switching activity (high effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.500000) for the clock net 'wb_clk' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort high
+Design : arbiter_ibus
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:42:46 2018
+****************************************
+
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  =   9.0309 uW   (87%)
+  Net Switching Power  =   1.3713 uW   (13%)
+                         ---------
+Total Dynamic Power    =  10.4022 uW  (100%)
+
+Cell Leakage Power     =   8.9132 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       2.4318e-03        3.9961e-05        2.2972e-03        2.4741e-03  (  23.76%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  6.5991e-03        1.3313e-03        6.6159e-03        7.9370e-03  (  76.24%)
+--------------------------------------------------------------------------------------------------
+Total          9.0309e-03 mW     1.3713e-03 mW     8.9132e-03 uW     1.0411e-02 mW
+1

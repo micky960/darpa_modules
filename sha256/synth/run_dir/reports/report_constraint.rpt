@@ -1,0 +1,13 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : sha256_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 08:59:01 2018
+****************************************
+
+This design has no violated constraints.
+
+1

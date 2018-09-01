@@ -1,0 +1,590 @@
+set compile_seqmap_propagate_constants     false
+false
+set compile_seqmap_propagate_high_effort   false
+false
+set compile_enable_register_merging        false
+false
+set write_sdc_output_net_resistance        false
+false
+set timing_separate_clock_gating_group     true
+true
+set_host_options -max_cores 8
+1
+set PROJECT_MODULES [getenv "PROJECT_MODULES"]
+/home/projects/vlsi/CEP/design/modules
+set run_dir  run_dir
+run_dir
+set design arbiter_dbus
+arbiter_dbus
+set clkin  wb_clk
+wb_clk
+if {[file exist $run_dir]} {
+sh rm -rf $run_dir
+}
+sh mkdir -p $run_dir/reports
+sh mkdir -p $run_dir/netlist
+set search_path [concat * $search_path]
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver
+lappend search_path "$PROJECT_MODULES/top/rtl"
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver /home/projects/vlsi/CEP/design/modules/top/rtl
+lappend search_path "$PROJECT_MODULES/or1200/rtl"
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver /home/projects/vlsi/CEP/design/modules/top/rtl /home/projects/vlsi/CEP/design/modules/or1200/rtl
+sh rm -rf ./work
+define_design_lib WORK -path ./work
+1
+set target_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db}
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db
+set link_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    }
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    
+analyze -library WORK -format sverilog "     $PROJECT_MODULES/top/rtl/orpsoc-defines.v     $PROJECT_MODULES/arbiter_dbus/rtl/arbiter_dbus.v"
+Running PRESTO HDLC
+Compiling source file /home/projects/vlsi/CEP/design/modules/top/rtl/orpsoc-defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/arbiter_dbus/rtl/arbiter_dbus.v
+Opening include file /home/projects/vlsi/CEP/design/modules/top/rtl/orpsoc-defines.v
+Presto compilation completed successfully.
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+Information: Using CCS timing libraries. (TIM-024)
+1
+elaborate $design
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/gtech.db'
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c'
+  Loading link library 'RGO_CSM65_25V33_LPE_50C_SS_108_297_125'
+  Loading link library 'USERLIB_ccs_ss_1p08v_1p08v_125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 679 in file
+        '/home/projects/vlsi/CEP/design/modules/arbiter_dbus/rtl/arbiter_dbus.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           680            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine arbiter_dbus line 679 in file
+                '/home/projects/vlsi/CEP/design/modules/arbiter_dbus/rtl/arbiter_dbus.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| wb_slave_sel_r_reg  | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /home/projects/vlsi/CEP/design/modules/arbiter_dbus/rtl/arbiter_dbus.v:720: Netlist for always block is empty. (ELAB-985)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'arbiter_dbus'.
+1
+set_dont_use [get_lib_cells sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c/*X0P*]
+1
+create_clock -name CLK  -period 4  -waveform {0 2} $clkin
+1
+set input_ports [remove_from_collection [all_inputs] {$clkin}]
+Warning: Nothing implicitly matched '$clkin' (SEL-003)
+{wbm0_adr_o[31] wbm0_adr_o[30] wbm0_adr_o[29] wbm0_adr_o[28] wbm0_adr_o[27] wbm0_adr_o[26] wbm0_adr_o[25] wbm0_adr_o[24] wbm0_adr_o[23] wbm0_adr_o[22] wbm0_adr_o[21] wbm0_adr_o[20] wbm0_adr_o[19] wbm0_adr_o[18] wbm0_adr_o[17] wbm0_adr_o[16] wbm0_adr_o[15] wbm0_adr_o[14] wbm0_adr_o[13] wbm0_adr_o[12] wbm0_adr_o[11] wbm0_adr_o[10] wbm0_adr_o[9] wbm0_adr_o[8] wbm0_adr_o[7] wbm0_adr_o[6] wbm0_adr_o[5] wbm0_adr_o[4] wbm0_adr_o[3] wbm0_adr_o[2] wbm0_adr_o[1] wbm0_adr_o[0] wbm0_dat_o[31] wbm0_dat_o[30] wbm0_dat_o[29] wbm0_dat_o[28] wbm0_dat_o[27] wbm0_dat_o[26] wbm0_dat_o[25] wbm0_dat_o[24] wbm0_dat_o[23] wbm0_dat_o[22] wbm0_dat_o[21] wbm0_dat_o[20] wbm0_dat_o[19] wbm0_dat_o[18] wbm0_dat_o[17] wbm0_dat_o[16] wbm0_dat_o[15] wbm0_dat_o[14] wbm0_dat_o[13] wbm0_dat_o[12] wbm0_dat_o[11] wbm0_dat_o[10] wbm0_dat_o[9] wbm0_dat_o[8] wbm0_dat_o[7] wbm0_dat_o[6] wbm0_dat_o[5] wbm0_dat_o[4] wbm0_dat_o[3] wbm0_dat_o[2] wbm0_dat_o[1] wbm0_dat_o[0] wbm0_sel_o[3] wbm0_sel_o[2] wbm0_sel_o[1] wbm0_sel_o[0] wbm0_we_o wbm0_cyc_o wbm0_stb_o wbm0_cti_o[2] wbm0_cti_o[1] wbm0_cti_o[0] wbm0_bte_o[1] wbm0_bte_o[0] wbm1_adr_o[31] wbm1_adr_o[30] wbm1_adr_o[29] wbm1_adr_o[28] wbm1_adr_o[27] wbm1_adr_o[26] wbm1_adr_o[25] wbm1_adr_o[24] wbm1_adr_o[23] wbm1_adr_o[22] wbm1_adr_o[21] wbm1_adr_o[20] wbm1_adr_o[19] wbm1_adr_o[18] wbm1_adr_o[17] wbm1_adr_o[16] wbm1_adr_o[15] wbm1_adr_o[14] wbm1_adr_o[13] wbm1_adr_o[12] wbm1_adr_o[11] wbm1_adr_o[10] wbm1_adr_o[9] wbm1_adr_o[8] ...}
+set output_ports [all_outputs]
+{wbm0_dat_i[31] wbm0_dat_i[30] wbm0_dat_i[29] wbm0_dat_i[28] wbm0_dat_i[27] wbm0_dat_i[26] wbm0_dat_i[25] wbm0_dat_i[24] wbm0_dat_i[23] wbm0_dat_i[22] wbm0_dat_i[21] wbm0_dat_i[20] wbm0_dat_i[19] wbm0_dat_i[18] wbm0_dat_i[17] wbm0_dat_i[16] wbm0_dat_i[15] wbm0_dat_i[14] wbm0_dat_i[13] wbm0_dat_i[12] wbm0_dat_i[11] wbm0_dat_i[10] wbm0_dat_i[9] wbm0_dat_i[8] wbm0_dat_i[7] wbm0_dat_i[6] wbm0_dat_i[5] wbm0_dat_i[4] wbm0_dat_i[3] wbm0_dat_i[2] wbm0_dat_i[1] wbm0_dat_i[0] wbm0_ack_i wbm0_err_i wbm0_rty_i wbm1_dat_i[31] wbm1_dat_i[30] wbm1_dat_i[29] wbm1_dat_i[28] wbm1_dat_i[27] wbm1_dat_i[26] wbm1_dat_i[25] wbm1_dat_i[24] wbm1_dat_i[23] wbm1_dat_i[22] wbm1_dat_i[21] wbm1_dat_i[20] wbm1_dat_i[19] wbm1_dat_i[18] wbm1_dat_i[17] wbm1_dat_i[16] wbm1_dat_i[15] wbm1_dat_i[14] wbm1_dat_i[13] wbm1_dat_i[12] wbm1_dat_i[11] wbm1_dat_i[10] wbm1_dat_i[9] wbm1_dat_i[8] wbm1_dat_i[7] wbm1_dat_i[6] wbm1_dat_i[5] wbm1_dat_i[4] wbm1_dat_i[3] wbm1_dat_i[2] wbm1_dat_i[1] wbm1_dat_i[0] wbm1_ack_i wbm1_err_i wbm1_rty_i wbs0_adr_i[31] wbs0_adr_i[30] wbs0_adr_i[29] wbs0_adr_i[28] wbs0_adr_i[27] wbs0_adr_i[26] wbs0_adr_i[25] wbs0_adr_i[24] wbs0_adr_i[23] wbs0_adr_i[22] wbs0_adr_i[21] wbs0_adr_i[20] wbs0_adr_i[19] wbs0_adr_i[18] wbs0_adr_i[17] wbs0_adr_i[16] wbs0_adr_i[15] wbs0_adr_i[14] wbs0_adr_i[13] wbs0_adr_i[12] wbs0_adr_i[11] wbs0_adr_i[10] wbs0_adr_i[9] wbs0_adr_i[8] wbs0_adr_i[7] wbs0_adr_i[6] wbs0_adr_i[5] wbs0_adr_i[4] wbs0_adr_i[3] wbs0_adr_i[2] ...}
+set_input_delay -max 1 [get_ports $input_ports ] -clock CLK
+1
+set_input_delay -min 0 [get_ports $input_ports ] -clock CLK
+1
+set_output_delay -max 1 [get_ports $output_ports ] -clock CLK
+1
+set_output_delay -min 3 [get_ports $output_ports ] -clock CLK
+1
+date
+Sun Jun 10 22:29:03 2018
+#compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -gate_clock
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db"
+Library analysis succeeded.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.2 |     *     |
+| Licensed DW Building Blocks        | M-2016.12-DWBB_201612.2 |     *     |
+============================================================================
+
+
+Information: There are 1143 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'arbiter_dbus'
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'arbiter_dbus'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11    1534.0      0.00       0.0       0.0                              0.0472
+    0:00:11    1534.0      0.00       0.0       0.0                              0.0472
+    0:00:11    1534.0      0.00       0.0       0.0                              0.0472
+    0:00:11    1534.0      0.00       0.0       0.0                              0.0472
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:12    1524.6      0.00       0.0       0.0                              0.0466
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:12    1525.7      0.00       0.0       0.0                              0.0466
+    0:00:12    1525.7      0.00       0.0       0.0                              0.0466
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:12    1525.7      0.00       0.0       0.0                              0.0466
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:13    1525.3      0.00       0.0       0.0                              0.0466
+    0:00:14    1523.2      0.00       0.0       0.0                              0.0464
+    0:00:14    1523.2      0.00       0.0       0.0                              0.0464
+    0:00:14    1523.2      0.00       0.0       0.0                              0.0464
+    0:00:14    1523.2      0.00       0.0       0.0                              0.0464
+    0:00:14    1521.4      0.00       0.0       0.0                              0.0462
+    0:00:14    1521.4      0.00       0.0       0.0                              0.0462
+    0:00:14    1521.4      0.00       0.0       0.0                              0.0462
+    0:00:14    1521.4      0.00       0.0       0.0                              0.0462
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+date
+Sun Jun 10 22:31:09 2018
+optimize_netlist -area
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 1143 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+
+  Beginning Area Optimization
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:03    1521.4      0.00       0.0       0.0                              0.0462
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+date
+Sun Jun 10 22:31:16 2018
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 1143 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:02    1519.9      0.00       0.0       0.0                              0.0461
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:02    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:03    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1519.9      0.00       0.0       0.0                              0.0461
+    0:00:04    1518.8      0.00       0.0       0.0                              0.0459
+    0:00:04    1518.8      0.00       0.0       0.0                              0.0459
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+mem -all -verbose
+Multicore compile mem-peak:   465 Mb
+Main process mem-peak:    418 Mb
+Child "J1" called 1 time , mem-peak:    288 Mb
+
+428640
+change_names -hier -rule verilog
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[30]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[29]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[28]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[27]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[26]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[25]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[24]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[23]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[22]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[21]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[20]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[19]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[18]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[17]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[16]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[15]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[11]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[10]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[9]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[8]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[7]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbm0_dat_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[30]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[29]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[28]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[27]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[26]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[25]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[24]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[23]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[22]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[21]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[20]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[19]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[18]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[17]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[16]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[15]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[11]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[10]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[9]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[8]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[7]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_adr_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[30]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[29]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[28]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[27]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[26]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[25]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[24]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[23]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[22]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[21]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[20]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[19]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[18]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[17]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[16]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[15]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[11]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[10]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[9]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[8]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[7]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_dat_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_sel_i[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_sel_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_sel_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_sel_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_cti_i[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_cti_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_cti_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_bte_i[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_bte_i[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design arbiter_dbus, net 'wbs0_we_i' is connecting multiple ports. (UCN-1)
+1
+write_file -hierarchy -format verilog -output "$run_dir/netlist/$design.v"
+Writing verilog file '/home/projects/vlsi/CEP/design/modules/arbiter_dbus/synth/run_dir/netlist/arbiter_dbus.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc "$run_dir/netlist/$design.sdc"
+1
+set_switching_activity -toggle_rate 5 -period 100  -static_probability 0.50 -type inputs
+set_switching_activity applied to 714 selected objects
+1
+propagate_switching_activity
+Warning: Use of propagate_switching_activity is not recommended. This feature will be obsolete in a future release. Check the man page for more information. (PWR-800)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.500000) for the clock net 'wb_clk' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+1
+report_timing -delay max  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_max.rpt
+report_timing -delay min  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_min.rpt
+report_constraint -all_violators -verbose  -nosplit                             > $run_dir/reports/report_constraint.rpt
+check_design -nosplit                                                           > $run_dir/reports/check_design.rpt
+report_design                                                                   > $run_dir/reports/report_design.rpt
+report_area                                                                     > $run_dir/reports/report_area.rpt
+report_timing -loop                                                             > $run_dir/reports/timing_loop.rpt
+report_power -analysis_effort high                                              > $run_dir/reports/report_power.rpt
+report_qor                                                                      > $run_dir/reports/report_qor.rpt
+sh touch ~/$design
+# 
+#
+#
+#  compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+dc_shell> pwd
+/home/projects/vlsi/CEP/design/modules/arbiter_dbus/synth
+dc_shell> exit
+
+Thank you...
+

@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : or1200_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 11:50:58 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+Number of ports:                          604
+Number of nets:                         20438
+Number of cells:                        20216
+Number of combinational cells:          16797
+Number of sequential cells:              3419
+Number of macros/black boxes:               0
+Number of buf/inv:                       2221
+Number of references:                     234
+
+Combinational area:              43600.320219
+Buf/Inv area:                     3165.840094
+Noncombinational area:           27390.240283
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 70990.560503
+Total area:                 undefined
+1

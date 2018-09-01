@@ -1,0 +1,658 @@
+set compile_seqmap_propagate_constants     false
+false
+set compile_seqmap_propagate_high_effort   false
+false
+set compile_enable_register_merging        false
+false
+set write_sdc_output_net_resistance        false
+false
+set timing_separate_clock_gating_group     true
+true
+set_host_options -max_cores 8
+1
+set PROJECT_MODULES [getenv "PROJECT_MODULES"]
+/home/projects/vlsi/CEP/design/modules
+set run_dir  run_dir
+run_dir
+set design md5_top
+md5_top
+set clkin  wb_clk_i
+wb_clk_i
+if {[file exist $run_dir]} {
+sh rm -rf $run_dir
+}
+sh mkdir -p $run_dir/reports
+sh mkdir -p $run_dir/netlist
+set search_path [concat * $search_path]
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver
+sh rm -rf ./work
+define_design_lib WORK -path ./work
+1
+set target_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db}
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db
+set link_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    }
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    
+analyze -library WORK -format sverilog "     $PROJECT_MODULES/top/rtl/orpsoc-defines.v     $PROJECT_MODULES/md5/rtl/pancham.v     $PROJECT_MODULES/md5/rtl/pancham_round.v     $PROJECT_MODULES/md5/rtl/md5_top.v "
+Running PRESTO HDLC
+Compiling source file /home/projects/vlsi/CEP/design/modules/top/rtl/orpsoc-defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/md5/rtl/pancham.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/md5/rtl/pancham_round.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/md5/rtl/md5_top.v
+Presto compilation completed successfully.
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+Information: Using CCS timing libraries. (TIM-024)
+1
+elaborate $design
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/gtech.db'
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c'
+  Loading link library 'RGO_CSM65_25V33_LPE_50C_SS_108_297_125'
+  Loading link library 'USERLIB_ccs_ss_1p08v_1p08v_125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 42 in file
+        '/home/projects/vlsi/CEP/design/modules/md5/rtl/md5_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            64            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 90 in file
+        '/home/projects/vlsi/CEP/design/modules/md5/rtl/md5_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            91            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine md5_top line 42 in file
+                '/home/projects/vlsi/CEP/design/modules/md5/rtl/md5_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      data_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+|    startHash_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  message_reset_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'md5_top'.
+Information: Building the design 'pancham'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/md5/rtl/pancham.v:292: Case statement is not a full case. (ELAB-909)
+
+Statistics for case statements in always block at line 261 in file
+        '/home/projects/vlsi/CEP/design/modules/md5/rtl/pancham.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           292            |    user/user     |
+|           315            |    auto/auto     |
+|           348            |    auto/auto     |
+|           381            |    auto/auto     |
+|           414            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine pancham line 478 in file
+                '/home/projects/vlsi/CEP/design/modules/md5/rtl/pancham.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  msg_out_valid_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine pancham line 484 in file
+                '/home/projects/vlsi/CEP/design/modules/md5/rtl/pancham.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       DD_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       AA_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       BB_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       CC_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine pancham line 493 in file
+                '/home/projects/vlsi/CEP/design/modules/md5/rtl/pancham.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        D_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        A_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        B_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        C_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine pancham line 508 in file
+                '/home/projects/vlsi/CEP/design/modules/md5/rtl/pancham.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      phase_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine pancham line 517 in file
+                '/home/projects/vlsi/CEP/design/modules/md5/rtl/pancham.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'pancham_round'. (HDL-193)
+
+Statistics for case statements in always block at line 82 in file
+        '/home/projects/vlsi/CEP/design/modules/md5/rtl/pancham_round.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            90            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+1
+set_dont_use [get_lib_cells sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c/*X0P*]
+1
+create_clock -name CLK  -period 4  -waveform {0 2} $clkin
+1
+set input_ports [remove_from_collection [all_inputs] {$clkin}]
+Warning: Nothing implicitly matched '$clkin' (SEL-003)
+{wb_adr_i[31] wb_adr_i[30] wb_adr_i[29] wb_adr_i[28] wb_adr_i[27] wb_adr_i[26] wb_adr_i[25] wb_adr_i[24] wb_adr_i[23] wb_adr_i[22] wb_adr_i[21] wb_adr_i[20] wb_adr_i[19] wb_adr_i[18] wb_adr_i[17] wb_adr_i[16] wb_adr_i[15] wb_adr_i[14] wb_adr_i[13] wb_adr_i[12] wb_adr_i[11] wb_adr_i[10] wb_adr_i[9] wb_adr_i[8] wb_adr_i[7] wb_adr_i[6] wb_adr_i[5] wb_adr_i[4] wb_adr_i[3] wb_adr_i[2] wb_adr_i[1] wb_adr_i[0] wb_cyc_i wb_dat_i[31] wb_dat_i[30] wb_dat_i[29] wb_dat_i[28] wb_dat_i[27] wb_dat_i[26] wb_dat_i[25] wb_dat_i[24] wb_dat_i[23] wb_dat_i[22] wb_dat_i[21] wb_dat_i[20] wb_dat_i[19] wb_dat_i[18] wb_dat_i[17] wb_dat_i[16] wb_dat_i[15] wb_dat_i[14] wb_dat_i[13] wb_dat_i[12] wb_dat_i[11] wb_dat_i[10] wb_dat_i[9] wb_dat_i[8] wb_dat_i[7] wb_dat_i[6] wb_dat_i[5] wb_dat_i[4] wb_dat_i[3] wb_dat_i[2] wb_dat_i[1] wb_dat_i[0] wb_sel_i[3] wb_sel_i[2] wb_sel_i[1] wb_sel_i[0] wb_stb_i wb_we_i wb_clk_i wb_rst_i}
+set output_ports [all_outputs]
+{wb_ack_o wb_err_o wb_dat_o[31] wb_dat_o[30] wb_dat_o[29] wb_dat_o[28] wb_dat_o[27] wb_dat_o[26] wb_dat_o[25] wb_dat_o[24] wb_dat_o[23] wb_dat_o[22] wb_dat_o[21] wb_dat_o[20] wb_dat_o[19] wb_dat_o[18] wb_dat_o[17] wb_dat_o[16] wb_dat_o[15] wb_dat_o[14] wb_dat_o[13] wb_dat_o[12] wb_dat_o[11] wb_dat_o[10] wb_dat_o[9] wb_dat_o[8] wb_dat_o[7] wb_dat_o[6] wb_dat_o[5] wb_dat_o[4] wb_dat_o[3] wb_dat_o[2] wb_dat_o[1] wb_dat_o[0] int_o}
+set_input_delay -max 1 [get_ports $input_ports ] -clock CLK
+1
+set_input_delay -min 0 [get_ports $input_ports ] -clock CLK
+1
+set_output_delay -max 1 [get_ports $output_ports ] -clock CLK
+1
+set_output_delay -min 3 [get_ports $output_ports ] -clock CLK
+1
+date
+Sat Jun  2 23:15:49 2018
+#compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -gate_clock
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db"
+Library analysis succeeded.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.2 |     *     |
+| Licensed DW Building Blocks        | M-2016.12-DWBB_201612.2 |     *     |
+============================================================================
+
+
+Information: There are 42 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'md5_top'
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'pancham'
+Information: Added key list 'DesignWare' to design 'pancham'. (DDB-72)
+ Implement Synthetic for 'pancham'.
+  Processing 'md5_top'
+  Processing 'pancham_round'
+ Implement Synthetic for 'pancham_round'.
+Information: Added key list 'DesignWare' to design 'pancham_round'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'pancham_round_DP_OP_62J2_122_6155_3'
+  Mapping 'pancham_round_DP_OP_36_128_3117_1'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:14   26198.6      1.62     182.8       0.1                              0.9222
+    0:01:22   29092.7      1.17     134.2       0.6                              1.1089
+    0:01:22   29092.7      1.17     134.2       0.6                              1.1089
+    0:01:23   29095.2      1.17     134.9       0.6                              1.1093
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:30   28716.5      1.17     135.4       0.5                              1.0831
+    0:01:31   28712.9      1.17     134.4       0.4                              1.0833
+    0:01:32   28723.7      1.16     132.5       0.3                              1.0848
+    0:01:32   28723.7      1.16     132.5       0.3                              1.0848
+    0:01:33   30212.3      1.26     145.8       0.4                              1.1796
+    0:01:34   30212.3      1.26     145.8       0.4                              1.1796
+    0:01:39   31567.7      1.03     118.5       0.4                              1.2687
+    0:01:39   31567.7      1.03     118.5       0.4                              1.2687
+    0:01:42   33235.9      1.14     131.8       0.9                              1.3819
+    0:01:42   33235.9      1.14     131.8       0.9                              1.3819
+    0:01:59   36263.2      0.85      90.5       0.0                              1.5890
+    0:01:59   36263.2      0.85      90.5       0.0                              1.5890
+    0:02:05   38155.3      0.92     102.4       0.1                              1.7137
+    0:02:05   38155.3      0.92     102.4       0.1                              1.7137
+    0:02:13   39515.8      0.78      83.7       0.5                              1.8104
+    0:02:13   39515.8      0.78      83.7       0.5                              1.8104
+    0:02:19   41513.8      0.95     108.5       0.7                              1.9483
+    0:02:19   41513.8      0.95     108.5       0.7                              1.9483
+    0:02:31   43449.1      0.72      78.6       0.6                              2.0864
+    0:02:31   43449.1      0.72      78.6       0.6                              2.0864
+    0:02:40   45629.6      0.90     102.0       0.8                              2.2320
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:40   45629.6      0.90     102.0       0.8                              2.2320
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:02:44   45086.8      0.80      90.2       0.0                              2.1999
+    0:02:50   47346.8      0.91     103.6       0.1                              2.3581
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:50   47346.8      0.91     103.6       0.1                              2.3581
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+    0:03:03   37668.6      0.84      93.4       0.0                              1.6850
+    0:03:07   39634.6      0.98     110.1       0.0                              1.8139
+    0:03:07   39634.6      0.98     110.1       0.0                              1.8139
+    0:03:09   39452.0      0.98     109.9       0.0                              1.7974
+    0:03:09   39452.0      0.98     109.9       0.0                              1.7974
+    0:03:14   41484.6      1.00     113.7       0.0                              1.9445
+    0:03:14   41484.6      1.00     113.7       0.0                              1.9445
+    0:03:15   41672.2      0.93     105.1       0.0                              1.9577
+    0:03:15   41672.2      0.93     105.1       0.0                              1.9577
+    0:03:20   43769.2      1.04     118.3       0.8                              2.1008
+    0:03:20   43769.2      1.04     118.3       0.8                              2.1008
+    0:03:36   45099.7      0.72      76.5       0.0                              2.1878
+    0:03:36   45099.7      0.72      76.5       0.0                              2.1878
+    0:03:43   47393.3      0.85      95.0       0.1                              2.3416
+    0:03:43   47393.3      0.85      95.0       0.1                              2.3416
+    0:03:55   48399.8      0.66      69.9       0.3                              2.4158
+    0:03:55   48399.8      0.66      69.9       0.3                              2.4158
+    0:04:07   50982.1      0.85      93.6       0.7                              2.5981
+    0:04:07   50982.1      0.85      93.6       0.7                              2.5981
+    0:04:18   51512.0      0.66      69.1       0.7                              2.6353
+    0:04:18   51512.0      0.66      69.1       0.7                              2.6353
+    0:04:32   54172.1      0.99     110.0       0.8                              2.8088
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:04:32   54172.1      0.99     110.0       0.8                              2.8088
+    0:04:46   30178.1      1.05     117.0       0.6                              1.1483
+    0:04:52   30804.5      0.88      98.4       0.3 pancham/C_reg[27]/D          1.2010
+    0:04:58   31343.4      0.82      90.7       0.3 pancham/C_reg[27]/D          1.2410
+    0:05:03   31632.5      0.78      86.3       0.3 pancham/C_reg[27]/D          1.2626
+    0:05:08   31929.1      0.75      82.6       0.2 pancham/B_reg[15]/D          1.2840
+    0:05:11   31968.4      0.75      82.2       0.2                              1.2870
+    0:05:12   31945.7      0.75      82.2       0.2                              1.2848
+    0:05:12   31945.7      0.75      82.2       0.2                              1.2848
+    0:05:13   31940.6      0.75      82.1       0.0                              1.2848
+    0:05:16   31760.6      0.75      82.0       0.0 pancham/A_reg[30]/D          1.2726
+    0:05:20   31916.5      0.73      79.6       0.0 pancham/C_reg[27]/D          1.2829
+    0:05:24   32110.9      0.71      77.6       0.0 pancham/A_reg[30]/D          1.2961
+    0:05:27   32234.0      0.70      76.3       0.0 pancham/A_reg[30]/D          1.3045
+    0:05:29   32342.8      0.69      75.3       0.0 pancham/A_reg[30]/D          1.3125
+    0:05:32   32452.2      0.68      73.8       0.0 pancham/D_reg[27]/D          1.3204
+    0:05:35   32538.6      0.67      72.8       0.0 pancham/D_reg[27]/D          1.3265
+    0:05:37   32622.5      0.66      71.7       0.0 pancham/D_reg[27]/D          1.3330
+    0:05:40   32676.1      0.66      71.0       0.0 pancham/B_reg[21]/D          1.3361
+    0:05:43   32774.8      0.65      70.4       0.0 pancham/B_reg[21]/D          1.3431
+    0:05:46   32837.8      0.64      70.1       0.0 pancham/B_reg[21]/D          1.3475
+    0:05:49   32899.7      0.64      69.2       0.0 pancham/C_reg[27]/D          1.3523
+    0:05:52   32955.8      0.63      68.7       0.0 pancham/C_reg[27]/D          1.3565
+    0:05:54   33003.4      0.63      68.4       0.0 pancham/C_reg[27]/D          1.3601
+    0:05:56   33047.6      0.63      68.0       0.0 pancham/C_reg[27]/D          1.3622
+    0:05:59   33105.2      0.62      67.1       0.0 pancham/C_reg[27]/D          1.3661
+    0:06:02   33140.9      0.62      66.7       0.0 pancham/C_reg[27]/D          1.3685
+    0:06:04   33169.0      0.61      66.4       0.0 pancham/C_reg[27]/D          1.3706
+    0:06:07   33217.2      0.62      66.2       0.0 pancham/A_reg[31]/D          1.3747
+    0:06:09   33242.0      0.61      65.8       0.0 pancham/A_reg[26]/D          1.3760
+    0:06:12   33324.5      0.60      65.1       0.0 pancham/C_reg[24]/D          1.3831
+    0:06:14   33355.1      0.60      64.9       0.0 pancham/C_reg[24]/D          1.3852
+    0:06:16   33364.1      0.60      64.5       0.0 pancham/C_reg[24]/D          1.3862
+    0:06:18   33395.4      0.60      64.2       0.0 pancham/C_reg[24]/D          1.3887
+    0:06:21   33417.4      0.59      63.8       0.0 pancham/C_reg[24]/D          1.3906
+    0:06:23   33486.8      0.59      63.4       0.0 pancham/C_reg[24]/D          1.3959
+    0:06:26   33540.5      0.59      62.9       0.0 pancham/C_reg[24]/D          1.3998
+    0:06:28   33587.6      0.58      62.5       0.0 pancham/C_reg[24]/D          1.4026
+    0:06:29   33587.3      0.58      62.3       0.0                              1.4027
+    0:06:36   34792.6      0.59      63.1       0.0                              1.4832
+    0:06:39   34760.2      0.58      61.0       0.0                              1.4808
+    0:06:43   35854.6      0.58      61.8       0.0                              1.5536
+    0:06:55   34030.8      0.58      61.2       0.0                              1.4159
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+date
+Sat Jun  2 23:24:33 2018
+optimize_netlist -area
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 64 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+
+  Beginning Area Optimization
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:03   34030.8      0.58      61.2       0.0                              1.4159
+    0:00:39   32725.8      0.58      60.8       0.0                              1.3329
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+date
+Sat Jun  2 23:25:16 2018
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 64 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:03   32725.8      0.58      60.8       0.0                              1.3329
+    0:00:03   32725.8      0.58      60.8       0.0                              1.3329
+    0:00:04   32674.7      0.58      61.0       0.0                              1.3300
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+    0:00:05   32672.2      0.58      61.0       0.0                              1.3299
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:05   32672.2      0.58      61.0       0.0                              1.3299
+    0:00:06   32672.2      0.58      61.0       0.0                              1.3299
+    0:00:07   32682.2      0.58      60.9       0.0                              1.3309
+    0:00:08   32682.2      0.58      60.9       0.0                              1.3309
+    0:00:11   33711.1      0.59      63.0       0.0                              1.4037
+    0:00:11   33711.1      0.59      63.0       0.0                              1.4037
+    0:00:19   34748.3      0.61      63.9       0.0                              1.4742
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:20   34748.3      0.61      63.9       0.0                              1.4742
+    0:00:27   35752.3      0.57      59.3       0.0                              1.5432
+    0:00:27   35752.7      0.56      59.8       0.0                              1.5433
+    0:00:35   36638.6      0.57      59.6       0.0                              1.6025
+    0:00:35   36638.6      0.57      59.6       0.0                              1.6025
+    0:00:36   36632.9      0.57      60.3       0.0                              1.6019
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:36   36632.9      0.57      60.3       0.0                              1.6019
+    0:00:42   36632.9      0.54      58.8       0.0 pancham/B_reg[30]/D          1.5991
+    0:00:47   36649.1      0.53      57.3       0.0 pancham/C_reg[29]/D          1.5996
+    0:00:52   36678.6      0.52      55.9       0.0 pancham/B_reg[27]/D          1.6012
+    0:00:56   36720.7      0.51      55.2       0.0 pancham/C_reg[29]/D          1.6045
+    0:00:58   36711.4      0.51      55.0       0.0                              1.6039
+    0:01:00   36690.8      0.51      55.0       0.0                              1.6019
+    0:01:00   36690.8      0.51      55.0       0.0                              1.6019
+    0:01:01   37055.2      0.55      59.6       0.0                              1.6268
+    0:01:01   37055.2      0.55      59.6       0.0                              1.6268
+    0:01:10   37929.2      0.54      58.2       0.0                              1.6887
+    0:01:11   37929.2      0.54      58.2       0.0                              1.6887
+    0:01:19   38723.4      0.55      59.2       0.0                              1.7409
+    0:01:19   38723.4      0.55      59.2       0.0                              1.7409
+    0:01:27   39493.4      0.55      58.9       0.0                              1.7931
+    0:01:35   39390.1      0.51      55.5       0.0                              1.7868
+    0:01:37   39397.3      0.52      55.3       0.0                              1.7898
+    0:01:38   39331.8      0.52      55.6       0.0                              1.7822
+    0:01:39   39331.8      0.52      55.6       0.0                              1.7822
+    0:01:39   39426.8      0.53      56.2       0.0                              1.7886
+    0:01:39   39426.8      0.53      56.2       0.0                              1.7886
+    0:01:47   40225.0      0.54      57.9       0.0                              1.8387
+    0:01:47   40225.0      0.54      57.9       0.0                              1.8387
+    0:01:54   40757.4      0.57      61.9       0.0                              1.8724
+    0:01:54   40758.1      0.57      61.9       0.0                              1.8725
+    0:02:02   41364.0      0.57      61.6       0.0                              1.9109
+    0:02:02   41365.8      0.57      62.2       0.0                              1.9111
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:02   41365.8      0.57      62.2       0.0                              1.9111
+    0:02:04   41347.4      0.57      61.9       0.0                              1.9084
+    0:02:07   40756.7      0.57      60.7       0.0                              1.8661
+    0:02:27   33836.8      0.72      75.2       0.0                              1.3953
+    0:02:35   34146.0      0.62      67.1       0.0 pancham/C_reg[27]/D          1.4322
+    0:02:41   34358.0      0.59      63.1       0.0 pancham/D_reg[31]/D          1.4457
+    0:02:48   34486.6      0.56      60.1       0.0 pancham/D_reg[31]/D          1.4550
+    0:02:50   34513.9      0.56      59.9       0.0                              1.4573
+    0:02:52   34483.3      0.56      59.8       0.0                              1.4555
+    0:02:55   34442.6      0.55      59.0       0.0                              1.4533
+    0:02:55   34442.6      0.55      59.0       0.0                              1.4533
+    0:03:00   35356.3      0.59      63.4       0.0                              1.5184
+    0:03:13   33364.1      0.59      62.9       0.0                              1.3853
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+mem -all -verbose
+Multicore compile mem-peak:   883 Mb
+Main process mem-peak:    509 Mb
+Child "J1" called 1 time , mem-peak:    308 Mb
+Child "J2" called 1 time , mem-peak:    292 Mb
+Child "J3" called 1 time , mem-peak:    292 Mb
+Child "J4" called 1 time , mem-peak:    292 Mb
+Child "J14" called 1 time , mem-peak:    371 Mb
+Child "J15" called 1 time , mem-peak:    371 Mb
+Child "J22" called 1 time , mem-peak:    386 Mb
+Child "J30" called 1 time , mem-peak:    386 Mb
+
+521752
+change_names -hier -rule verilog
+Warning: In the design md5_top, net '*Logic0*' is connecting multiple ports. (UCN-1)
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+write_file -hierarchy -format verilog -output "$run_dir/netlist/$design.v"
+Writing verilog file '/home/projects/vlsi/CEP/design/modules/md5/synth/run_dir/netlist/md5_top.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc "$run_dir/netlist/$design.sdc"
+1
+set_switching_activity -toggle_rate 5 -period 100  -static_probability 0.50 -type inputs
+set_switching_activity applied to 73 selected objects
+1
+propagate_switching_activity
+Warning: Use of propagate_switching_activity is not recommended. This feature will be obsolete in a future release. Check the man page for more information. (PWR-800)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.500000) for the clock net 'wb_clk_i' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+1
+report_timing -delay max  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_max.rpt
+report_timing -delay min  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_min.rpt
+report_constraint -all_violators -verbose  -nosplit                             > $run_dir/reports/report_constraint.rpt
+check_design -nosplit                                                           > $run_dir/reports/check_design.rpt
+report_design                                                                   > $run_dir/reports/report_design.rpt
+report_area                                                                     > $run_dir/reports/report_area.rpt
+report_timing -loop                                                             > $run_dir/reports/timing_loop.rpt
+report_power -analysis_effort high                                              > $run_dir/reports/report_power.rpt
+report_qor                                                                      > $run_dir/reports/report_qor.rpt
+sh touch ~/$design
+# 
+#
+#
+#  compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> exit
+
+Thank you...
+

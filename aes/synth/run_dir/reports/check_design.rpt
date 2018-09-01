@@ -1,0 +1,53 @@
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12-SP2
+Date:        Wed Jul  4 09:41:27 2018
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     37
+    Unconnected ports (LINT-28)                                    33
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      3
+--------------------------------------------------------------------------------
+
+Warning: In design 'aes_top', port 'wb_adr_i_31' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_30' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_29' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_28' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_27' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_26' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_25' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_24' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_23' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_22' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_21' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_20' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_19' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_18' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_17' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_16' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_15' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_14' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_13' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_12' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_11' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_10' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_9' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_8' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_7' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_6' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_1' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_adr_i_0' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_cyc_i' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_sel_i_3' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_sel_i_2' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_sel_i_1' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', port 'wb_sel_i_0' is not connected to any nets. (LINT-28)
+Warning: In design 'aes_top', output port 'wb_err_o' is connected directly to output port 'int_o'. (LINT-31)
+Warning: In design 'aes_top', output port 'wb_ack_o' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'aes_top', output port 'wb_err_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'aes_top', output port 'int_o' is connected directly to 'logic 0'. (LINT-52)
+1

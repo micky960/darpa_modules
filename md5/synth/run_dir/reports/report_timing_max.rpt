@@ -1,0 +1,1453 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : md5_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 07:33:43 2018
+****************************************
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_19_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U8799/A0 (OAI21_X3M_A9TH)                                         0.00       3.83 f
+  U8799/Y (OAI21_X3M_A9TH)                                          0.09       3.93 r
+  n4838 (net)                                   1         0.00      0.00       3.93 r
+  U7693/A (XOR2_X3M_A9TH)                                           0.00       3.93 r
+  U7693/Y (XOR2_X3M_A9TH)                                           0.12       4.05 r
+  n5606 (net)                                   4         0.00      0.00       4.05 r
+  U10134/A (NAND2_X1P4M_A9TH)                                       0.00       4.05 r
+  U10134/Y (NAND2_X1P4M_A9TH)                                       0.09       4.14 f
+  n6512 (net)                                   1         0.00      0.00       4.14 f
+  U8436/A (NAND3_X2M_A9TH)                                          0.00       4.14 f
+  U8436/Y (NAND3_X2M_A9TH)                                          0.08       4.22 r
+  n4127 (net)                                   1         0.00      0.00       4.22 r
+  pancham_C_reg_19_/D (DFFQ_X3M_A9TH)                               0.00       4.22 r
+  data arrival time                                                            4.22
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_19_/CK (DFFQ_X3M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.11       3.89
+  data required time                                                           3.89
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.89
+  data arrival time                                                           -4.22
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+  Startpoint: pancham_phase_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: pancham_C_reg_31_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  pancham_phase_reg_2_/CK (DFFQ_X4M_A9TH)                           0.00       0.00 r
+  pancham_phase_reg_2_/Q (DFFQ_X4M_A9TH)                            0.34       0.34 f
+  pancham_phase[2] (net)                        4         0.03      0.00       0.34 f
+  U9461/A (BUFH_X13M_A9TH)                                          0.00       0.34 f
+  U9461/Y (BUFH_X13M_A9TH)                                          0.12       0.46 f
+  n5801 (net)                                   5         0.04      0.00       0.46 f
+  U8051/A (NAND2_X8M_A9TH)                                          0.00       0.46 f
+  U8051/Y (NAND2_X8M_A9TH)                                          0.07       0.53 r
+  n7232 (net)                                   4         0.02      0.00       0.53 r
+  U7971/A (NAND2_X8M_A9TH)                                          0.00       0.53 r
+  U7971/Y (NAND2_X8M_A9TH)                                          0.09       0.62 f
+  n7358 (net)                                   5         0.02      0.00       0.62 f
+  U6821/A (NAND2_X6M_A9TH)                                          0.00       0.62 f
+  U6821/Y (NAND2_X6M_A9TH)                                          0.07       0.69 r
+  n6756 (net)                                   5         0.01      0.00       0.69 r
+  U6791/A (NAND2_X4M_A9TH)                                          0.00       0.69 r
+  U6791/Y (NAND2_X4M_A9TH)                                          0.06       0.75 f
+  n6704 (net)                                   5         0.01      0.00       0.75 f
+  U8111/A (AND2_X2M_A9TH)                                           0.00       0.75 f
+  U8111/Y (AND2_X2M_A9TH)                                           0.12       0.88 f
+  n6726 (net)                                   1         0.00      0.00       0.88 f
+  U6372/A (NOR2_X1P4A_A9TH)                                         0.00       0.88 f
+  U6372/Y (NOR2_X1P4A_A9TH)                                         0.09       0.97 r
+  n6703 (net)                                   1         0.00      0.00       0.97 r
+  U7910/B (NAND2_X4M_A9TH)                                          0.00       0.97 r
+  U7910/Y (NAND2_X4M_A9TH)                                          0.11       1.08 f
+  n6755 (net)                                   4         0.01      0.00       1.08 f
+  U12138/A (XOR2_X4M_A9TH)                                          0.00       1.08 f
+  U12138/Y (XOR2_X4M_A9TH)                                          0.14       1.22 r
+  n9602 (net)                                   5         0.01      0.00       1.22 r
+  U7473/B (XOR2_X4M_A9TH)                                           0.00       1.22 r
+  U7473/Y (XOR2_X4M_A9TH)                                           0.22       1.44 r
+  n7777 (net)                                   3         0.01      0.00       1.44 r
+  U8085/A (XOR2_X3M_A9TH)                                           0.00       1.44 r
+  U8085/Y (XOR2_X3M_A9TH)                                           0.15       1.59 r
+  n14724 (net)                                  1         0.01      0.00       1.59 r
+  U8236/A (XOR2_X4M_A9TH)                                           0.00       1.59 r
+  U8236/Y (XOR2_X4M_A9TH)                                           0.15       1.74 r
+  n5864 (net)                                   2         0.01      0.00       1.74 r
+  U7474/A (NAND2_X3M_A9TH)                                          0.00       1.74 r
+  U7474/Y (NAND2_X3M_A9TH)                                          0.10       1.85 f
+  n10780 (net)                                  3         0.00      0.00       1.85 f
+  U5830/A1 (OAI21_X3M_A9TH)                                         0.00       1.85 f
+  U5830/Y (OAI21_X3M_A9TH)                                          0.12       1.97 r
+  n5516 (net)                                   1         0.00      0.00       1.97 r
+  U7993/B0 (AOI21_X6M_A9TH)                                         0.00       1.97 r
+  U7993/Y (AOI21_X6M_A9TH)                                          0.08       2.05 f
+  n8122 (net)                                   2         0.01      0.00       2.05 f
+  U10167/A (INV_X1M_A9TH)                                           0.00       2.05 f
+  U10167/Y (INV_X1M_A9TH)                                           0.06       2.11 r
+  n5475 (net)                                   1         0.00      0.00       2.11 r
+  U10165/A (NAND2_X1A_A9TH)                                         0.00       2.11 r
+  U10165/Y (NAND2_X1A_A9TH)                                         0.08       2.19 f
+  n5474 (net)                                   1         0.00      0.00       2.19 f
+  U8531/B (NAND3_X2M_A9TH)                                          0.00       2.19 f
+  U8531/Y (NAND3_X2M_A9TH)                                          0.11       2.30 r
+  n10061 (net)                                  1         0.00      0.00       2.30 r
+  U9172/A (XOR2_X3M_A9TH)                                           0.00       2.30 r
+  U9172/Y (XOR2_X3M_A9TH)                                           0.14       2.44 r
+  n11347 (net)                                  6         0.01      0.00       2.44 r
+  U9168/A0 (OAI22_X3M_A9TH)                                         0.00       2.44 r
+  U9168/Y (OAI22_X3M_A9TH)                                          0.16       2.59 f
+  n6907 (net)                                   1         0.00      0.00       2.59 f
+  U5537/A (NOR2_X3A_A9TH)                                           0.00       2.59 f
+  U5537/Y (NOR2_X3A_A9TH)                                           0.13       2.72 r
+  n11518 (net)                                  5         0.01      0.00       2.72 r
+  U10856/A (NAND2_X1A_A9TH)                                         0.00       2.72 r
+  U10856/Y (NAND2_X1A_A9TH)                                         0.11       2.83 f
+  n10075 (net)                                  1         0.00      0.00       2.83 f
+  U11356/B0N (AO21B_X2M_A9TH)                                       0.00       2.83 f
+  U11356/Y (AO21B_X2M_A9TH)                                         0.06       2.89 r
+  n10076 (net)                                  1         0.00      0.00       2.89 r
+  U8529/B0 (AOI31_X2M_A9TH)                                         0.00       2.89 r
+  U8529/Y (AOI31_X2M_A9TH)                                          0.06       2.96 f
+  n6211 (net)                                   1         0.00      0.00       2.96 f
+  U8528/B (NAND3_X2A_A9TH)                                          0.00       2.96 f
+  U8528/Y (NAND3_X2A_A9TH)                                          0.10       3.06 r
+  n6519 (net)                                   1         0.00      0.00       3.06 r
+  U5375/A (NOR3_X2M_A9TH)                                           0.00       3.06 r
+  U5375/Y (NOR3_X2M_A9TH)                                           0.10       3.16 f
+  n15098 (net)                                  1         0.00      0.00       3.16 f
+  U7939/A (NAND2_X4M_A9TH)                                          0.00       3.16 f
+  U7939/Y (NAND2_X4M_A9TH)                                          0.10       3.25 r
+  n5622 (net)                                   3         0.01      0.00       3.25 r
+  U7859/A (NOR2_X4A_A9TH)                                           0.00       3.25 r
+  U7859/Y (NOR2_X4A_A9TH)                                           0.07       3.33 f
+  n12927 (net)                                  2         0.01      0.00       3.33 f
+  U7858/A1 (OAI21_X6M_A9TH)                                         0.00       3.33 f
+  U7858/Y (OAI21_X6M_A9TH)                                          0.10       3.43 r
+  n12941 (net)                                  2         0.01      0.00       3.43 r
+  U9759/A0 (AOI21_X6M_A9TH)                                         0.00       3.43 r
+  U9759/Y (AOI21_X6M_A9TH)                                          0.09       3.52 f
+  n12137 (net)                                  2         0.01      0.00       3.52 f
+  U7770/A0 (OAI21_X6M_A9TH)                                         0.00       3.52 f
+  U7770/Y (OAI21_X6M_A9TH)                                          0.10       3.62 r
+  n8388 (net)                                   3         0.01      0.00       3.62 r
+  U9213/A (NAND2_X6M_A9TH)                                          0.00       3.62 r
+  U9213/Y (NAND2_X6M_A9TH)                                          0.08       3.70 f
+  n6648 (net)                                   2         0.01      0.00       3.70 f
+  U11998/A (NAND2_X8M_A9TH)                                         0.00       3.70 f
+  U11998/Y (NAND2_X8M_A9TH)                                         0.07       3.77 r
+  n6332 (net)                                   1         0.01      0.00       3.77 r
+  U8469/A (INV_X13M_A9TH)                                           0.00       3.77 r
+  U8469/Y (INV_X13M_A9TH)                                           0.06       3.83 f
+  n6689 (net)                                  11         0.04      0.00       3.83 f
+  U7601/A0 (OAI21_X8M_A9TH)                                         0.00       3.83 f
+  U7601/Y (OAI21_X8M_A9TH)                                          0.08       3.91 r
+  n6271 (net)                                   1         0.01      0.00       3.91 r
+  U7434/A (NOR2_X6A_A9TH)                                           0.00       3.91 r
+  U7434/Y (NOR2_X6A_A9TH)                                           0.06       3.97 f
+  n14675 (net)                                  1         0.01      0.00       3.97 f
+  U7432/A (XOR2_X4M_A9TH)                                           0.00       3.97 f
+  U7432/Y (XOR2_X4M_A9TH)                                           0.10       4.07 f
+  n5661 (net)                                   4         0.01      0.00       4.07 f
+  U8143/A (NAND2_X2M_A9TH)                                          0.00       4.07 f
+  U8143/Y (NAND2_X2M_A9TH)                                          0.08       4.15 r
+  n12013 (net)                                  1         0.00      0.00       4.15 r
+  U7970/A (NAND2_X1A_A9TH)                                          0.00       4.15 r
+  U7970/Y (NAND2_X1A_A9TH)                                          0.09       4.23 f
+  n4103 (net)                                   1         0.00      0.00       4.23 f
+  pancham_C_reg_31_/D (DFFQ_X2M_A9TH)                               0.00       4.23 f
+  data arrival time                                                            4.23
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  pancham_C_reg_31_/CK (DFFQ_X2M_A9TH)                              0.00       4.00 r
+  library setup time                                               -0.10       3.90
+  data required time                                                           3.90
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.90
+  data arrival time                                                           -4.23
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.33
+
+
+1

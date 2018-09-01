@@ -1,0 +1,2066 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : ram_wb
+Version: M-2016.12-SP2
+Date   : Thu Jul 12 05:52:06 2018
+****************************************
+
+
+  Startpoint: wbm0_cyc_i (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm0_cyc_i (in)                                         0.00       0.00 r
+  U533/Y (AOI222_X1M_A9TH)                                0.08       0.08 f
+  U470/Y (INV_X1B_A9TH)                                   0.10       0.17 r
+  U627/Y (NAND2_X1M_A9TH)                                 0.09       0.27 f
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CEN (sram_sp_hde_64k)     0.00     0.27 f
+  data arrival time                                                  0.27
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.49       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.27
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[0]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[0] (in)                                      0.00       0.00 r
+  U631/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U634/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[0] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[10]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[10] (in)                                     0.00       0.00 r
+  U663/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U665/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[10] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[11]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[11] (in)                                     0.00       0.00 r
+  U666/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U668/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[11] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[12]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[12] (in)                                     0.00       0.00 r
+  U669/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U671/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[12] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[13]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[13] (in)                                     0.00       0.00 r
+  U672/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U674/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[13] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[14]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[14] (in)                                     0.00       0.00 r
+  U675/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U677/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[14] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[15]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[15] (in)                                     0.00       0.00 r
+  U678/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U680/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[15] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[16]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[16] (in)                                     0.00       0.00 r
+  U681/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U684/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[16] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[17]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[17] (in)                                     0.00       0.00 r
+  U685/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U687/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[17] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[18]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[18] (in)                                     0.00       0.00 r
+  U688/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U690/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[18] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[19]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[19] (in)                                     0.00       0.00 r
+  U691/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U693/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[19] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[1]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[1] (in)                                      0.00       0.00 r
+  U635/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U637/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[1] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[20]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[20] (in)                                     0.00       0.00 r
+  U694/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U696/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[20] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[21]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[21] (in)                                     0.00       0.00 r
+  U697/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U699/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[21] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[22]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[22] (in)                                     0.00       0.00 r
+  U700/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U702/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[22] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[23]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[23] (in)                                     0.00       0.00 r
+  U703/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U705/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[23] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[24]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[24] (in)                                     0.00       0.00 r
+  U706/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U709/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[24] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[25]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[25] (in)                                     0.00       0.00 r
+  U710/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U712/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[25] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[26]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[26] (in)                                     0.00       0.00 r
+  U713/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U715/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[26] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[27]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[27] (in)                                     0.00       0.00 r
+  U716/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U718/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[27] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[28]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[28] (in)                                     0.00       0.00 r
+  U719/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U721/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[28] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[29]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[29] (in)                                     0.00       0.00 r
+  U722/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U724/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[29] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[2]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[2] (in)                                      0.00       0.00 r
+  U638/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U640/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[2] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[30]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[30] (in)                                     0.00       0.00 r
+  U725/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U727/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[30] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[31]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[31] (in)                                     0.00       0.00 r
+  U728/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U730/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[31] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[3]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[3] (in)                                      0.00       0.00 r
+  U641/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U643/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[3] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[4]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[4] (in)                                      0.00       0.00 r
+  U644/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U646/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[4] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[5]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[5] (in)                                      0.00       0.00 r
+  U647/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U649/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[5] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[6]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[6] (in)                                      0.00       0.00 r
+  U650/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U652/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[6] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[7]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[7] (in)                                      0.00       0.00 r
+  U653/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U655/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[7] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[8]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[8] (in)                                      0.00       0.00 r
+  U656/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U659/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[8] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[9]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[9] (in)                                      0.00       0.00 r
+  U660/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U662/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/D[9] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[0]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[0] (in)                                      0.00       0.00 r
+  U631/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U634/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[0] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[10]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[10] (in)                                     0.00       0.00 r
+  U663/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U665/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[10] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[11]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[11] (in)                                     0.00       0.00 r
+  U666/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U668/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[11] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[12]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[12] (in)                                     0.00       0.00 r
+  U669/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U671/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[12] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[13]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[13] (in)                                     0.00       0.00 r
+  U672/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U674/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[13] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[14]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[14] (in)                                     0.00       0.00 r
+  U675/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U677/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[14] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[15]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[15] (in)                                     0.00       0.00 r
+  U678/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U680/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[15] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[16]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[16] (in)                                     0.00       0.00 r
+  U681/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U684/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[16] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[17]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[17] (in)                                     0.00       0.00 r
+  U685/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U687/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[17] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[18]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[18] (in)                                     0.00       0.00 r
+  U688/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U690/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[18] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[19]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[19] (in)                                     0.00       0.00 r
+  U691/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U693/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[19] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[1]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[1] (in)                                      0.00       0.00 r
+  U635/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U637/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[1] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[20]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[20] (in)                                     0.00       0.00 r
+  U694/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U696/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[20] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[21]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[21] (in)                                     0.00       0.00 r
+  U697/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U699/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[21] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[22]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[22] (in)                                     0.00       0.00 r
+  U700/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U702/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[22] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[23]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[23] (in)                                     0.00       0.00 r
+  U703/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U705/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[23] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[24]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[24] (in)                                     0.00       0.00 r
+  U706/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U709/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[24] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[25]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[25] (in)                                     0.00       0.00 r
+  U710/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U712/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[25] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[26]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[26] (in)                                     0.00       0.00 r
+  U713/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U715/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[26] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[27]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[27] (in)                                     0.00       0.00 r
+  U716/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U718/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[27] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[28]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[28] (in)                                     0.00       0.00 r
+  U719/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U721/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[28] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[29]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[29] (in)                                     0.00       0.00 r
+  U722/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U724/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[29] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[2]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[2] (in)                                      0.00       0.00 r
+  U638/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U640/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[2] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[30]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[30] (in)                                     0.00       0.00 r
+  U725/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U727/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[30] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[31]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[31] (in)                                     0.00       0.00 r
+  U728/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U730/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[31] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[3]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[3] (in)                                      0.00       0.00 r
+  U641/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U643/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[3] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[4]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[4] (in)                                      0.00       0.00 r
+  U644/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U646/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[4] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[5]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[5] (in)                                      0.00       0.00 r
+  U647/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U649/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[5] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[6]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[6] (in)                                      0.00       0.00 r
+  U650/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U652/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[6] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[7]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[7] (in)                                      0.00       0.00 r
+  U653/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U655/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[7] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[8]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[8] (in)                                      0.00       0.00 r
+  U656/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U659/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[8] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm1_dat_i[9]
+              (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm1_dat_i[9] (in)                                      0.00       0.00 r
+  U660/Y (AOI22_X1M_A9TH)                                 0.06       0.06 f
+  U662/Y (AOI32_X1M_A9TH)                                 0.14       0.19 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/D[9] (sram_sp_hde_64k)     0.00     0.19 r
+  data arrival time                                                  0.19
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.41       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.22
+
+
+  Startpoint: wbm0_cyc_i (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  wbm0_cyc_i (in)                                         0.00       0.00 r
+  U533/Y (AOI222_X1M_A9TH)                                0.08       0.08 f
+  U470/Y (INV_X1B_A9TH)                                   0.10       0.17 r
+  U629/Y (NAND2_X1M_A9TH)                                 0.10       0.28 f
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CEN (sram_sp_hde_64k)     0.00     0.28 f
+  data arrival time                                                  0.28
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.49       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.28
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.21
+
+
+  Startpoint: wbm1_we_i (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_1__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  wbm1_we_i (in)                                          0.00       0.00 f
+  U478/Y (AOI222_X1M_A9TH)                                0.06       0.06 r
+  U537/Y (OR2_X1M_A9TH)                                   0.24       0.30 r
+  ram_wb_b3_0_genblk1_1__u_sram_inst/WEN (sram_sp_hde_64k)     0.00     0.30 r
+  data arrival time                                                  0.30
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_1__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.34       0.34
+  data required time                                                 0.34
+  --------------------------------------------------------------------------
+  data required time                                                 0.34
+  data arrival time                                                 -0.30
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: wbm1_we_i (input port clocked by CLK)
+  Endpoint: ram_wb_b3_0_genblk1_0__u_sram_inst
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  wbm1_we_i (in)                                          0.00       0.00 f
+  U478/Y (AOI222_X1M_A9TH)                                0.06       0.06 r
+  U537/Y (OR2_X1M_A9TH)                                   0.24       0.30 r
+  ram_wb_b3_0_genblk1_0__u_sram_inst/WEN (sram_sp_hde_64k)     0.00     0.30 r
+  data arrival time                                                  0.30
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ram_wb_b3_0_genblk1_0__u_sram_inst/CLK (sram_sp_hde_64k)     0.00     0.00 r
+  library hold time                                       0.34       0.34
+  data required time                                                 0.34
+  --------------------------------------------------------------------------
+  data required time                                                 0.34
+  data arrival time                                                 -0.30
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+    Pin: ram_wb_b3_0_genblk1_0__u_sram_inst/CLK
+
+    Period              4.00
+  - min_period          4.02
+  ------------------------------
+    Slack              -0.02 (VIOLATED)
+
+
+    Pin: ram_wb_b3_0_genblk1_1__u_sram_inst/CLK
+
+    Period              4.00
+  - min_period          4.02
+  ------------------------------
+    Slack              -0.02 (VIOLATED)
+
+
+1

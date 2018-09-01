@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : ram_wb
+Version: M-2016.12-SP2
+Date   : Thu Jul 12 05:52:06 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+    USERLIB_ccs_ss_1p08v_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db)
+
+Number of ports:                         1103
+Number of nets:                           795
+Number of cells:                          509
+Number of combinational cells:            447
+Number of sequential cells:                60
+Number of macros/black boxes:               2
+Number of buf/inv:                         85
+Number of references:                      41
+
+Combinational area:                969.480019
+Buf/Inv area:                       93.240004
+Noncombinational area:             455.039997
+Macro/Black Box area:           698481.750000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                699906.270015
+Total area:                 undefined
+1

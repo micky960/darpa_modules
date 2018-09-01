@@ -1,0 +1,84 @@
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12-SP2
+Date:        Tue Jul 10 10:35:11 2018
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     68
+    Unconnected ports (LINT-28)                                    64
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      3
+--------------------------------------------------------------------------------
+
+Warning: In design 'gps_top', port 'wb_adr_i_31_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_30_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_29_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_28_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_27_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_26_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_25_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_24_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_23_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_22_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_21_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_20_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_19_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_18_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_17_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_16_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_15_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_14_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_13_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_12_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_11_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_10_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_9_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_8_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_7_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_6_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_1_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_adr_i_0_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_cyc_i' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_31_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_30_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_29_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_28_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_27_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_26_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_25_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_24_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_23_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_22_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_21_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_20_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_19_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_18_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_17_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_16_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_15_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_14_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_13_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_12_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_11_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_10_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_9_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_8_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_7_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_6_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_5_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_4_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_3_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_2_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_dat_i_1_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_sel_i_3_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_sel_i_2_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_sel_i_1_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', port 'wb_sel_i_0_' is not connected to any nets. (LINT-28)
+Warning: In design 'gps_top', output port 'wb_err_o' is connected directly to output port 'int_o'. (LINT-31)
+Warning: In design 'gps_top', output port 'wb_err_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'gps_top', output port 'int_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'gps_top', output port 'wb_ack_o' is connected directly to 'logic 1'. (LINT-52)
+1

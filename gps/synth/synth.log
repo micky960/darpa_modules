@@ -1,0 +1,353 @@
+set compile_seqmap_propagate_constants     false
+false
+set compile_seqmap_propagate_high_effort   false
+false
+set compile_enable_register_merging        false
+false
+set write_sdc_output_net_resistance        false
+false
+set timing_separate_clock_gating_group     true
+true
+set_host_options -max_cores 8
+1
+set PROJECT_MODULES [getenv "PROJECT_MODULES"]
+/home/projects/vlsi/CEP/design/modules
+set run_dir  run_dir_post_lock
+run_dir_post_lock
+set design gps_top
+gps_top
+set clkin  wb_clk_i
+wb_clk_i
+if {[file exist $run_dir]} {
+sh rm -rf $run_dir
+}
+sh mkdir -p $run_dir/reports
+sh mkdir -p $run_dir/netlist
+set search_path [concat * $search_path]
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver
+sh rm -rf ./work
+define_design_lib WORK -path ./work
+1
+set target_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db}
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db
+set link_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    }
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    
+read_verilog -netlist /home/projects/aspdac18/tmax/synth_add_ports_gps_top_RTL/netlist/gps_top_RTL_mod.v
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/gtech.db'
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c'
+  Loading link library 'RGO_CSM65_25V33_LPE_50C_SS_108_297_125'
+  Loading link library 'USERLIB_ccs_ss_1p08v_1p08v_125c'
+  Loading link library 'gtech'
+Loading verilog file '/home/projects/aspdac18/tmax/synth_add_ports_gps_top_RTL/netlist/gps_top_RTL_mod.v'
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /home/projects/aspdac18/tmax/synth_add_ports_gps_top_RTL/netlist/gps_top_RTL_mod.v
+Verilog netlist reader completed successfully.
+Current design is now '/home/projects/aspdac18/tmax/synth_add_ports_gps_top_RTL/netlist/gps_top.db:gps_top'
+Loaded 1 design.
+Current design is 'gps_top'.
+gps_top
+ungroup -all -flatten
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
+set_dont_use [get_lib_cells sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c/*X0P*]
+1
+create_clock -name CLK  -period 4  -waveform {0 2} $clkin
+1
+set input_ports [remove_from_collection [all_inputs] {$clkin}]
+Warning: Nothing implicitly matched '$clkin' (SEL-003)
+{wb_adr_i_5_ wb_adr_i_4_ wb_adr_i_3_ wb_adr_i_2_ wb_dat_i_0_ wb_stb_i wb_we_i wb_clk_i wb_rst_i wb_adr_i_31_ wb_adr_i_30_ wb_adr_i_29_ wb_adr_i_28_ wb_adr_i_27_ wb_adr_i_26_ wb_adr_i_25_ wb_adr_i_24_ wb_adr_i_23_ wb_adr_i_22_ wb_adr_i_21_ wb_adr_i_20_ wb_adr_i_19_ wb_adr_i_18_ wb_adr_i_17_ wb_adr_i_16_ wb_adr_i_15_ wb_adr_i_14_ wb_adr_i_13_ wb_adr_i_12_ wb_adr_i_11_ wb_adr_i_10_ wb_adr_i_9_ wb_adr_i_8_ wb_adr_i_7_ wb_adr_i_6_ wb_adr_i_1_ wb_adr_i_0_ wb_cyc_i wb_dat_i_31_ wb_dat_i_30_ wb_dat_i_29_ wb_dat_i_28_ wb_dat_i_27_ wb_dat_i_26_ wb_dat_i_25_ wb_dat_i_24_ wb_dat_i_23_ wb_dat_i_22_ wb_dat_i_21_ wb_dat_i_20_ wb_dat_i_19_ wb_dat_i_18_ wb_dat_i_17_ wb_dat_i_16_ wb_dat_i_15_ wb_dat_i_14_ wb_dat_i_13_ wb_dat_i_12_ wb_dat_i_11_ wb_dat_i_10_ wb_dat_i_9_ wb_dat_i_8_ wb_dat_i_7_ wb_dat_i_6_ wb_dat_i_5_ wb_dat_i_4_ wb_dat_i_3_ wb_dat_i_2_ wb_dat_i_1_ wb_sel_i_3_ wb_sel_i_2_ wb_sel_i_1_ wb_sel_i_0_ sfllKey_75_ sfllKey_74_ sfllKey_73_ sfllKey_72_ sfllKey_71_ sfllKey_70_ sfllKey_69_ sfllKey_68_ sfllKey_67_ sfllKey_66_ sfllKey_65_ sfllKey_64_ sfllKey_63_ sfllKey_62_ sfllKey_61_ sfllKey_60_ sfllKey_59_ sfllKey_58_ sfllKey_57_ sfllKey_56_ sfllKey_55_ sfllKey_54_ sfllKey_53_ sfllKey_52_ sfllKey_51_ sfllKey_50_ sfllKey_49_ ...}
+set output_ports [all_outputs]
+{wb_dat_o_31_ wb_dat_o_30_ wb_dat_o_29_ wb_dat_o_28_ wb_dat_o_27_ wb_dat_o_26_ wb_dat_o_25_ wb_dat_o_24_ wb_dat_o_23_ wb_dat_o_22_ wb_dat_o_21_ wb_dat_o_20_ wb_dat_o_19_ wb_dat_o_18_ wb_dat_o_17_ wb_dat_o_16_ wb_dat_o_15_ wb_dat_o_14_ wb_dat_o_13_ wb_dat_o_12_ wb_dat_o_11_ wb_dat_o_10_ wb_dat_o_9_ wb_dat_o_8_ wb_dat_o_7_ wb_dat_o_6_ wb_dat_o_5_ wb_dat_o_4_ wb_dat_o_3_ wb_dat_o_2_ wb_dat_o_1_ wb_dat_o_0_ wb_err_o int_o wb_ack_o}
+set_input_delay -max 1 [get_ports $input_ports ] -clock CLK
+1
+set_input_delay -min 0 [get_ports $input_ports ] -clock CLK
+1
+set_output_delay -max 1 [get_ports $output_ports ] -clock CLK
+1
+set_output_delay -min 3 [get_ports $output_ports ] -clock CLK
+1
+date
+Tue Jul 10 10:34:47 2018
+set_switching_activity -toggle_rate 5 -period 100  -static_probability 0.50 -type inputs
+set_switching_activity applied to 229 selected objects
+1
+propagate_switching_activity
+Warning: Use of propagate_switching_activity is not recommended. This feature will be obsolete in a future release. Check the man page for more information. (PWR-800)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.500000) for the clock net 'wb_clk_i' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+1
+report_timing -delay max  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_max.rpt
+report_timing -delay min  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_min.rpt
+report_constraint -all_violators -verbose  -nosplit                             > $run_dir/reports/report_constraint.rpt
+check_design -nosplit                                                           > $run_dir/reports/check_design.rpt
+report_design                                                                   > $run_dir/reports/report_design.rpt
+report_area                                                                     > $run_dir/reports/report_area.rpt
+report_timing -loop                                                             > $run_dir/reports/timing_loop.rpt
+report_power -analysis_effort high                                              > $run_dir/reports/report_power.rpt
+report_qor                                                                      > $run_dir/reports/report_qor.rpt
+sh touch ~/$design
+# 
+#
+#
+#  compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+dc_shell> 
+dc_shell> report_qor
+ 
+****************************************
+Report : qor
+Design : gps_top
+Version: M-2016.12-SP2
+Date   : Tue Jul 10 10:45:11 2018
+****************************************
+
+
+  Timing Path Group 'CLK'
+  -----------------------------------
+  Levels of Logic:               7.00
+  Critical Path Length:          1.39
+  Critical Path Slack:           0.61
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:             145052
+  Buf/Inv Cell Count:           25181
+  Buf Cell Count:                 443
+  Inv Cell Count:               24738
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:    135353
+  Sequential Cell Count:         9699
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   337116.243570
+  Noncombinational Area: 73324.439445
+  Buf/Inv Area:          35696.881199
+  Total Buffer Area:          1128.24
+  Total Inverter Area:       34568.64
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:            410440.683015
+  Design Area:          410440.683015
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:        145217
+  Nets With Violations:           354
+  Max Trans Violations:           322
+  Max Cap Violations:             354
+  -----------------------------------
+
+
+  Hostname: aduae260-lap
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.00
+  Mapping Optimization:                0.00
+  -----------------------------------------
+  Overall Compile Time:                0.00
+  Overall Compile Wall Clock Time:     0.00
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+dc_shell> report_qor
+ 
+****************************************
+Report : qor
+Design : gps_top
+Version: M-2016.12-SP2
+Date   : Tue Jul 10 10:45:46 2018
+****************************************
+
+
+  Timing Path Group 'CLK'
+  -----------------------------------
+  Levels of Logic:               7.00
+  Critical Path Length:          1.39
+  Critical Path Slack:           0.61
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:             145052
+  Buf/Inv Cell Count:           25181
+  Buf Cell Count:                 443
+  Inv Cell Count:               24738
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:    135353
+  Sequential Cell Count:         9699
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   337116.243570
+  Noncombinational Area: 73324.439445
+  Buf/Inv Area:          35696.881199
+  Total Buffer Area:          1128.24
+  Total Inverter Area:       34568.64
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:            410440.683015
+  Design Area:          410440.683015
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:        145217
+  Nets With Violations:           354
+  Max Trans Violations:           322
+  Max Cap Violations:             354
+  -----------------------------------
+
+
+  Hostname: aduae260-lap
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.00
+  Mapping Optimization:                0.00
+  -----------------------------------------
+  Overall Compile Time:                0.00
+  Overall Compile Wall Clock Time:     0.00
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+dc_shell> report_power
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.500000) for the clock net 'wb_clk_i' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : gps_top
+Version: M-2016.12-SP2
+Date   : Tue Jul 10 10:46:05 2018
+****************************************
+
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  =   3.1057 mW   (74%)
+  Net Switching Power  =   1.0991 mW   (26%)
+                         ---------
+Total Dynamic Power    =   4.2048 mW  (100%)
+
+Cell Leakage Power     =  15.9482 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           1.9287            0.2501            1.2789            2.1800  (  51.65%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      1.1770            0.8490           14.6693            2.0407  (  48.35%)
+--------------------------------------------------------------------------------------------------
+Total              3.1056 mW         1.0991 mW        15.9482 uW         4.2207 mW
+1
+dc_shell> report_area
+ 
+****************************************
+Report : area
+Design : gps_top
+Version: M-2016.12-SP2
+Date   : Tue Jul 10 15:16:30 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+Number of ports:                          264
+Number of nets:                        145217
+Number of cells:                       145052
+Number of combinational cells:         135353
+Number of sequential cells:              9699
+Number of macros/black boxes:               0
+Number of buf/inv:                      25181
+Number of references:                     270
+
+Combinational area:             337116.243570
+Buf/Inv area:                    35696.881199
+Noncombinational area:           73324.439445
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                410440.683015
+Total area:                 undefined
+1
+dc_shell> 

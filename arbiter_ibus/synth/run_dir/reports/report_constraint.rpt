@@ -1,0 +1,39 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : arbiter_ibus
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:42:46 2018
+****************************************
+
+
+  Startpoint: wbm_stb_o (input port clocked by CLK)
+  Endpoint: wbm_stb_r_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  wbm_stb_o (in)                           0.00       0.00 f
+  wbm_stb_r_reg/D (DFFQ_X1M_A9TH)          0.00       0.00 f
+  data arrival time                                   0.00
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  wbm_stb_r_reg/CK (DFFQ_X1M_A9TH)         0.00       0.00 r
+  library hold time                        0.04       0.04
+  data required time                                  0.04
+  -----------------------------------------------------------
+  data required time                                  0.04
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.04
+
+
+1

@@ -1,0 +1,344 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : iir_top
+Version: M-2016.12-SP2
+Date   : Tue Jul 10 11:58:29 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: next_reg (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wb_rst_i (in)                                      0.00       0.00 r
+  wb_rst_i (net)               675         0.95      0.00       0.00 r
+  U12041/B1 (OAI22_X1M_A9TH)                         0.00       0.00 r
+  U12041/Y (OAI22_X1M_A9TH)                          0.04       0.04 f
+  n3936 (net)                    1         0.00      0.00       0.04 f
+  next_reg/D (DFFQ_X1M_A9TH)                         0.00       0.04 f
+  data arrival time                                             0.04
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  next_reg/CK (DFFQ_X1M_A9TH)                        0.00       0.00 r
+  library hold time                                  0.02       0.02
+  data required time                                            0.02
+  ---------------------------------------------------------------------
+  data required time                                            0.02
+  data arrival time                                            -0.04
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.02
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: data_In_write_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wb_rst_i (in)                                      0.00       0.00 r
+  wb_rst_i (net)               675         0.95      0.00       0.00 r
+  U12044/B1 (OAI22_X1M_A9TH)                         0.00       0.00 r
+  U12044/Y (OAI22_X1M_A9TH)                          0.04       0.04 f
+  n3935 (net)                    1         0.00      0.00       0.04 f
+  data_In_write_reg/D (DFFQ_X1M_A9TH)                0.00       0.04 f
+  data arrival time                                             0.04
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  data_In_write_reg/CK (DFFQ_X1M_A9TH)               0.00       0.00 r
+  library hold time                                  0.02       0.02
+  data required time                                            0.02
+  ---------------------------------------------------------------------
+  data required time                                            0.02
+  data arrival time                                            -0.04
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.02
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: next_reg (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wb_rst_i (in)                                      0.00       0.00 r
+  wb_rst_i (net)               675         0.95      0.00       0.00 r
+  U12041/B1 (OAI22_X1M_A9TH)                         0.00       0.00 r
+  U12041/Y (OAI22_X1M_A9TH)                          0.06       0.06 f
+  n3936 (net)                    1         0.00      0.00       0.06 f
+  next_reg/D (DFFQ_X1M_A9TH)                         0.00       0.06 f
+  data arrival time                                             0.06
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  next_reg/CK (DFFQ_X1M_A9TH)                        0.00       0.00 r
+  library hold time                                  0.02       0.02
+  data required time                                            0.02
+  ---------------------------------------------------------------------
+  data required time                                            0.02
+  data arrival time                                            -0.06
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.04
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: data_In_write_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wb_rst_i (in)                                      0.00       0.00 r
+  wb_rst_i (net)               675         0.95      0.00       0.00 r
+  U12044/B1 (OAI22_X1M_A9TH)                         0.00       0.00 r
+  U12044/Y (OAI22_X1M_A9TH)                          0.06       0.06 f
+  n3935 (net)                    1         0.00      0.00       0.06 f
+  data_In_write_reg/D (DFFQ_X1M_A9TH)                0.00       0.06 f
+  data arrival time                                             0.06
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  data_In_write_reg/CK (DFFQ_X1M_A9TH)               0.00       0.00 r
+  library hold time                                  0.02       0.02
+  data required time                                            0.02
+  ---------------------------------------------------------------------
+  data required time                                            0.02
+  data arrival time                                            -0.06
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.04
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: next_reg (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wb_rst_i (in)                                      0.00       0.00 r
+  wb_rst_i (net)               675         0.95      0.00       0.00 r
+  U12041/B1 (OAI22_X1M_A9TH)                         0.00       0.00 r
+  U12041/Y (OAI22_X1M_A9TH)                          0.07       0.07 f
+  n3936 (net)                    1         0.00      0.00       0.07 f
+  next_reg/D (DFFQ_X1M_A9TH)                         0.00       0.07 f
+  data arrival time                                             0.07
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  next_reg/CK (DFFQ_X1M_A9TH)                        0.00       0.00 r
+  library hold time                                  0.02       0.02
+  data required time                                            0.02
+  ---------------------------------------------------------------------
+  data required time                                            0.02
+  data arrival time                                            -0.07
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.05
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: data_In_write_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wb_rst_i (in)                                      0.00       0.00 r
+  wb_rst_i (net)               675         0.95      0.00       0.00 r
+  U12044/B1 (OAI22_X1M_A9TH)                         0.00       0.00 r
+  U12044/Y (OAI22_X1M_A9TH)                          0.07       0.07 f
+  n3935 (net)                    1         0.00      0.00       0.07 f
+  data_In_write_reg/D (DFFQ_X1M_A9TH)                0.00       0.07 f
+  data arrival time                                             0.07
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  data_In_write_reg/CK (DFFQ_X1M_A9TH)               0.00       0.00 r
+  library hold time                                  0.02       0.02
+  data required time                                            0.02
+  ---------------------------------------------------------------------
+  data required time                                            0.02
+  data arrival time                                            -0.07
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.05
+
+
+  Startpoint: wb_dat_i[12]
+              (input port clocked by CLK)
+  Endpoint: data_In_data_reg_12_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[12] (in)                                                 0.00       0.00 f
+  wb_dat_i[12] (net)                            3         0.00      0.00       0.00 f
+  U12136/A (INV_X1B_A9TH)                                           0.00       0.00 f
+  U12136/Y (INV_X1B_A9TH)                                           0.02       0.02 r
+  n10828 (net)                                  1         0.00      0.00       0.02 r
+  U12137/B0 (OAI22_X1M_A9TH)                                        0.00       0.02 r
+  U12137/Y (OAI22_X1M_A9TH)                                         0.05       0.07 f
+  n3883 (net)                                   1         0.00      0.00       0.07 f
+  data_In_data_reg_12_/D (DFFQ_X1M_A9TH)                            0.00       0.07 f
+  data arrival time                                                            0.07
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  data_In_data_reg_12_/CK (DFFQ_X1M_A9TH)                           0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.07
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.06
+
+
+  Startpoint: wb_dat_i[11]
+              (input port clocked by CLK)
+  Endpoint: data_In_data_reg_11_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[11] (in)                                                 0.00       0.00 f
+  wb_dat_i[11] (net)                            3         0.00      0.00       0.00 f
+  U12139/A (INV_X1B_A9TH)                                           0.00       0.00 f
+  U12139/Y (INV_X1B_A9TH)                                           0.02       0.02 r
+  n10830 (net)                                  1         0.00      0.00       0.02 r
+  U12140/B0 (OAI22_X1M_A9TH)                                        0.00       0.02 r
+  U12140/Y (OAI22_X1M_A9TH)                                         0.05       0.07 f
+  n3882 (net)                                   1         0.00      0.00       0.07 f
+  data_In_data_reg_11_/D (DFFQ_X1M_A9TH)                            0.00       0.07 f
+  data arrival time                                                            0.07
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  data_In_data_reg_11_/CK (DFFQ_X1M_A9TH)                           0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.07
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.06
+
+
+  Startpoint: wb_dat_i[10]
+              (input port clocked by CLK)
+  Endpoint: data_In_data_reg_10_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[10] (in)                                                 0.00       0.00 f
+  wb_dat_i[10] (net)                            3         0.00      0.00       0.00 f
+  U12142/A (INV_X1B_A9TH)                                           0.00       0.00 f
+  U12142/Y (INV_X1B_A9TH)                                           0.02       0.02 r
+  n10832 (net)                                  1         0.00      0.00       0.02 r
+  U12143/B0 (OAI22_X1M_A9TH)                                        0.00       0.02 r
+  U12143/Y (OAI22_X1M_A9TH)                                         0.05       0.07 f
+  n3881 (net)                                   1         0.00      0.00       0.07 f
+  data_In_data_reg_10_/D (DFFQ_X1M_A9TH)                            0.00       0.07 f
+  data arrival time                                                            0.07
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  data_In_data_reg_10_/CK (DFFQ_X1M_A9TH)                           0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.07
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.06
+
+
+  Startpoint: wb_dat_i[5]
+              (input port clocked by CLK)
+  Endpoint: data_In_data_reg_5_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[5] (in)                                                  0.00       0.00 f
+  wb_dat_i[5] (net)                             3         0.00      0.00       0.00 f
+  U12157/A (INV_X1B_A9TH)                                           0.00       0.00 f
+  U12157/Y (INV_X1B_A9TH)                                           0.02       0.02 r
+  n10842 (net)                                  1         0.00      0.00       0.02 r
+  U12158/B0 (OAI22_X1M_A9TH)                                        0.00       0.02 r
+  U12158/Y (OAI22_X1M_A9TH)                                         0.05       0.07 f
+  n3876 (net)                                   1         0.00      0.00       0.07 f
+  data_In_data_reg_5_/D (DFFQ_X1M_A9TH)                             0.00       0.07 f
+  data arrival time                                                            0.07
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  data_In_data_reg_5_/CK (DFFQ_X1M_A9TH)                            0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.07
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.06
+
+
+1

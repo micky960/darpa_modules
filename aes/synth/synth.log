@@ -1,0 +1,323 @@
+dc_shell> create_port -help
+Usage: create_port    # create port
+        [-direction dir]       (in, out, or inout; default is 'in')
+        name_list              (list of new port names to create)
+dc_shell> mans connect_logic_net
+Error: unknown command 'mans' (CMD-005)
+dc_shell> man connect_logic_net
+2.  Synopsys Commands                                        Command Reference
+                               connect_logic_net
+
+NAME
+       connect_logic_net
+              Connects a logic net to logic ports in a UPF description.
+
+SYNTAX
+       status connect_logic_net
+               net_name
+               -ports port_list
+               [-reconnect]
+
+   Data Types
+       net_name      string
+       port_list     list
+
+ARGUMENTS
+       net_name
+              Specifies the net name. You must use a simple name.
+
+       -ports port_list
+              Specifies  the  ports connected to the net. The ports must be on
+              the interface of the active UPF scope or on the design  elements
+              that are located in the active scope and its descendants.
+
+       -reconnect reconnect
+              Allows  a  port that is already connected to a net to be discon-
+              nected from the existing net and connected to the  newly  speci-
+              fied net.
+
+DESCRIPTION
+       This  command  connects a logic net to the specified ports.  The net is
+       propagated through implicitly created ports  and  nets  throughout  the
+       logic  hierarchy  in  the  descendant tree of the active UPF scope. The
+       connection from the specified net in the active UPF scope to  any  ele-
+       ment  in  the  port list cannot cross any power-domain boundaries.  The
+       -reconnect option disconnects any existing net from the specified  port
+       and  connects  the  newly specified net to all the ports present in the
+       port_list.
+
+   Multicorner-Multimode Support
+       This command has no dependency on scenario-specific information.
+
+SEE ALSO
+       create_logic_port(2)
+       create_logic_net(2)
+
+                                Version
+            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
+dc_shell> man connect_supply_net
+2.  Synopsys Commands                                        Command Reference
+                              connect_supply_net
+
+NAME
+       connect_supply_net
+              Connects the supply net to specified supply ports and pins.
+
+SYNTAX
+       status connect_supply_net
+               supply_net_name
+               -ports list
+               [-vct vct_name]
+
+   Data Types
+       supply_net_name     string
+       list                list
+       vct_name            string
+
+ARGUMENTS
+       supply_net_name
+              Specifies the name of the supply net to be connected, which must
+              be an existing simple (nonhierarchical) supply net name.
+
+       -ports list
+              Specifies the supply ports or pins that are to be connected with
+              the  supply net.  Each item in the list is the hierarchical name
+              of a supply port or pin.
+
+       -vct vct_name
+              Specifies the value conversion table (VCT) to be  used  in  this
+              connection.
+
+              The  tool  supports  only the following 14 predefined VCT names:
+              UPF2VHDL_SL   ;    UPF_GNDZERO2VHDL_SL    ;    UPF2SV_LOGIC    ;
+              UPF_GNDZERO2SV_LOGIC  ; VHDL_TIED_HI ; SV_TIED_HI ; VHDL_TIED_LO
+              ; SV_TIED_LO ; VHDL_SL2UPF ; VHDL_SL2UPF_GNDZERO ;  SV_LOGIC2UPF
+              ;       SV_LOGIC2UPF_GNDZERO       ;      SV_LOGIC2UPF_MD      ;
+              SV_LOGIC2UPF_GNDZERO_MD.
+
+DESCRIPTION
+       The connect_supply_net command makes an explicit connection of a supply
+       net  to specified supply ports or pins. It overrides (has higher prece-
+       dence than) the automatic connection  semantics  that  might  otherwise
+       apply.
+
+       If a design element is not connected explicitly to any supply net using
+       the connect_supply_net command, it shares the primary power  or  ground
+       supply net with the power domain to which it belongs.
+
+       Before  they  can  be  connected, the supply net must be created in the
+       same power domain as the supply port.  The instance that  contains  the
+       pin must also be in the extent of the same power domain.
+
+       The command can be used to connect a supply net to bias pins. Bias pins
+       that meet following conditions are supported:
+
+        o The bias pin is from a macro cell
+
+        o The bias pin direction is "input" or "inout"
+
+        o The bias pin physical_connection is "routing_pin"
+
+   Multicorner-Multimode Support
+       This command has no dependency on scenario-specific information.
+
+EXAMPLES
+       The following example connects a supply net named VSS with  the  supply
+       port VSS:
+
+         prompt> create_power_domain PD1 -elements INST_1
+         PD1
+         prompt> create_supply_net VSS -domain PD1
+         VSS
+         prompt> create_supply_port VSS -domain PD1
+         VSS
+         prompt> connect_supply_net VSS -ports VSS
+         1
+
+       The  following  example shows how to connect a supply set with a supply
+       port:
+
+         prompt> connect_supply_net sset.power -ports VDD
+         1
+         prompt> connect_supply_net sset.ground -ports VSS
+         1
+
+SEE ALSO
+       create_supply_net(2)
+       report_supply_net(2)
+
+                                Version
+            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
+dc_shell> 
+dc_shell> man connect_net
+2.  Synopsys Commands                                        Command Reference
+                                  connect_net
+
+NAME
+       connect_net
+              Connects the specified net to the specified pins or ports.
+
+SYNTAX
+       status connect_net
+               net
+               object_list
+
+   Data Types
+       net             string
+       object_list     list
+
+ARGUMENTS
+       net    Specifies  the net to connect.  The net must be a scalar (single
+              bit) net, and must exist in the current design.
+
+       object_list
+              Specifies a list of pins and ports to which the  net  is  to  be
+              connected.   Pins  and  ports  must  be at the same hierarchical
+              level as the specified  net,  and  must  exist  in  the  current
+              design.   If  a  specified pin or port is already connected, the
+              tool issues an error message.
+
+DESCRIPTION
+       This command connects a net to the specified pins or ports at the  same
+       hierarchical  level.   The net can be at any level of hierarchy but the
+       pins or ports must be at the same level.  A net  can  be  connected  to
+       many  pins  or ports; however, you cannot connect a pin or port to more
+       than one net.
+
+       To disconnect objects on a net, use the disconnect_net command.
+
+       To display pins and ports on a net, use  either  the  all_connected  or
+       get_nets -of $net command.
+
+   Multicorner-Multimode Support
+       This command has no dependency on scenario-specific information.
+
+EXAMPLES
+       The  following example uses connect_net to connect net NET0 to ports A1
+       and A2 and pin U1/A.  The all_connected  command  returns  the  objects
+       connected to net NET0.
+
+         prompt> connect_net NET0 [get_ports {A1 A2}]
+
+         prompt> connect_net NET0 [get_pins U1/A]
+
+         prompt> all_connected NET0
+         {A1 A2 U1/A}
+
+       The  following  example  shows  the  error  message  generated when you
+       attempt to connect a pin or port to more than one net:
+
+         prompt> connect_net MY_NET_1 PORT1
+         Connecting net 'MY_NET_1' to port 'PORT1'.
+
+         prompt> connect_net MY_NET_2 PORT1
+         Error: Object 'PORT1' is already connected to net 'MY_NET_1'.
+
+       The following example shows how connect_net  is  used  to  connect  the
+       U1/MY_NET net to the U1/MY_PORT port:
+
+         prompt> connect_net U1/MY_NET U1/MY_PORT
+
+SEE ALSO
+       all_connected(2)
+       create_net(2)
+       current_design(2)
+       disconnect_net(2)
+       remove_net(2)
+
+                                Version
+            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> help *tie*
+ all_tieoff_cells     # Returns all tieoff cells
+ report_direct_power_rail_tie # report_direct_power_rail_tie
+ set_direct_power_rail_tie # set_direct_power_rail_tie
+dc_shell> man all_tieoff_cells
+2.  Synopsys Commands                                        Command Reference
+                               all_tieoff_cells
+
+NAME
+       all_tieoff_cells
+              Returns  a collection of all tie-off cells in the current design
+              or in the input collection.
+
+SYNTAX
+       collection all_tieoff_cells
+               [input_coll]
+
+   Data Types
+       input_coll     collection
+
+ARGUMENTS
+       input_coll
+              Searches the specified input collection and returns a collection
+              of tie-off cells.  Objects are to be searched only from the con-
+              tent of the specified input collection,  rather  than  from  the
+              design.
+
+DESCRIPTION
+       The  all_tieoff_cells command returns a collection of all tie-off cells
+       from the current design.  The tool searches the entire  design  hierar-
+       chy.   It  returns  tie-off cells from the entire design, not just from
+       the top level.
+
+       Tie-off cells are the constant cells that the tool  introduced  in  the
+       design.   To  find  the  value of a tie-off cell, the tool examines the
+       corresponding lib_cell of each cell to determine if it  is  logic-0  or
+       logic-1.
+
+       If you specify a value for input_coll, the command searches for tie-off
+       cells or nets only from the specified collection, rather than from  the
+       entire design.
+
+       This  command  returns  a  standard Tcl collection.  All of the generic
+       collection  manipulating  commands,  such   as   foreach_in_collection,
+       sizeof_collection, and so on, can be performed on this collection.
+
+   Multicorner-Multimode Support
+       This command has no dependency on scenario-specific information.
+
+EXAMPLES
+       The  following  example  returns a collection of all tie-off cells from
+       the design:
+
+         prompt> all_tieoff_cells
+         {logic1 logic0}
+
+       The following example returns a collection of all tie-off cells from an
+       existing collection stored in $COLL:
+
+         prompt> all_tieoff_cells $COLL
+         {logic1}
+
+SEE ALSO
+       foreach_in_collection(2)
+       sizeof_collection(2)
+
+                                Version
+            Copyright (c) 2017 Synopsys, Inc. All rights reserved.
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> exit
+
+Thank you...
+

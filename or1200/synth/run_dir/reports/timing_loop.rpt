@@ -1,0 +1,17 @@
+ 
+****************************************
+Report : timing
+        -loops
+        -max_paths 1
+Design : or1200_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 11:50:58 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+No loops.
+
+1

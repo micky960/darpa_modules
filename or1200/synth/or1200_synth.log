@@ -1,0 +1,291 @@
+set compile_seqmap_propagate_constants     false
+false
+set compile_seqmap_propagate_high_effort   false
+false
+set compile_enable_register_merging        false
+false
+set write_sdc_output_net_resistance        false
+false
+set timing_separate_clock_gating_group     true
+true
+set_host_options -max_cores 8
+1
+set PROJECT_MODULES [getenv "PROJECT_MODULES"]
+/home/projects/vlsi/CEP/design/modules
+set run_dir  run_dir
+run_dir
+set design or1200_top
+or1200_top
+set clkin  clk_i
+clk_i
+if {[file exist $run_dir]} {
+sh rm -rf $run_dir
+}
+sh mkdir -p $run_dir/reports
+sh mkdir -p $run_dir/netlist
+set search_path [concat * $search_path]
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver
+sh rm -rf ./work
+define_design_lib WORK -path ./work
+1
+set target_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db}
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db
+set link_library {   /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                       /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                           /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    }
+   /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                       /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                           /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    
+analyze -library WORK -format sverilog "     $PROJECT_MODULES/top/rtl/orpsoc-defines.v     $PROJECT_MODULES/or1200/rtl/or1200_defines.v     $PROJECT_MODULES/or1200/rtl/or1200_alu.v     $PROJECT_MODULES/or1200/rtl/or1200_amultp2_32x32.v     $PROJECT_MODULES/or1200/rtl/or1200_cfgr.v     $PROJECT_MODULES/or1200/rtl/or1200_cpu.v     $PROJECT_MODULES/or1200/rtl/or1200_ctrl.v     $PROJECT_MODULES/or1200/rtl/or1200_dc_fsm.v     $PROJECT_MODULES/or1200/rtl/or1200_dc_ram.v     $PROJECT_MODULES/or1200/rtl/or1200_dc_tag.v     $PROJECT_MODULES/or1200/rtl/or1200_dc_top.v     $PROJECT_MODULES/or1200/rtl/or1200_dmmu_tlb.v     $PROJECT_MODULES/or1200/rtl/or1200_dmmu_top.v     $PROJECT_MODULES/or1200/rtl/or1200_dpram.v     $PROJECT_MODULES/or1200/rtl/or1200_dpram_256x32.v     $PROJECT_MODULES/or1200/rtl/or1200_dpram_32x32.v     $PROJECT_MODULES/or1200/rtl/or1200_du.v     $PROJECT_MODULES/or1200/rtl/or1200_except.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_addsub.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_arith.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_div.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_fcmp.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_intfloat_conv.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_intfloat_conv_except.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_mul.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_post_norm_addsub.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_post_norm_div.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_post_norm_intfloat_conv.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_post_norm_mul.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_pre_norm_addsub.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_pre_norm_div.v     $PROJECT_MODULES/or1200/rtl/or1200_fpu_pre_norm_mul.v     $PROJECT_MODULES/or1200/rtl/or1200_freeze.v     $PROJECT_MODULES/or1200/rtl/or1200_genpc.v     $PROJECT_MODULES/or1200/rtl/or1200_gmultp2_32x32.v     $PROJECT_MODULES/or1200/rtl/or1200_ic_fsm.v     $PROJECT_MODULES/or1200/rtl/or1200_ic_ram.v     $PROJECT_MODULES/or1200/rtl/or1200_ic_tag.v     $PROJECT_MODULES/or1200/rtl/or1200_ic_top.v     $PROJECT_MODULES/or1200/rtl/or1200_if.v     $PROJECT_MODULES/or1200/rtl/or1200_immu_tlb.v     $PROJECT_MODULES/or1200/rtl/or1200_immu_top.v     $PROJECT_MODULES/or1200/rtl/or1200_iwb_biu.v     $PROJECT_MODULES/or1200/rtl/or1200_lsu.v     $PROJECT_MODULES/or1200/rtl/or1200_mem2reg.v     $PROJECT_MODULES/or1200/rtl/or1200_mult_mac.v     $PROJECT_MODULES/or1200/rtl/or1200_operandmuxes.v     $PROJECT_MODULES/or1200/rtl/or1200_pic.v     $PROJECT_MODULES/or1200/rtl/or1200_pm.v     $PROJECT_MODULES/or1200/rtl/or1200_qmem_top.v     $PROJECT_MODULES/or1200/rtl/or1200_reg2mem.v     $PROJECT_MODULES/or1200/rtl/or1200_rf.v     $PROJECT_MODULES/or1200/rtl/or1200_rfram_generic.v     $PROJECT_MODULES/or1200/rtl/or1200_sb.v     $PROJECT_MODULES/or1200/rtl/or1200_sb_fifo.v     $PROJECT_MODULES/or1200/rtl/or1200_spram.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_1024x32.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_1024x32_bw.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_1024x8.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_128x32.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_2048x32.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_2048x32_bw.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_2048x8.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_256x21.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_32_bw.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_32x24.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_512x20.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_64x14.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_64x22.v     $PROJECT_MODULES/or1200/rtl/or1200_spram_64x24.v     $PROJECT_MODULES/or1200/rtl/or1200_sprs.v     $PROJECT_MODULES/or1200/rtl/or1200_tpram_32x32.v     $PROJECT_MODULES/or1200/rtl/or1200_tt.v     $PROJECT_MODULES/or1200/rtl/or1200_wb_biu.v     $PROJECT_MODULES/or1200/rtl/or1200_wbmux.v     $PROJECT_MODULES/or1200/rtl/or1200_xcv_ram32x8d.v     $PROJECT_MODULES/or1200/rtl/or1200_top.v "
+Running PRESTO HDLC
+Compiling source file /home/projects/vlsi/CEP/design/modules/top/rtl/orpsoc-defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_alu.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_amultp2_32x32.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_cfgr.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_cpu.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_cpu.v:305: port spr_dat_npc have inconsistent declarations. (VER-151)
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_ctrl.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dc_fsm.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dc_ram.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dc_tag.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dc_top.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dmmu_tlb.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dmmu_top.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dpram.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dpram_256x32.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dpram.v:128: The statements in initial blocks are ignored. (VER-281)
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_dpram_32x32.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_du.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_du.v:450: port spr_dat_o have inconsistent declarations. (VER-151)
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_except.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_addsub.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_arith.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_div.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_fcmp.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_intfloat_conv.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_intfloat_conv_except.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_mul.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_post_norm_addsub.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_post_norm_div.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_post_norm_intfloat_conv.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_post_norm_mul.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_pre_norm_addsub.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_pre_norm_div.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_fpu_pre_norm_mul.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_freeze.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_genpc.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_gmultp2_32x32.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_ic_fsm.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_ic_ram.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_ic_tag.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_ic_top.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_if.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_immu_tlb.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_immu_top.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_immu_top.v:153: port icpu_adr_o have inconsistent declarations. (VER-151)
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_iwb_biu.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Information:  /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_iwb_biu.v:60: List () of one, unnamed, port is ignored. (VER-988)
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_lsu.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_mem2reg.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_mult_mac.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_operandmuxes.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_pic.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_pm.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_qmem_top.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_reg2mem.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_rf.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_rfram_generic.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_sb.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_sb_fifo.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_1024x32.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Warning:  /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram.v:121: The statements in initial blocks are ignored. (VER-281)
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_1024x32_bw.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_1024x8.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_128x32.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_2048x32.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_2048x32_bw.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_2048x8.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_256x21.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_32_bw.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_32x24.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_512x20.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_64x14.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_64x22.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_spram_64x24.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_sprs.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_tpram_32x32.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_tt.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_wb_biu.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_wbmux.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_xcv_ram32x8d.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_top.v
+Opening include file /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_defines.v
+Error:  /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_top.v:119: Symbol orp_sfll_key not included in portlist (VER-149)
+Error:  /home/projects/vlsi/CEP/design/modules/or1200/rtl/or1200_top.v:120: Symbol orp_fll_key not included in portlist (VER-149)
+*** Presto compilation terminated with 2 errors. ***
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+Information: Using CCS timing libraries. (TIM-024)
+0
+elaborate $design
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/gtech.db'
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c'
+  Loading link library 'RGO_CSM65_25V33_LPE_50C_SS_108_297_125'
+  Loading link library 'USERLIB_ccs_ss_1p08v_1p08v_125c'
+  Loading link library 'gtech'
+Error: Cannot find the design 'or1200_top' in the library 'WORK'. (LBR-0)
+0
+ungroup -all -flatten
+Error: Current design is not defined. (UID-4)
+0
+set_dont_use [get_lib_cells sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c/*X0P*]
+1
+create_clock -name CLK  -period 4  -waveform {0 2} $clkin
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'clk_i'. (UID-109)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+0
+set input_ports [remove_from_collection [all_inputs] {$clkin}]
+Error: Current design is not defined. (UID-4)
+set output_ports [all_outputs]
+Error: Current design is not defined. (UID-4)
+set_input_delay -max 1 [get_ports $input_ports ] -clock CLK
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'CLK'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+set_input_delay -min 0 [get_ports $input_ports ] -clock CLK
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'CLK'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+set_output_delay -max 1 [get_ports $output_ports ] -clock CLK
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'CLK'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+set_output_delay -min 3 [get_ports $output_ports ] -clock CLK
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'CLK'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+date
+Wed Jul  4 07:33:51 2018
+#compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -gate_clock
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Error: Current design is not defined. (UID-4)
+0
+date
+Wed Jul  4 07:33:51 2018
+optimize_netlist -area
+Error: Current design is not defined. (UID-4)
+0
+date
+Wed Jul  4 07:33:51 2018
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Error: Current design is not defined. (UID-4)
+0
+mem -all -verbose
+Main process mem-peak:    248 Mb
+No child process
+
+254268
+change_names -hier -rule verilog
+Error: Current design is not defined. (UID-4)
+0
+write_file -hierarchy -format verilog -output "$run_dir/netlist/$design.v"
+Error: No files or designs were specified. (UID-22)
+0
+write_sdc "$run_dir/netlist/$design.sdc"
+Error: Current design is not defined. (UID-4)
+0
+set_switching_activity -toggle_rate 5 -period 100  -static_probability 0.50 -type inputs
+Error: Current design is not defined. (UID-4)
+0
+propagate_switching_activity
+Warning: Use of propagate_switching_activity is not recommended. This feature will be obsolete in a future release. Check the man page for more information. (PWR-800)
+Error: Current design is not defined. (UID-4)
+0
+report_timing -delay max  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_max.rpt
+report_timing -delay min  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_min.rpt
+report_constraint -all_violators -verbose  -nosplit                             > $run_dir/reports/report_constraint.rpt
+check_design -nosplit                                                           > $run_dir/reports/check_design.rpt
+report_design                                                                   > $run_dir/reports/report_design.rpt
+report_area                                                                     > $run_dir/reports/report_area.rpt
+report_timing -loop                                                             > $run_dir/reports/timing_loop.rpt
+report_power -analysis_effort high                                              > $run_dir/reports/report_power.rpt
+report_qor                                                                      > $run_dir/reports/report_qor.rpt
+sh touch ~/$design
+exit
+
+Thank you...

@@ -1,0 +1,361 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : sha256_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 08:59:01 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: sha256_w_mem_inst_sha256_w_mem_ctrl_reg_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               24         0.03      0.00       0.00 r
+  U13135/A (NOR2_X1M_A9TH)                                          0.00       0.00 r
+  U13135/Y (NOR2_X1M_A9TH)                                          0.03       0.03 f
+  n4088 (net)                                   1         0.00      0.00       0.03 f
+  sha256_w_mem_inst_sha256_w_mem_ctrl_reg_reg_1_/D (DFFQ_X1M_A9TH)     0.00     0.03 f
+  data arrival time                                                            0.03
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  sha256_w_mem_inst_sha256_w_mem_ctrl_reg_reg_1_/CK (DFFQ_X1M_A9TH)     0.00     0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: sha256_w_mem_inst_sha256_w_mem_ctrl_reg_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_rst_i (in)                                                     0.00       0.00 f
+  wb_rst_i (net)                               24         0.03      0.00       0.00 f
+  U13135/A (NOR2_X1M_A9TH)                                          0.00       0.00 f
+  U13135/Y (NOR2_X1M_A9TH)                                          0.05       0.05 r
+  n4088 (net)                                   1         0.00      0.00       0.05 r
+  sha256_w_mem_inst_sha256_w_mem_ctrl_reg_reg_1_/D (DFFQ_X1M_A9TH)     0.00     0.05 r
+  data arrival time                                                            0.05
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  sha256_w_mem_inst_sha256_w_mem_ctrl_reg_reg_1_/CK (DFFQ_X1M_A9TH)     0.00     0.00 r
+  library hold time                                                -0.06      -0.06
+  data required time                                                          -0.06
+  ------------------------------------------------------------------------------------
+  data required time                                                          -0.06
+  data arrival time                                                           -0.05
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.11
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: newMessage_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 f
+  wb_rst_i (in)                                      0.00       0.00 f
+  wb_rst_i (net)                24         0.03      0.00       0.00 f
+  U7904/B0 (AOI21_X1M_A9TH)                          0.00       0.00 f
+  U7904/Y (AOI21_X1M_A9TH)                           0.07       0.07 r
+  n7000 (net)                    3         0.00      0.00       0.07 r
+  U7908/B0 (AOI22_X1M_A9TH)                          0.00       0.07 r
+  U7908/Y (AOI22_X1M_A9TH)                           0.09       0.16 f
+  n4089 (net)                    1         0.00      0.00       0.16 f
+  newMessage_reg/D (DFFQ_X1M_A9TH)                   0.00       0.16 f
+  data arrival time                                             0.16
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  newMessage_reg/CK (DFFQ_X1M_A9TH)                  0.00       0.00 r
+  library hold time                                  0.01       0.01
+  data required time                                            0.01
+  ---------------------------------------------------------------------
+  data required time                                            0.01
+  data arrival time                                            -0.16
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.15
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: startHash_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 f
+  wb_rst_i (in)                                      0.00       0.00 f
+  wb_rst_i (net)                24         0.03      0.00       0.00 f
+  U7904/B0 (AOI21_X1M_A9TH)                          0.00       0.00 f
+  U7904/Y (AOI21_X1M_A9TH)                           0.07       0.07 r
+  n7000 (net)                    3         0.00      0.00       0.07 r
+  U7909/B0 (AOI22_X1M_A9TH)                          0.00       0.07 r
+  U7909/Y (AOI22_X1M_A9TH)                           0.09       0.16 f
+  n4090 (net)                    1         0.00      0.00       0.16 f
+  startHash_reg/D (DFFQ_X1M_A9TH)                    0.00       0.16 f
+  data arrival time                                             0.16
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  startHash_reg/CK (DFFQ_X1M_A9TH)                   0.00       0.00 r
+  library hold time                                  0.01       0.01
+  data required time                                            0.01
+  ---------------------------------------------------------------------
+  data required time                                            0.01
+  data arrival time                                            -0.16
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.15
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: newMessage_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 f
+  wb_rst_i (in)                                      0.00       0.00 f
+  wb_rst_i (net)                24         0.03      0.00       0.00 f
+  U7904/B0 (AOI21_X1M_A9TH)                          0.00       0.00 f
+  U7904/Y (AOI21_X1M_A9TH)                           0.07       0.07 r
+  n7000 (net)                    3         0.00      0.00       0.07 r
+  U7908/B0 (AOI22_X1M_A9TH)                          0.00       0.07 r
+  U7908/Y (AOI22_X1M_A9TH)                           0.09       0.16 f
+  n4089 (net)                    1         0.00      0.00       0.16 f
+  newMessage_reg/D (DFFQ_X1M_A9TH)                   0.00       0.16 f
+  data arrival time                                             0.16
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  newMessage_reg/CK (DFFQ_X1M_A9TH)                  0.00       0.00 r
+  library hold time                                  0.01       0.01
+  data required time                                            0.01
+  ---------------------------------------------------------------------
+  data required time                                            0.01
+  data arrival time                                            -0.16
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.15
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: startHash_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 f
+  wb_rst_i (in)                                      0.00       0.00 f
+  wb_rst_i (net)                24         0.03      0.00       0.00 f
+  U7904/B0 (AOI21_X1M_A9TH)                          0.00       0.00 f
+  U7904/Y (AOI21_X1M_A9TH)                           0.07       0.07 r
+  n7000 (net)                    3         0.00      0.00       0.07 r
+  U7909/B0 (AOI22_X1M_A9TH)                          0.00       0.07 r
+  U7909/Y (AOI22_X1M_A9TH)                           0.09       0.16 f
+  n4090 (net)                    1         0.00      0.00       0.16 f
+  startHash_reg/D (DFFQ_X1M_A9TH)                    0.00       0.16 f
+  data arrival time                                             0.16
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  startHash_reg/CK (DFFQ_X1M_A9TH)                   0.00       0.00 r
+  library hold time                                  0.01       0.01
+  data required time                                            0.01
+  ---------------------------------------------------------------------
+  data required time                                            0.01
+  data arrival time                                            -0.16
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.15
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: newMessage_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 f
+  wb_rst_i (in)                                      0.00       0.00 f
+  wb_rst_i (net)                24         0.03      0.00       0.00 f
+  U7904/B0 (AOI21_X1M_A9TH)                          0.00       0.00 f
+  U7904/Y (AOI21_X1M_A9TH)                           0.07       0.07 r
+  n7000 (net)                    3         0.00      0.00       0.07 r
+  U7908/B0 (AOI22_X1M_A9TH)                          0.00       0.07 r
+  U7908/Y (AOI22_X1M_A9TH)                           0.09       0.16 f
+  n4089 (net)                    1         0.00      0.00       0.16 f
+  newMessage_reg/D (DFFQ_X1M_A9TH)                   0.00       0.16 f
+  data arrival time                                             0.16
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  newMessage_reg/CK (DFFQ_X1M_A9TH)                  0.00       0.00 r
+  library hold time                                  0.01       0.01
+  data required time                                            0.01
+  ---------------------------------------------------------------------
+  data required time                                            0.01
+  data arrival time                                            -0.16
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.15
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: startHash_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 f
+  wb_rst_i (in)                                      0.00       0.00 f
+  wb_rst_i (net)                24         0.03      0.00       0.00 f
+  U7904/B0 (AOI21_X1M_A9TH)                          0.00       0.00 f
+  U7904/Y (AOI21_X1M_A9TH)                           0.07       0.07 r
+  n7000 (net)                    3         0.00      0.00       0.07 r
+  U7909/B0 (AOI22_X1M_A9TH)                          0.00       0.07 r
+  U7909/Y (AOI22_X1M_A9TH)                           0.09       0.16 f
+  n4090 (net)                    1         0.00      0.00       0.16 f
+  startHash_reg/D (DFFQ_X1M_A9TH)                    0.00       0.16 f
+  data arrival time                                             0.16
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  startHash_reg/CK (DFFQ_X1M_A9TH)                   0.00       0.00 r
+  library hold time                                  0.01       0.01
+  data required time                                            0.01
+  ---------------------------------------------------------------------
+  data required time                                            0.01
+  data arrival time                                            -0.16
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.15
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: sha256_sha256_ctrl_reg_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               24         0.03      0.00       0.00 r
+  U7922/A (NOR2_X1M_A9TH)                                           0.00       0.00 r
+  U7922/Y (NOR2_X1M_A9TH)                                           0.04       0.04 f
+  n7019 (net)                                   2         0.00      0.00       0.04 f
+  U7923/B0 (OAI21_X1M_A9TH)                                         0.00       0.04 f
+  U7923/Y (OAI21_X1M_A9TH)                                          0.07       0.11 r
+  n7018 (net)                                   1         0.00      0.00       0.11 r
+  U7924/A (NAND2_X1M_A9TH)                                          0.00       0.11 r
+  U7924/Y (NAND2_X1M_A9TH)                                          0.07       0.18 f
+  n3568 (net)                                   1         0.00      0.00       0.18 f
+  sha256_sha256_ctrl_reg_reg_0_/D (DFFQ_X1M_A9TH)                   0.00       0.18 f
+  data arrival time                                                            0.18
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  sha256_sha256_ctrl_reg_reg_0_/CK (DFFQ_X1M_A9TH)                  0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.18
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.16
+
+
+  Startpoint: wb_rst_i (input port clocked by CLK)
+  Endpoint: sha256_sha256_ctrl_reg_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_rst_i (in)                                                     0.00       0.00 r
+  wb_rst_i (net)                               24         0.03      0.00       0.00 r
+  U7922/A (NOR2_X1M_A9TH)                                           0.00       0.00 r
+  U7922/Y (NOR2_X1M_A9TH)                                           0.04       0.04 f
+  n7019 (net)                                   2         0.00      0.00       0.04 f
+  U7923/B0 (OAI21_X1M_A9TH)                                         0.00       0.04 f
+  U7923/Y (OAI21_X1M_A9TH)                                          0.07       0.11 r
+  n7018 (net)                                   1         0.00      0.00       0.11 r
+  U7924/A (NAND2_X1M_A9TH)                                          0.00       0.11 r
+  U7924/Y (NAND2_X1M_A9TH)                                          0.07       0.18 f
+  n3568 (net)                                   1         0.00      0.00       0.18 f
+  sha256_sha256_ctrl_reg_reg_0_/D (DFFQ_X1M_A9TH)                   0.00       0.18 f
+  data arrival time                                                            0.18
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  sha256_sha256_ctrl_reg_reg_0_/CK (DFFQ_X1M_A9TH)                  0.00       0.00 r
+  library hold time                                                 0.02       0.02
+  data required time                                                           0.02
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.02
+  data arrival time                                                           -0.18
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.16
+
+
+1

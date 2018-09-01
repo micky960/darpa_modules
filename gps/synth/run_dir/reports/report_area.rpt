@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : gps_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 12:33:48 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+Number of ports:                          264
+Number of nets:                        124911
+Number of cells:                       124902
+Number of combinational cells:         115203
+Number of sequential cells:              9699
+Number of macros/black boxes:               0
+Number of buf/inv:                      13984
+Number of references:                      59
+
+Combinational area:             229318.204534
+Buf/Inv area:                    15105.240600
+Noncombinational area:           73324.439445
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                302642.643979
+Total area:                 undefined
+1

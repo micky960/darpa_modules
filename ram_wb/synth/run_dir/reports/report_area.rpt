@@ -1,0 +1,33 @@
+Warning: Design 'ram_wb' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : ram_wb
+Version: M-2016.12-SP2
+Date   : Tue Jul  3 16:48:14 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+Number of ports:                         1103
+Number of nets:                          2080
+Number of cells:                         1817
+Number of combinational cells:           1042
+Number of sequential cells:               775
+Number of macros/black boxes:               0
+Number of buf/inv:                        122
+Number of references:                      26
+
+Combinational area:               3071.880020
+Buf/Inv area:                      133.920005
+Noncombinational area:            6680.880262
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  9752.760282
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1

@@ -1,0 +1,13 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : idft_top_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 08:54:58 2018
+****************************************
+
+This design has no violated constraints.
+
+1

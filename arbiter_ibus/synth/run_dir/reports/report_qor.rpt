@@ -1,0 +1,83 @@
+ 
+****************************************
+Report : qor
+Design : arbiter_ibus
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:42:46 2018
+****************************************
+
+
+  Timing Path Group 'CLK'
+  -----------------------------------
+  Levels of Logic:               7.00
+  Critical Path Length:          1.99
+  Critical Path Slack:           0.01
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:         -0.04
+  Total Hold Violation:         -0.04
+  No. of Hold Violations:        1.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:                 91
+  Buf/Inv Cell Count:               7
+  Buf Cell Count:                   0
+  Inv Cell Count:                   7
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:        80
+  Sequential Cell Count:           11
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      193.320002
+  Noncombinational Area:    83.159999
+  Buf/Inv Area:              7.560000
+  Total Buffer Area:             0.00
+  Total Inverter Area:           7.56
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:               276.480002
+  Design Area:             276.480002
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:           239
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: aduae260-lap
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.04
+  Mapping Optimization:                1.08
+  -----------------------------------------
+  Overall Compile Time:                5.61
+  Overall Compile Wall Clock Time:     5.87
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.04  TNS: 0.04  Number of Violating Paths: 1
+
+  --------------------------------------------------------------------
+
+
+1

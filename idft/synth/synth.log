@@ -1,0 +1,3046 @@
+set compile_seqmap_propagate_constants     false
+false
+set compile_seqmap_propagate_high_effort   false
+false
+set compile_enable_register_merging        false
+false
+set write_sdc_output_net_resistance        false
+false
+set timing_separate_clock_gating_group     true
+true
+set_host_options -max_cores 8
+1
+set PROJECT_MODULES [getenv "PROJECT_MODULES"]
+/home/projects/vlsi/CEP/design/modules
+set run_dir  run_dir
+run_dir
+set design idft_top_top
+idft_top_top
+set clkin  wb_clk_i
+wb_clk_i
+if {[file exist $run_dir]} {
+sh rm -rf $run_dir
+}
+sh mkdir -p $run_dir/reports
+sh mkdir -p $run_dir/netlist
+set search_path [concat * $search_path]
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver
+sh rm -rf ./work
+define_design_lib WORK -path ./work
+1
+set target_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db}
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db
+set link_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    }
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    
+analyze -library WORK -format sverilog "     $PROJECT_MODULES/top/rtl/orpsoc-defines.v     $PROJECT_MODULES/idft/rtl/filter_idft.v     $PROJECT_MODULES/idft/rtl/idft_top_top.v "
+Running PRESTO HDLC
+Compiling source file /home/projects/vlsi/CEP/design/modules/top/rtl/orpsoc-defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:663: the undeclared symbol 'tm0_d' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:664: the undeclared symbol 'tm0_dd' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1217: the undeclared symbol 'tm1_d' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1218: the undeclared symbol 'tm1_dd' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1789: the undeclared symbol 'tm6_d' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1790: the undeclared symbol 'tm6_dd' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2377: the undeclared symbol 'tm11_d' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2378: the undeclared symbol 'tm11_dd' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2997: the undeclared symbol 'tm16_d' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2998: the undeclared symbol 'tm16_dd' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3681: the undeclared symbol 'tm21_d' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3682: the undeclared symbol 'tm21_dd' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4461: the undeclared symbol 'tm26_d' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4462: the undeclared symbol 'tm26_dd' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v
+Presto compilation completed successfully.
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+Information: Using CCS timing libraries. (TIM-024)
+1
+elaborate $design
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/gtech.db'
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c'
+  Loading link library 'RGO_CSM65_25V33_LPE_50C_SS_108_297_125'
+  Loading link library 'USERLIB_ccs_ss_1p08v_1p08v_125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 44 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 66 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            67            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine idft_top_top line 44 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  data_Out_addr_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  data_In_write_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  data_In_addr_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  data_In_data_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine idft_top_top line 96 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data_In_write_r_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine idft_top_top line 102 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dataX_reg      | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine idft_top_top line 110 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     next_r_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine idft_top_top line 116 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      xSel_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine idft_top_top line 127 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_out_r_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine idft_top_top line 133 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dataY_reg      | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+|      ySel_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine idft_top_top line 143 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/idft_top_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   data_valid_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+| idft_top_top/107 |   32   |   64    |      5       |
+| idft_top_top/124 |   32   |   64    |      5       |
+======================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'idft_top_top'.
+Information: Building the design 'idft_top'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rc35468'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock35470'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1057: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1058: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1059: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1060: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock35470 line 1072 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'rc35552'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DirSum_35733'. (HDL-193)
+
+Inferred memory devices in process
+        in routine DirSum_35733 line 1372 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       i5_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock35736'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1627: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1628: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1629: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1630: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock35736 line 1642 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'rc35818'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DirSum_36007'. (HDL-193)
+
+Inferred memory devices in process
+        in routine DirSum_36007 line 1952 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       i4_reg        | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock36010'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2211: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2212: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2213: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2214: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock36010 line 2226 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'rc36092'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DirSum_36297'. (HDL-193)
+
+Inferred memory devices in process
+        in routine DirSum_36297 line 2556 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       i3_reg        | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock36300'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2823: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2824: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2825: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2826: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock36300 line 2838 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'rc36382'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DirSum_36619'. (HDL-193)
+
+Inferred memory devices in process
+        in routine DirSum_36619 line 3208 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       i2_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock36622'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3491: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3492: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3493: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3494: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock36622 line 3506 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'rc36704'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DirSum_37004'. (HDL-193)
+
+Inferred memory devices in process
+        in routine DirSum_37004 line 3956 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       i1_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock37007'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4271: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4272: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4273: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4274: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock37007 line 4286 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'rc37089'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'perm35466'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:687: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:698: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:701: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:715: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:725: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:727: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:741: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:751: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:753: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 677 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           690            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 707 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           718            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 733 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           744            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 758 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           759            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 796 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           797            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 836 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           837            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 874 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           875            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine perm35466 line 677 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1wr_en_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inFlip0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      s1wr0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35466 line 707 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1rdloc_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   outFlip0_z_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35466 line 733 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s2rdloc_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state3_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    outFlip1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35466 line 758 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35466 line 796 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd1_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35466 line 836 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35466 line 874 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr1_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'codeBlock35470' with
+        the parameters "1,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth1_width1 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'addfxp' instantiated from design 'codeBlock35470' with
+        the parameters "16,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine addfxp_width16_cycles1 line 4753 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       res_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'subfxp' instantiated from design 'codeBlock35470' with
+        the parameters "16,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine subfxp_width16_cycles1 line 4775 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       res_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'perm35550'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1241: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1252: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1255: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1269: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1279: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1281: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1295: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1305: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1307: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 1231 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1244           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1261 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1272           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1287 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1298           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1312 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1313           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1320 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1321           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1330 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1331           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1338 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1339           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine perm35550 line 1231 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1wr_en_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inFlip0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      s1wr0_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35550 line 1261 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1rdloc_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   outFlip0_z_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35550 line 1287 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s2rdloc_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state3_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    outFlip1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35550 line 1312 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd0_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35550 line 1320 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35550 line 1330 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr0_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35550 line 1338 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock35555'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1513: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1515: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1517: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1518: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock35555 line 1536 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      tm166_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm31_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm140_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm32_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm144_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       i5_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      tm137_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm141_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm153_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm160_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm138_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm142_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm154_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm161_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm139_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm143_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm155_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm162_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm156_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm163_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm157_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm164_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm158_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm165_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm159_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'perm35816'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1813: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1824: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1827: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1841: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1851: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1853: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1867: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1877: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:1879: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 1803 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1816           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1833 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1844           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1859 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1870           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1884 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1885           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1894 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1895           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1906 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1907           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1916 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1917           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine perm35816 line 1803 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1wr_en_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inFlip0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      s1wr0_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35816 line 1833 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1rdloc_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   outFlip0_z_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35816 line 1859 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s2rdloc_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state3_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    outFlip1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35816 line 1884 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd0_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35816 line 1894 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd1_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35816 line 1906 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr0_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm35816 line 1916 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr1_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock35821'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2097: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2099: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2101: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2102: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock35821 line 2120 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      tm196_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm39_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm170_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm40_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm174_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       i4_reg        | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      tm167_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm171_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm183_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm190_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm168_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm172_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm184_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm191_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm169_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm173_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm185_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm192_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm186_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm193_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm187_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm194_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm188_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm195_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm189_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'perm36090'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2401: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2412: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2415: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2429: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2439: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2441: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2455: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2465: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2467: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 2391 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2404           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 2421 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2432           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 2447 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2458           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 2472 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2473           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 2486 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2487           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 2502 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2503           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 2516 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2517           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine perm36090 line 2391 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1wr_en_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inFlip0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      s1wr0_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36090 line 2421 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1rdloc_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   outFlip0_z_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36090 line 2447 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s2rdloc_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state3_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    outFlip1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36090 line 2472 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd0_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36090 line 2486 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd1_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36090 line 2502 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr0_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36090 line 2516 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr1_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock36095'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2709: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2711: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2713: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:2714: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock36095 line 2732 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      tm226_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm47_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm200_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm48_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm204_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       i3_reg        | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      tm197_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm201_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm213_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm220_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm198_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm202_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm214_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm221_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm199_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm203_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm215_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm222_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm216_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm223_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm217_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm224_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm218_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm225_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm219_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'perm36380'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3021: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3032: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3035: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3049: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3059: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3061: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3075: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3085: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3087: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 3011 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3024           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3041 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3052           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3067 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3078           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3092 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3093           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3114 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3115           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3138 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3139           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3160 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3161           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine perm36380 line 3011 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1wr_en_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inFlip0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      s1wr0_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36380 line 3041 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1rdloc_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   outFlip0_z_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36380 line 3067 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s2rdloc_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state3_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    outFlip1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36380 line 3092 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd0_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36380 line 3114 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd1_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36380 line 3138 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr0_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36380 line 3160 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr1_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock36385'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3377: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3379: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3381: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3382: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock36385 line 3400 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      tm256_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm55_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm230_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm56_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm234_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       i2_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      tm227_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm231_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm243_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm250_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm228_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm232_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm244_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm251_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm229_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm233_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm245_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm252_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm246_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm253_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm247_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm254_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm248_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm255_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm249_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'perm36702'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3705: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3716: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3719: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3733: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3743: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3745: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3759: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3769: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:3771: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 3695 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3708           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3725 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3736           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3751 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3762           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3776 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3777           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3814 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3815           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3854 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3855           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3892 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3893           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine perm36702 line 3695 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1wr_en_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inFlip0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      s1wr0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36702 line 3725 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1rdloc_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   outFlip0_z_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36702 line 3751 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s2rdloc_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state3_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    outFlip1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36702 line 3776 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36702 line 3814 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd1_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36702 line 3854 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm36702 line 3892 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr1_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'codeBlock36706'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4157: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4159: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4161: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4162: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine codeBlock36706 line 4180 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      tm286_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm63_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm260_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm64_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm264_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       i1_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X0_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X1_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X2_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       X3_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      next_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      tm257_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm261_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm273_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm280_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm258_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm262_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm274_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm281_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm259_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm263_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm275_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm282_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm276_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm283_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm277_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm284_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm278_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm285_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tm279_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'perm37087'. (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4485: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4496: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4499: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4513: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4523: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4525: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4539: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4549: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4551: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 4475 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4488           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4505 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4516           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4531 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4542           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4556 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4557           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4594 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4595           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4634 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4635           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4672 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4673           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine perm37087 line 4475 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1wr_en_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     state1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inFlip0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      s1wr0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm37087 line 4505 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s1rdloc_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   outFlip0_z_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm37087 line 4531 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s2rdloc_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     state3_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    outFlip1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm37087 line 4556 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm37087 line 4594 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s1rd1_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm37087 line 4634 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr0_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine perm37087 line 4672 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      s2wr1_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm35466' with
+        the parameters "3,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth3_width1 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memMod_dist' instantiated from design 'perm35466' with
+        the parameters "64,32,6". (HDL-193)
+
+Inferred memory devices in process
+        in routine memMod_dist_depth64_width32_logDepth6 line 955 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===============================================================================
+|             block name/line               | Inputs | Outputs | # sel inputs |
+===============================================================================
+| memMod_dist_depth64_width32_logDepth6/956 |   64   |   32    |      6       |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'nextReg' instantiated from design 'perm35466' with
+        the parameters "31,5". (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:992: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine nextReg_depth31_logDepth5 line 994 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     active_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm35466' with
+        the parameters "4,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth4_width1 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'nextReg' instantiated from design 'perm35466' with
+        the parameters "32,5". (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:992: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine nextReg_depth32_logDepth5 line 994 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     active_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm35466' with
+        the parameters "31,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth31_width1 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  31   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm35466' with
+        the parameters "3,5". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth3_width5 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'swNet35466'. (HDL-193)
+
+Statistics for case statements in always block at line 561 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           562            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine swNet35466 line 561 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     control_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35466 line 600 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    control0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35466 line 605 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      t1_0_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      t1_1_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35466 line 609 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       y0_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       y1_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memMod_dist' instantiated from design 'perm35550' with
+        the parameters "4,32,2". (HDL-193)
+
+Inferred memory devices in process
+        in routine memMod_dist_depth4_width32_logDepth2 line 955 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+==============================================================================
+|             block name/line              | Inputs | Outputs | # sel inputs |
+==============================================================================
+| memMod_dist_depth4_width32_logDepth2/956 |   4    |   32    |      2       |
+==============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm35550' with
+        the parameters "2,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth2_width1 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'swNet35550'. (HDL-193)
+
+Statistics for case statements in always block at line 1145 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1146           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine swNet35550 line 1145 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     control_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35550 line 1154 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    control0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35550 line 1159 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      t1_0_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      t1_1_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35550 line 1163 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       y0_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       y1_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'codeBlock35555' with
+        the parameters "7,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth7_width1 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D18_35723'. (HDL-193)
+
+Statistics for case statements in always block at line 1401 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1404           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D18_35723 line 1401 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D20_35731'. (HDL-193)
+
+Statistics for case statements in always block at line 1421 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1424           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D20_35731 line 1421 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'multfix' instantiated from design 'codeBlock35555' with
+        the parameters "16,2". (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4729: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:4730: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine multfix_WIDTH16_CYCLES2 line 4732 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  60   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memMod_dist' instantiated from design 'perm35816' with
+        the parameters "8,32,3". (HDL-193)
+
+Inferred memory devices in process
+        in routine memMod_dist_depth8_width32_logDepth3 line 955 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+==============================================================================
+|             block name/line              | Inputs | Outputs | # sel inputs |
+==============================================================================
+| memMod_dist_depth8_width32_logDepth3/956 |   8    |   32    |      3       |
+==============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm35816' with
+        the parameters "3,2". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth3_width2 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'swNet35816'. (HDL-193)
+
+Statistics for case statements in always block at line 1715 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1716           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine swNet35816 line 1715 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     control_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35816 line 1726 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    control0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35816 line 1731 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      t1_0_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      t1_1_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet35816 line 1735 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       y0_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       y1_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D14_35993'. (HDL-193)
+
+Statistics for case statements in always block at line 1981 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1984           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D14_35993 line 1981 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D16_36005'. (HDL-193)
+
+Statistics for case statements in always block at line 2003 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2006           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D16_36005 line 2003 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memMod_dist' instantiated from design 'perm36090' with
+        the parameters "16,32,4". (HDL-193)
+
+Inferred memory devices in process
+        in routine memMod_dist_depth16_width32_logDepth4 line 955 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===============================================================================
+|             block name/line               | Inputs | Outputs | # sel inputs |
+===============================================================================
+| memMod_dist_depth16_width32_logDepth4/956 |   16   |   32    |      4       |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm36090' with
+        the parameters "8,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth8_width1 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm36090' with
+        the parameters "3,3". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth3_width3 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'swNet36090'. (HDL-193)
+
+Statistics for case statements in always block at line 2299 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2300           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine swNet36090 line 2299 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     control_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36090 line 2314 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    control0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36090 line 2319 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      t1_0_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      t1_1_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36090 line 2323 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       y0_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       y1_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D10_36275'. (HDL-193)
+
+Statistics for case statements in always block at line 2585 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2588           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D10_36275 line 2585 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D12_36295'. (HDL-193)
+
+Statistics for case statements in always block at line 2611 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2614           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D12_36295 line 2611 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memMod_dist' instantiated from design 'perm36380' with
+        the parameters "32,32,5". (HDL-193)
+
+Inferred memory devices in process
+        in routine memMod_dist_depth32_width32_logDepth5 line 955 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===============================================================================
+|             block name/line               | Inputs | Outputs | # sel inputs |
+===============================================================================
+| memMod_dist_depth32_width32_logDepth5/956 |   32   |   32    |      5       |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'nextReg' instantiated from design 'perm36380' with
+        the parameters "15,4". (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:992: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine nextReg_depth15_logDepth4 line 994 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     active_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'nextReg' instantiated from design 'perm36380' with
+        the parameters "16,4". (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v:992: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine nextReg_depth16_logDepth4 line 994 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     active_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm36380' with
+        the parameters "15,1". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth15_width1 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shiftRegFIFO' instantiated from design 'perm36380' with
+        the parameters "3,4". (HDL-193)
+
+Inferred memory devices in process
+        in routine shiftRegFIFO_depth3_width4 line 975 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'swNet36380'. (HDL-193)
+
+Statistics for case statements in always block at line 2911 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           2912           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine swNet36380 line 2911 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     control_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36380 line 2934 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    control0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36380 line 2939 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      t1_0_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      t1_1_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36380 line 2943 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       y0_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       y1_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D6_36581'. (HDL-193)
+
+Statistics for case statements in always block at line 3237 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3240           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D6_36581 line 3237 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D8_36617'. (HDL-193)
+
+Statistics for case statements in always block at line 3271 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3274           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D8_36617 line 3271 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'swNet36702'. (HDL-193)
+
+Statistics for case statements in always block at line 3579 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3580           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine swNet36702 line 3579 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     control_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36702 line 3618 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    control0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36702 line 3623 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      t1_0_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      t1_1_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet36702 line 3627 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       y0_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       y1_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D2_36934'. (HDL-193)
+
+Statistics for case statements in always block at line 3985 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           3988           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D2_36934 line 3985 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'D4_37002'. (HDL-193)
+
+Statistics for case statements in always block at line 4035 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4038           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine D4_37002 line 4035 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out2_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out3_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'swNet37087'. (HDL-193)
+
+Statistics for case statements in always block at line 4359 in file
+        '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           4360           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine swNet37087 line 4359 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     control_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet37087 line 4398 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    control0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet37087 line 4403 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      t1_0_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      t1_1_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine swNet37087 line 4407 in file
+                '/home/projects/vlsi/CEP/design/modules/idft/rtl/filter_idft.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       y0_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       y1_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+set_dont_use [get_lib_cells sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c/*X0P*]
+1
+create_clock -name CLK  -period 4  -waveform {0 2} $clkin
+1
+set input_ports [remove_from_collection [all_inputs] {$clkin}]
+Warning: Nothing implicitly matched '$clkin' (SEL-003)
+{wb_adr_i[31] wb_adr_i[30] wb_adr_i[29] wb_adr_i[28] wb_adr_i[27] wb_adr_i[26] wb_adr_i[25] wb_adr_i[24] wb_adr_i[23] wb_adr_i[22] wb_adr_i[21] wb_adr_i[20] wb_adr_i[19] wb_adr_i[18] wb_adr_i[17] wb_adr_i[16] wb_adr_i[15] wb_adr_i[14] wb_adr_i[13] wb_adr_i[12] wb_adr_i[11] wb_adr_i[10] wb_adr_i[9] wb_adr_i[8] wb_adr_i[7] wb_adr_i[6] wb_adr_i[5] wb_adr_i[4] wb_adr_i[3] wb_adr_i[2] wb_adr_i[1] wb_adr_i[0] wb_cyc_i wb_dat_i[31] wb_dat_i[30] wb_dat_i[29] wb_dat_i[28] wb_dat_i[27] wb_dat_i[26] wb_dat_i[25] wb_dat_i[24] wb_dat_i[23] wb_dat_i[22] wb_dat_i[21] wb_dat_i[20] wb_dat_i[19] wb_dat_i[18] wb_dat_i[17] wb_dat_i[16] wb_dat_i[15] wb_dat_i[14] wb_dat_i[13] wb_dat_i[12] wb_dat_i[11] wb_dat_i[10] wb_dat_i[9] wb_dat_i[8] wb_dat_i[7] wb_dat_i[6] wb_dat_i[5] wb_dat_i[4] wb_dat_i[3] wb_dat_i[2] wb_dat_i[1] wb_dat_i[0] wb_sel_i[3] wb_sel_i[2] wb_sel_i[1] wb_sel_i[0] wb_stb_i wb_we_i wb_clk_i wb_rst_i}
+set output_ports [all_outputs]
+{wb_ack_o wb_err_o wb_dat_o[31] wb_dat_o[30] wb_dat_o[29] wb_dat_o[28] wb_dat_o[27] wb_dat_o[26] wb_dat_o[25] wb_dat_o[24] wb_dat_o[23] wb_dat_o[22] wb_dat_o[21] wb_dat_o[20] wb_dat_o[19] wb_dat_o[18] wb_dat_o[17] wb_dat_o[16] wb_dat_o[15] wb_dat_o[14] wb_dat_o[13] wb_dat_o[12] wb_dat_o[11] wb_dat_o[10] wb_dat_o[9] wb_dat_o[8] wb_dat_o[7] wb_dat_o[6] wb_dat_o[5] wb_dat_o[4] wb_dat_o[3] wb_dat_o[2] wb_dat_o[1] wb_dat_o[0] int_o}
+set_input_delay -max 1 [get_ports $input_ports ] -clock CLK
+1
+set_input_delay -min 0 [get_ports $input_ports ] -clock CLK
+1
+set_output_delay -max 1 [get_ports $output_ports ] -clock CLK
+1
+set_output_delay -min 3 [get_ports $output_ports ] -clock CLK
+1
+date
+Sun Jun  3 00:57:40 2018
+#compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -gate_clock
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.2 |     *     |
+| Licensed DW Building Blocks        | M-2016.12-DWBB_201612.2 |     *     |
+============================================================================
+
+
+Information: There are 82 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 22 instances of design 'shiftRegFIFO_depth1_width1'. (OPT-1056)
+Information: Uniquified 17 instances of design 'addfxp_width16_cycles1'. (OPT-1056)
+Information: Uniquified 17 instances of design 'subfxp_width16_cycles1'. (OPT-1056)
+Information: Uniquified 17 instances of design 'shiftRegFIFO_depth3_width1'. (OPT-1056)
+Information: Uniquified 12 instances of design 'memMod_dist_depth64_width32_logDepth6'. (OPT-1056)
+Information: Uniquified 3 instances of design 'nextReg_depth31_logDepth5'. (OPT-1056)
+Information: Uniquified 15 instances of design 'shiftRegFIFO_depth4_width1'. (OPT-1056)
+Information: Uniquified 3 instances of design 'nextReg_depth32_logDepth5'. (OPT-1056)
+Information: Uniquified 3 instances of design 'shiftRegFIFO_depth31_width1'. (OPT-1056)
+Information: Uniquified 3 instances of design 'shiftRegFIFO_depth3_width5'. (OPT-1056)
+Information: Uniquified 4 instances of design 'memMod_dist_depth4_width32_logDepth2'. (OPT-1056)
+Information: Uniquified 7 instances of design 'shiftRegFIFO_depth7_width1'. (OPT-1056)
+Information: Uniquified 20 instances of design 'multfix_WIDTH16_CYCLES2'. (OPT-1056)
+Information: Uniquified 4 instances of design 'memMod_dist_depth8_width32_logDepth3'. (OPT-1056)
+Information: Uniquified 4 instances of design 'memMod_dist_depth16_width32_logDepth4'. (OPT-1056)
+Information: Uniquified 4 instances of design 'memMod_dist_depth32_width32_logDepth5'. (OPT-1056)
+  Simplifying Design 'idft_top_top'
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+.
+  Processing 'idft_top_top'
+ Implement Synthetic for 'idft_top_top'.
+  Processing 'memMod_dist_depth64_width32_logDepth6_0'
+  Processing 'memMod_dist_depth32_width32_logDepth5_0'
+  Processing 'memMod_dist_depth16_width32_logDepth4_0'
+  Processing 'codeBlock36706'
+  Processing 'codeBlock36385'
+  Processing 'codeBlock36095'
+  Processing 'codeBlock35821'
+  Processing 'codeBlock35555'
+  Processing 'perm36702'
+ Implement Synthetic for 'perm36702'.
+  Processing 'D14_35993'
+  Processing 'nextReg_depth32_logDepth5_0'
+ Implement Synthetic for 'nextReg_depth32_logDepth5_0'.
+  Processing 'rc35468'
+  Processing 'swNet35466'
+  Processing 'D4_37002'
+  Processing 'codeBlock36010'
+  Processing 'D20_35731'
+  Processing 'rc35552'
+  Processing 'perm35466'
+ Implement Synthetic for 'perm35466'.
+  Processing 'D16_36005'
+  Processing 'nextReg_depth31_logDepth5_0'
+ Implement Synthetic for 'nextReg_depth31_logDepth5_0'.
+  Processing 'rc35818'
+  Processing 'perm37087'
+ Implement Synthetic for 'perm37087'.
+  Processing 'D12_36295'
+  Processing 'shiftRegFIFO_depth15_width1'
+  Processing 'shiftRegFIFO_depth3_width3'
+  Processing 'swNet36702'
+  Processing 'D2_36934'
+  Processing 'codeBlock35470'
+  Processing 'DirSum_37004'
+ Implement Synthetic for 'DirSum_37004'.
+  Processing 'DirSum_35733'
+  Processing 'shiftRegFIFO_depth3_width4'
+  Processing 'memMod_dist_depth8_width32_logDepth3_0'
+  Processing 'D10_36275'
+  Processing 'DirSum_36297'
+Information: Added key list 'DesignWare' to design 'DirSum_36297'. (DDB-72)
+  Processing 'shiftRegFIFO_depth3_width5_0'
+  Processing 'shiftRegFIFO_depth8_width1'
+  Processing 'idft_top'
+  Processing 'codeBlock36622'
+  Processing 'multfix_WIDTH16_CYCLES2_0'
+ Implement Synthetic for 'multfix_WIDTH16_CYCLES2_0'.
+  Processing 'DirSum_36619'
+Information: Added key list 'DesignWare' to design 'DirSum_36619'. (DDB-72)
+  Processing 'nextReg_depth15_logDepth4'
+ Implement Synthetic for 'nextReg_depth15_logDepth4'.
+  Processing 'shiftRegFIFO_depth7_width1_0'
+  Processing 'swNet37087'
+  Processing 'perm36090'
+Information: Added key list 'DesignWare' to design 'perm36090'. (DDB-72)
+  Processing 'D8_36617'
+  Processing 'subfxp_width16_cycles1_5'
+ Implement Synthetic for 'subfxp_width16_cycles1_5'.
+  Processing 'rc37089'
+  Processing 'shiftRegFIFO_depth4_width1_0'
+  Processing 'perm36380'
+Information: Added key list 'DesignWare' to design 'perm36380'. (DDB-72)
+  Processing 'codeBlock37007'
+  Processing 'codeBlock35736'
+  Processing 'shiftRegFIFO_depth31_width1_0'
+  Processing 'nextReg_depth16_logDepth4'
+ Implement Synthetic for 'nextReg_depth16_logDepth4'.
+  Processing 'shiftRegFIFO_depth3_width2'
+  Processing 'swNet36090'
+  Processing 'swNet35816'
+  Processing 'D6_36581'
+  Processing 'DirSum_36007'
+Information: Added key list 'DesignWare' to design 'DirSum_36007'. (DDB-72)
+  Processing 'rc36382'
+  Processing 'shiftRegFIFO_depth2_width1'
+  Processing 'shiftRegFIFO_depth1_width1_0'
+  Processing 'memMod_dist_depth4_width32_logDepth2_0'
+  Processing 'perm35816'
+Information: Added key list 'DesignWare' to design 'perm35816'. (DDB-72)
+  Processing 'codeBlock36300'
+  Processing 'D18_35723'
+  Processing 'rc36092'
+  Processing 'swNet36380'
+  Processing 'swNet35550'
+  Processing 'perm35550'
+  Processing 'addfxp_width16_cycles1_5'
+ Implement Synthetic for 'addfxp_width16_cycles1_5'.
+  Processing 'rc36704'
+  Processing 'shiftRegFIFO_depth3_width1_0'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'idft_top_top'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'DirSum_37004'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'perm35466'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'perm36702'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'perm37087'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'nextReg_depth31_logDepth5_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'nextReg_depth32_logDepth5_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'nextReg_depth15_logDepth4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'nextReg_depth16_logDepth4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'nextReg_depth32_logDepth5_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'nextReg_depth32_logDepth5_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'nextReg_depth31_logDepth5_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'nextReg_depth31_logDepth5_1'. (DDB-72)
+.
+  Mapping Optimization (Phase 1)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_16'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_15'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_14'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_13'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_12'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_11'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_10'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_9'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_8'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_7'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_6'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_5'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_16'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_15'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_14'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_13'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_12'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_11'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_10'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_9'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_8'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_7'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_6'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_5'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_3'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'subfxp_width16_cycles1_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_3'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'addfxp_width16_cycles1_0'. (DDB-72)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Mapping 'multfix_WIDTH16_CYCLES2_18_DW_mult_tc_0'
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_19'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_18'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_17'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_16'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_15'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_14'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_13'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_12'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_11'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_10'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_9'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_8'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_7'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_6'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_5'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_3'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multfix_WIDTH16_CYCLES2_0'. (DDB-72)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:03:21  584403.1      0.22      10.4     100.5                             17.9101
+    0:03:22  586111.0      0.00       0.0     100.5                             18.0600
+    0:03:22  586111.0      0.00       0.0     100.5                             18.0600
+    0:03:23  586111.0      0.00       0.0     100.5                             18.0600
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:04:05  584993.2      0.00       0.0     100.5                             17.9863
+    0:04:09  583844.0      0.00       0.0     100.5                             17.9359
+    0:04:16  582522.5      0.00       0.0     100.5                             17.8669
+    0:04:17  582445.8      0.00       0.0     100.5                             17.8623
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:32  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:33  581598.7      0.00       0.0     100.5                             17.7732
+    0:04:33  581598.7      0.00       0.0     100.5                             17.7732
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:04:33  581598.7      0.00       0.0     100.5                             17.7732
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:04:37  581838.5      0.00       0.0       0.0                             17.8019
+    0:04:37  581838.5      0.00       0.0       0.0                             17.8019
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:04:37  581838.5      0.00       0.0       0.0                             17.8019
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+    0:04:49  581701.7      0.00       0.0       0.0                             17.7892
+    0:04:49  581701.7      0.00       0.0       0.0                             17.7892
+    0:04:50  581701.7      0.00       0.0       0.0                             17.7892
+    0:05:02  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:03  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:03  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:03  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:03  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:03  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:03  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:03  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+    0:05:04  581580.0      0.00       0.0       0.0                             17.7788
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:05:06  581559.8      0.00       0.0       0.0                             17.7787
+    0:05:21  580820.0      0.00       0.0       0.0                             17.7328
+    0:05:22  580821.5      0.00       0.0       0.0                             17.7329
+    0:05:22  580821.5      0.00       0.0       0.0                             17.7329
+    0:05:35  580727.9      0.00       0.0       0.0                             17.7246
+    0:05:40  580667.4      0.00       0.0       0.0                             17.7204
+    0:05:41  580660.6      0.00       0.0       0.0                             17.7198
+    0:05:41  580660.6      0.00       0.0       0.0                             17.7198
+    0:05:42  580660.6      0.00       0.0       0.0                             17.7198
+    0:05:42  580660.6      0.00       0.0       0.0                             17.7198
+    0:05:44  580621.7      0.00       0.0       0.0                             17.7165
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'idft_top_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'idft_top/stage0/instPerm38034/shiftFIFO_38062/clk': 43875 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+date
+Sun Jun  3 01:03:44 2018
+optimize_netlist -area
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 129 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+
+  Beginning Area Optimization
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11  580621.7      0.00       0.0       0.0                             17.7165
+    0:03:41  580115.9      0.00       0.0       0.0                             17.6965
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'idft_top_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'idft_top/stage0/instPerm38034/shiftFIFO_38062/clk': 43875 load(s), 1 driver(s)
+1
+date
+Sun Jun  3 01:07:31 2018
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 454 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:16  574346.2      0.00       0.0       0.0                             17.4972
+    0:00:16  574346.2      0.00       0.0       0.0                             17.4972
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:35  574346.2      0.00       0.0       0.0                             17.4972
+    0:00:41  574411.0      0.00       0.0       0.0                             17.4973
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:57  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:58  574397.3      0.00       0.0       0.0                             17.4936
+    0:00:58  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:13  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:27  574397.3      0.00       0.0       0.0                             17.4936
+    0:01:30  574339.7      0.00       0.0       0.0                             17.4935
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:30  574339.7      0.00       0.0       0.0                             17.4935
+    0:01:44  574339.7      0.00       0.0       0.0                             17.4935
+    0:01:51  574313.8      0.00       0.0       0.0                             17.4922
+    0:01:58  574306.2      0.00       0.0       0.0                             17.4910
+    0:01:58  574306.2      0.00       0.0       0.0                             17.4910
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'idft_top_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'idft_top/stage0/instPerm38034/shiftFIFO_38062/clk': 43315 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+mem -all -verbose
+Multicore compile mem-peak:   1811 Mb
+Main process mem-peak:    754 Mb
+Child "J1" called 1 time , mem-peak:    449 Mb
+Child "J2" called 1 time , mem-peak:    449 Mb
+Child "J3" called 1 time , mem-peak:    449 Mb
+Child "J4" called 1 time , mem-peak:    449 Mb
+Child "J5" called 1 time , mem-peak:    449 Mb
+Child "J6" called 1 time , mem-peak:    449 Mb
+Child "J7" called 1 time , mem-peak:    449 Mb
+Child "J8" called 1 time , mem-peak:    449 Mb
+Child "J10" called 1 time , mem-peak:    449 Mb
+Child "J11" called 1 time , mem-peak:    449 Mb
+Child "J12" called 1 time , mem-peak:    449 Mb
+Child "J13" called 1 time , mem-peak:    449 Mb
+Child "J15" called 1 time , mem-peak:    449 Mb
+Child "J16" called 1 time , mem-peak:    449 Mb
+Child "J21" called 1 time , mem-peak:    449 Mb
+Child "J22" called 1 time , mem-peak:    658 Mb
+Child "J23" called 1 time , mem-peak:    621 Mb
+Child "J24" called 1 time , mem-peak:    621 Mb
+Child "J25" called 1 time , mem-peak:    621 Mb
+Child "J26" called 1 time , mem-peak:    621 Mb
+Child "J27" called 1 time , mem-peak:    621 Mb
+Child "J28" called 1 time , mem-peak:    619 Mb
+Child "J33" called 1 time , mem-peak:    627 Mb
+Child "J34" called 1 time , mem-peak:    627 Mb
+Child "J35" called 1 time , mem-peak:    627 Mb
+Child "J36" called 1 time , mem-peak:    627 Mb
+Child "J37" called 1 time , mem-peak:    627 Mb
+Child "J38" called 1 time , mem-peak:    627 Mb
+Child "J39" called 1 time , mem-peak:    627 Mb
+Child "J58" called 1 time , mem-peak:    658 Mb
+Child "J59" called 1 time , mem-peak:    658 Mb
+Child "J60" called 1 time , mem-peak:    658 Mb
+Child "J61" called 1 time , mem-peak:    658 Mb
+Child "J62" called 1 time , mem-peak:    658 Mb
+Child "J63" called 1 time , mem-peak:    658 Mb
+
+772632
+change_names -hier -rule verilog
+Warning: In the design idft_top_top, net '*Logic0*' is connecting multiple ports. (UCN-1)
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+write_file -hierarchy -format verilog -output "$run_dir/netlist/$design.v"
+Writing verilog file '/home/projects/vlsi/CEP/design/modules/idft/synth/run_dir/netlist/idft_top_top.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc "$run_dir/netlist/$design.sdc"
+1
+set_switching_activity -toggle_rate 5 -period 100  -static_probability 0.50 -type inputs
+set_switching_activity applied to 73 selected objects
+1
+propagate_switching_activity
+Warning: Use of propagate_switching_activity is not recommended. This feature will be obsolete in a future release. Check the man page for more information. (PWR-800)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.500000) for the clock net 'wb_clk_i' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+1
+report_timing -delay max  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_max.rpt
+report_timing -delay min  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_min.rpt
+report_constraint -all_violators -verbose  -nosplit                             > $run_dir/reports/report_constraint.rpt
+check_design -nosplit                                                           > $run_dir/reports/check_design.rpt
+report_design                                                                   > $run_dir/reports/report_design.rpt
+report_area                                                                     > $run_dir/reports/report_area.rpt
+report_timing -loop                                                             > $run_dir/reports/timing_loop.rpt
+report_power -analysis_effort high                                              > $run_dir/reports/report_power.rpt
+report_qor                                                                      > $run_dir/reports/report_qor.rpt
+sh touch ~/$design
+# 
+#
+#
+#  compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+dc_shell> 
+dc_shell> exit
+
+Thank you...
+

@@ -1,0 +1,307 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : uart_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:45:35 2018
+****************************************
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: srx_pad_i (input port clocked by CLK)
+  Endpoint: regs_i_uart_sync_flops_flop_0_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  srx_pad_i (in)                                                    0.00       0.00 f
+  srx_pad_i (net)                               1         0.00      0.00       0.00 f
+  regs_i_uart_sync_flops_flop_0_reg_0_/D (DFFSQ_X1M_A9TH)           0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  regs_i_uart_sync_flops_flop_0_reg_0_/CK (DFFSQ_X1M_A9TH)          0.00       0.00 r
+  library hold time                                                 0.05       0.05
+  data required time                                                           0.05
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.05
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.05
+
+
+  Startpoint: wb_cyc_i (input port clocked by CLK)
+  Endpoint: wb_interface_wb_cyc_is_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_cyc_i (in)                                                     0.00       0.00 f
+  wb_cyc_i (net)                                1         0.00      0.00       0.00 f
+  wb_interface_wb_cyc_is_reg/D (DFFRPQ_X1M_A9TH)                    0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_cyc_is_reg/CK (DFFRPQ_X1M_A9TH)                   0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: wb_adr_i[0]
+              (input port clocked by CLK)
+  Endpoint: wb_interface_wb_adr_is_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_adr_i[0] (in)                                                  0.00       0.00 f
+  wb_adr_i[0] (net)                             1         0.00      0.00       0.00 f
+  wb_interface_wb_adr_is_reg_0_/D (DFFRPQ_X1M_A9TH)                 0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_adr_is_reg_0_/CK (DFFRPQ_X1M_A9TH)                0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: wb_adr_i[1]
+              (input port clocked by CLK)
+  Endpoint: wb_interface_wb_adr_is_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_adr_i[1] (in)                                                  0.00       0.00 f
+  wb_adr_i[1] (net)                             1         0.00      0.00       0.00 f
+  wb_interface_wb_adr_is_reg_1_/D (DFFRPQ_X1M_A9TH)                 0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_adr_is_reg_1_/CK (DFFRPQ_X1M_A9TH)                0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: wb_adr_i[2]
+              (input port clocked by CLK)
+  Endpoint: wb_interface_wb_adr_is_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_adr_i[2] (in)                                                  0.00       0.00 f
+  wb_adr_i[2] (net)                             1         0.00      0.00       0.00 f
+  wb_interface_wb_adr_is_reg_2_/D (DFFRPQ_X1M_A9TH)                 0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_adr_is_reg_2_/CK (DFFRPQ_X1M_A9TH)                0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: wb_dat_i[0]
+              (input port clocked by CLK)
+  Endpoint: wb_interface_wb_dat_is_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[0] (in)                                                  0.00       0.00 f
+  wb_dat_i[0] (net)                             1         0.00      0.00       0.00 f
+  wb_interface_wb_dat_is_reg_0_/D (DFFRPQ_X1M_A9TH)                 0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_dat_is_reg_0_/CK (DFFRPQ_X1M_A9TH)                0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: wb_dat_i[1]
+              (input port clocked by CLK)
+  Endpoint: wb_interface_wb_dat_is_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[1] (in)                                                  0.00       0.00 f
+  wb_dat_i[1] (net)                             1         0.00      0.00       0.00 f
+  wb_interface_wb_dat_is_reg_1_/D (DFFRPQ_X1M_A9TH)                 0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_dat_is_reg_1_/CK (DFFRPQ_X1M_A9TH)                0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: wb_dat_i[2]
+              (input port clocked by CLK)
+  Endpoint: wb_interface_wb_dat_is_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[2] (in)                                                  0.00       0.00 f
+  wb_dat_i[2] (net)                             1         0.00      0.00       0.00 f
+  wb_interface_wb_dat_is_reg_2_/D (DFFRPQ_X1M_A9TH)                 0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_dat_is_reg_2_/CK (DFFRPQ_X1M_A9TH)                0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: wb_dat_i[3]
+              (input port clocked by CLK)
+  Endpoint: wb_interface_wb_dat_is_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[3] (in)                                                  0.00       0.00 f
+  wb_dat_i[3] (net)                             1         0.00      0.00       0.00 f
+  wb_interface_wb_dat_is_reg_3_/D (DFFRPQ_X1M_A9TH)                 0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_dat_is_reg_3_/CK (DFFRPQ_X1M_A9TH)                0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+  Startpoint: wb_dat_i[4]
+              (input port clocked by CLK)
+  Endpoint: wb_interface_wb_dat_is_reg_4_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 f
+  wb_dat_i[4] (in)                                                  0.00       0.00 f
+  wb_dat_i[4] (net)                             1         0.00      0.00       0.00 f
+  wb_interface_wb_dat_is_reg_4_/D (DFFRPQ_X1M_A9TH)                 0.00       0.00 f
+  data arrival time                                                            0.00
+
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  wb_interface_wb_dat_is_reg_4_/CK (DFFRPQ_X1M_A9TH)                0.00       0.00 r
+  library hold time                                                 0.03       0.03
+  data required time                                                           0.03
+  ------------------------------------------------------------------------------------
+  data required time                                                           0.03
+  data arrival time                                                            0.00
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.03
+
+
+1

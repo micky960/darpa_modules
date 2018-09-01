@@ -1,0 +1,53 @@
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12-SP2
+Date:        Tue Jun 26 14:48:49 2018
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     37
+    Unconnected ports (LINT-28)                                    33
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      3
+--------------------------------------------------------------------------------
+
+Warning: In design 'iir_top', port 'wb_adr_i[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_adr_i[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_cyc_i' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_sel_i[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_sel_i[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_sel_i[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', port 'wb_sel_i[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'iir_top', output port 'wb_err_o' is connected directly to output port 'int_o'. (LINT-31)
+Warning: In design 'iir_top', output port 'wb_ack_o' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'iir_top', output port 'wb_err_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'iir_top', output port 'int_o' is connected directly to 'logic 0'. (LINT-52)
+1

@@ -1,0 +1,521 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'aes_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : aes_top
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:41:25 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_0 (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U123466/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U123466/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218062 (net)                 32         0.03      0.00       1.78 r
+  U123468/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U123468/Y (AOI22_X1M_A9TH)                         0.33       2.11 f
+  n110773 (net)                  1         0.00      0.00       2.11 f
+  U123470/C (NAND4_X1A_A9TH)                         0.00       2.11 f
+  U123470/Y (NAND4_X1A_A9TH)                         0.17       2.28 r
+  n110776 (net)                  1         0.00      0.00       2.28 r
+  U123471/C0 (AOI211_X1M_A9TH)                       0.00       2.28 r
+  U123471/Y (AOI211_X1M_A9TH)                        0.11       2.39 f
+  n110778 (net)                  1         0.00      0.00       2.39 f
+  U123472/C0 (OAI211_X1M_A9TH)                       0.00       2.39 f
+  U123472/Y (OAI211_X1M_A9TH)                        0.10       2.49 r
+  wb_dat_o_0 (net)               1         0.00      0.00       2.49 r
+  wb_dat_o_0 (out)                                   0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+  Startpoint: wb_adr_i_5 (input port clocked by CLK)
+  Endpoint: wb_dat_o_11
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               1.00       1.00 r
+  wb_adr_i_5 (in)                                    0.00       1.00 r
+  wb_adr_i_5 (net)               3         0.00      0.00       1.00 r
+  U113218/A (INV_X1B_A9TH)                           0.00       1.00 r
+  U113218/Y (INV_X1B_A9TH)                           0.05       1.05 f
+  n110758 (net)                  2         0.00      0.00       1.05 f
+  U120333/B (NOR2_X1A_A9TH)                          0.00       1.05 f
+  U120333/Y (NOR2_X1A_A9TH)                          0.11       1.16 r
+  n110757 (net)                  2         0.00      0.00       1.16 r
+  U123449/B (NAND2_X1M_A9TH)                         0.00       1.16 r
+  U123449/Y (NAND2_X1M_A9TH)                         0.12       1.28 f
+  n110767 (net)                  2         0.00      0.00       1.28 f
+  U113212/B (NOR2_X1P4A_A9TH)                        0.00       1.28 f
+  U113212/Y (NOR2_X1P4A_A9TH)                        0.51       1.78 r
+  n218028 (net)                 32         0.03      0.00       1.78 r
+  U227004/A0 (AOI22_X1M_A9TH)                        0.00       1.78 r
+  U227004/Y (AOI22_X1M_A9TH)                         0.33       2.12 f
+  n217923 (net)                  1         0.00      0.00       2.12 f
+  U227005/D (NAND4_X1A_A9TH)                         0.00       2.12 f
+  U227005/Y (NAND4_X1A_A9TH)                         0.19       2.30 r
+  n217930 (net)                  1         0.00      0.00       2.30 r
+  U119785/DN (NAND4XXXB_X1M_A9TH)                    0.00       2.30 r
+  U119785/Y (NAND4XXXB_X1M_A9TH)                     0.19       2.49 r
+  wb_dat_o_11 (net)              1         0.00      0.00       2.49 r
+  wb_dat_o_11 (out)                                  0.00       2.49 r
+  data arrival time                                             2.49
+
+  clock CLK (rise edge)                              4.00       4.00
+  clock network delay (ideal)                        0.00       4.00
+  output external delay                             -1.00       3.00
+  data required time                                            3.00
+  ---------------------------------------------------------------------
+  data required time                                            3.00
+  data arrival time                                            -2.49
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.51
+
+
+1

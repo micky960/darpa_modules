@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : arbiter_dbus
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:43:25 2018
+****************************************
+
+Library(s) Used:
+
+    sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c (File: /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db)
+
+Number of ports:                         2000
+Number of nets:                          1324
+Number of cells:                          611
+Number of combinational cells:            595
+Number of sequential cells:                16
+Number of macros/black boxes:               0
+Number of buf/inv:                         27
+Number of references:                      27
+
+Combinational area:               1397.880004
+Buf/Inv area:                       32.400001
+Noncombinational area:             120.959999
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1518.840003
+Total area:                 undefined
+1

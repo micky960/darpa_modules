@@ -1,0 +1,299 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : arbiter_bytebus
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:43:56 2018
+****************************************
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: wbm0_adr_o[9]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[9]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[9] (in)                                 0.00       0.00 r
+  wbm0_adr_o[9] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[9] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[8]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[8]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[8] (in)                                 0.00       0.00 r
+  wbm0_adr_o[8] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[8] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[7]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[7]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[7] (in)                                 0.00       0.00 r
+  wbm0_adr_o[7] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[7] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[6]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[6]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[6] (in)                                 0.00       0.00 r
+  wbm0_adr_o[6] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[6] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[5]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[5]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[5] (in)                                 0.00       0.00 r
+  wbm0_adr_o[5] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[5] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[4]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[4]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[4] (in)                                 0.00       0.00 r
+  wbm0_adr_o[4] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[4] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[3]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[3]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[3] (in)                                 0.00       0.00 r
+  wbm0_adr_o[3] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[3] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[2]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[2]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[2] (in)                                 0.00       0.00 r
+  wbm0_adr_o[2] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[2] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[1]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[1]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[1] (in)                                 0.00       0.00 r
+  wbm0_adr_o[1] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[1] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+  Startpoint: wbm0_adr_o[0]
+              (input port clocked by CLK)
+  Endpoint: wbs0_adr_i[0]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                        Fanout       Cap      Incr       Path
+  ---------------------------------------------------------------------
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  input external delay                               0.00       0.00 r
+  wbm0_adr_o[0] (in)                                 0.00       0.00 r
+  wbm0_adr_o[0] (net)            5         0.00      0.00       0.00 r
+  wbs0_adr_i[0] (out)                                0.00       0.00 r
+  data arrival time                                             0.00
+
+  clock CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  output external delay                             -3.00      -3.00
+  data required time                                           -3.00
+  ---------------------------------------------------------------------
+  data required time                                           -3.00
+  data arrival time                                             0.00
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.00
+
+
+1

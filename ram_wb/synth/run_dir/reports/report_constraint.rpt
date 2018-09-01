@@ -1,0 +1,14 @@
+Warning: Design 'ram_wb' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : ram_wb
+Version: M-2016.12-SP2
+Date   : Tue Jul  3 16:48:14 2018
+****************************************
+
+This design has no violated constraints.
+
+1

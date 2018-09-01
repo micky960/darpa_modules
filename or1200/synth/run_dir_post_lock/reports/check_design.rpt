@@ -1,0 +1,70 @@
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12-SP2
+Date:        Tue Jul 10 10:26:00 2018
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     54
+    Unconnected ports (LINT-28)                                     2
+    Shorted outputs (LINT-31)                                      25
+    Constant outputs (LINT-52)                                     27
+--------------------------------------------------------------------------------
+
+Warning: In design 'or1200_top', port 'dbg_ewt_i' is not connected to any nets. (LINT-28)
+Warning: In design 'or1200_top', port 'pm_cpustall_i' is not connected to any nets. (LINT-28)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_lvolt_o'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_cpu_gate_o'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_tt_gate_o'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_immu_gate_o'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_dmmu_gate_o'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_ic_gate_o'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_dc_gate_o'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_clksd_o_0_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_clksd_o_1_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_clksd_o_2_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'pm_clksd_o_3_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_0_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_1_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_2_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_3_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_4_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_5_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_6_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_7_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_8_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_9_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_wp_o_10_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_lss_o_0_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_lss_o_1_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to output port 'dbg_lss_o_2_'. (LINT-31)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_3_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_2_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_1_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_lss_o_0_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_10_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_9_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_8_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_7_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_6_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_5_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_4_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_3_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_2_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_1_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'dbg_wp_o_0_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_clksd_o_3_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_clksd_o_2_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_clksd_o_1_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_clksd_o_0_' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_dc_gate_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_ic_gate_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_dmmu_gate_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_immu_gate_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_tt_gate_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_cpu_gate_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_lvolt_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'or1200_top', output port 'pm_wakeup_o' is connected directly to 'logic 1'. (LINT-52)
+1

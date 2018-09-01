@@ -1,0 +1,809 @@
+set compile_seqmap_propagate_constants     false
+false
+set compile_seqmap_propagate_high_effort   false
+false
+set compile_enable_register_merging        false
+false
+set write_sdc_output_net_resistance        false
+false
+set timing_separate_clock_gating_group     true
+true
+set_host_options -max_cores 8
+1
+set PROJECT_MODULES [getenv "PROJECT_MODULES"]
+/home/projects/vlsi/CEP/design/modules
+set run_dir  run_dir
+run_dir
+set design modexp_top
+modexp_top
+set clkin  wb_clk_i
+wb_clk_i
+if {[file exist $run_dir]} {
+sh rm -rf $run_dir
+}
+sh mkdir -p $run_dir/reports
+sh mkdir -p $run_dir/netlist
+set search_path [concat * $search_path]
+* . /opt/programs/synopsys/dc/libraries/syn /opt/programs/synopsys/dc/minpower/syn /opt/programs/synopsys/dc/dw/syn_ver /opt/programs/synopsys/dc/dw/sim_ver
+sh rm -rf ./work
+define_design_lib WORK -path ./work
+1
+set target_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db}
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db
+set link_library { /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    }
+ /home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db                     /home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db                         /home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db                    
+analyze -library WORK -format sverilog "     $PROJECT_MODULES/top/rtl/orpsoc-defines.v
+    $PROJECT_MODULES/rsa/rtl/modexp.v     $PROJECT_MODULES/rsa/rtl/adder.v     $PROJECT_MODULES/rsa/rtl/blockmem1r1w.v     $PROJECT_MODULES/rsa/rtl/blockmem2r1w.v     $PROJECT_MODULES/rsa/rtl/blockmem2r1wptr.v     $PROJECT_MODULES/rsa/rtl/blockmem2rptr1w.v     $PROJECT_MODULES/rsa/rtl/modexp_core.v     $PROJECT_MODULES/rsa/rtl/montprod.v     $PROJECT_MODULES/rsa/rtl/residue.v     $PROJECT_MODULES/rsa/rtl/shl.v     $PROJECT_MODULES/rsa/rtl/shr.v     $PROJECT_MODULES/rsa/rtl/modexp_top.v "
+Running PRESTO HDLC
+Compiling source file /home/projects/vlsi/CEP/design/modules/top/rtl/orpsoc-defines.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/adder.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem1r1w.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem2r1w.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem2r1wptr.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem2rptr1w.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_core.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/montprod.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/residue.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/shl.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/shr.v
+Compiling source file /home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_top.v
+Presto compilation completed successfully.
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+Information: Using CCS timing libraries. (TIM-024)
+1
+elaborate $design
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/gtech.db'
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/standard.sldb'
+  Loading link library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c'
+  Loading link library 'RGO_CSM65_25V33_LPE_50C_SS_108_297_125'
+  Loading link library 'USERLIB_ccs_ss_1p08v_1p08v_125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 201 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           228            |    user/auto     |
+|           289            |    user/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine modexp_top line 172 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_top.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| modulus_length_reg_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| modulus_length_reg_reg  | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      start_reg_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| exponent_length_reg_reg | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| exponent_length_reg_reg | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'modexp_top'.
+Information: Building the design 'modexp_core' instantiated from design 'modexp_top' with
+	the parameters "OPW=32,ADW=8". (HDL-193)
+
+Statistics for case statements in always block at line 556 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           569            |    user/auto     |
+===============================================
+
+Statistics for case statements in always block at line 614 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           624            |    user/auto     |
+===============================================
+
+Statistics for case statements in always block at line 645 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           655            |    user/auto     |
+===============================================
+
+Statistics for case statements in always block at line 704 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           722            |    user/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine modexp_core_OPW32_ADW8 line 390 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/modexp_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| cycle_ctr_state_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      ready_reg_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| montprod_select_reg_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  montprod_dest_reg_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  montprod_dest_reg_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   modexp_ctrl_reg_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       one_reg_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      b_one_reg_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  loop_counter_reg_reg   | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ei_reg_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  residue_valid_reg_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| exponation_mode_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  cycle_ctr_low_reg_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| cycle_ctr_high_reg_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Statistics for MUX_OPs
+================================================================
+|      block name/line       | Inputs | Outputs | # sel inputs |
+================================================================
+| modexp_core_OPW32_ADW8/690 |   32   |    1    |      5       |
+================================================================
+Presto compilation completed successfully.
+Information: Building the design 'montprod' instantiated from design 'modexp_core_OPW32_ADW8' with
+	the parameters "OPW=32,ADW=8". (HDL-193)
+Warning:  /home/projects/vlsi/CEP/design/modules/rsa/rtl/montprod.v:425: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 315 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/montprod.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           331            |    user/auto     |
+|           357            |    user/auto     |
+===============================================
+
+Statistics for case statements in always block at line 495 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/montprod.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           516            |    user/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine montprod_OPW32_ADW8 line 243 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/montprod.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|  montprod_ctrl_reg_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      ready_reg_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    loop_ctr_reg_reg     | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   word_index_reg_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| word_index_prev_reg_reg | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| add_carry_in_sa_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| add_carry_in_sm_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  shr_carry_in_reg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        b_reg_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        q_reg_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      s_mux_reg_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    s_mem_we_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| s_mem_read_addr_reg_reg | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   b_bit_index_reg_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| first_iteration_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Statistics for MUX_OPs
+=============================================================
+|    block name/line      | Inputs | Outputs | # sel inputs |
+=============================================================
+| montprod_OPW32_ADW8/417 |   32   |    1    |      5       |
+=============================================================
+Presto compilation completed successfully.
+Information: Building the design 'residue' instantiated from design 'modexp_core_OPW32_ADW8' with
+	the parameters "OPW=32,ADW=8". (HDL-193)
+
+Statistics for case statements in always block at line 254 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/residue.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           257            |    user/auto     |
+===============================================
+
+Statistics for case statements in always block at line 298 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/residue.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           300            |    user/auto     |
+|           309            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 335 in file
+	'/home/projects/vlsi/CEP/design/modules/rsa/rtl/residue.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           347            |    user/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine residue_OPW32_ADW8 line 156 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/residue.v'.
+========================================================================================
+|        Register Name         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================
+|     shl_carry_in_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     residue_ctrl_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      word_index_reg_reg      | Flip-flop |   8   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      length_m1_reg_reg       | Flip-flop |   8   |  Y  | N  | N  | Y  | N  | N  | N  |
+|          nn_reg_reg          | Flip-flop |  15   |  Y  | N  | Y  | N  | N  | N  | N  |
+| loop_counter_1_to_nn_reg_reg | Flip-flop |  15   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        ready_reg_reg         | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     sub_carry_in_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+========================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'blockmem2r1w' instantiated from design 'modexp_core_OPW32_ADW8' with
+	the parameters "OPW=32,ADW=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine blockmem2r1w_OPW32_ADW8 line 64 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem2r1w.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop | 8192  |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_read_data0_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_read_data1_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+================================================================
+|      block name/line       | Inputs | Outputs | # sel inputs |
+================================================================
+| blockmem2r1w_OPW32_ADW8/69 |  256   |   32    |      8       |
+| blockmem2r1w_OPW32_ADW8/70 |  256   |   32    |      8       |
+================================================================
+Presto compilation completed successfully.
+Information: Building the design 'blockmem2r1wptr' instantiated from design 'modexp_core_OPW32_ADW8' with
+	the parameters "OPW=32,ADW=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine blockmem2r1wptr_OPW32_ADW8 line 92 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem2r1wptr.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop | 8192  |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_read_data0_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_read_data1_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine blockmem2r1wptr_OPW32_ADW8 line 105 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem2r1wptr.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ptr_reg_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===================================================================
+|       block name/line         | Inputs | Outputs | # sel inputs |
+===================================================================
+| blockmem2r1wptr_OPW32_ADW8/97 |  256   |   32    |      8       |
+| blockmem2r1wptr_OPW32_ADW8/98 |  256   |   32    |      8       |
+===================================================================
+Presto compilation completed successfully.
+Information: Building the design 'blockmem2rptr1w' instantiated from design 'modexp_core_OPW32_ADW8' with
+	the parameters "OPW=32,ADW=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine blockmem2rptr1w_OPW32_ADW8 line 90 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem2rptr1w.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop | 8192  |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_read_data0_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_read_data1_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine blockmem2rptr1w_OPW32_ADW8 line 103 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem2rptr1w.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ptr_reg_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===================================================================
+|       block name/line         | Inputs | Outputs | # sel inputs |
+===================================================================
+| blockmem2rptr1w_OPW32_ADW8/95 |  256   |   32    |      8       |
+| blockmem2rptr1w_OPW32_ADW8/96 |  256   |   32    |      8       |
+===================================================================
+Presto compilation completed successfully.
+Information: Building the design 'blockmem1r1w' instantiated from design 'montprod_OPW32_ADW8' with
+	the parameters "OPW=32,ADW=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine blockmem1r1w_OPW32_ADW8 line 62 in file
+		'/home/projects/vlsi/CEP/design/modules/rsa/rtl/blockmem1r1w.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop | 8192  |  Y  | N  | N  | N  | N  | N  | N  |
+|  tmp_read_data_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+================================================================
+|      block name/line       | Inputs | Outputs | # sel inputs |
+================================================================
+| blockmem1r1w_OPW32_ADW8/67 |  256   |   32    |      8       |
+================================================================
+Presto compilation completed successfully.
+Information: Building the design 'adder' instantiated from design 'montprod_OPW32_ADW8' with
+	the parameters "OPW=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'shr' instantiated from design 'montprod_OPW32_ADW8' with
+	the parameters "OPW=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'shl' instantiated from design 'residue_OPW32_ADW8' with
+	the parameters "OPW=32". (HDL-193)
+Presto compilation completed successfully.
+1
+ungroup -all -flatten
+Information: Updating graph... (UID-83)
+Warning: Design 'modexp_top' contains 9 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+set_dont_use [get_lib_cells sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c/*X0P*]
+1
+create_clock -name CLK  -period 4  -waveform {0 2} $clkin
+1
+set input_ports [remove_from_collection [all_inputs] {$clkin}]
+Warning: Nothing implicitly matched '$clkin' (SEL-003)
+{wb_adr_i[31] wb_adr_i[30] wb_adr_i[29] wb_adr_i[28] wb_adr_i[27] wb_adr_i[26] wb_adr_i[25] wb_adr_i[24] wb_adr_i[23] wb_adr_i[22] wb_adr_i[21] wb_adr_i[20] wb_adr_i[19] wb_adr_i[18] wb_adr_i[17] wb_adr_i[16] wb_adr_i[15] wb_adr_i[14] wb_adr_i[13] wb_adr_i[12] wb_adr_i[11] wb_adr_i[10] wb_adr_i[9] wb_adr_i[8] wb_adr_i[7] wb_adr_i[6] wb_adr_i[5] wb_adr_i[4] wb_adr_i[3] wb_adr_i[2] wb_adr_i[1] wb_adr_i[0] wb_cyc_i wb_dat_i[31] wb_dat_i[30] wb_dat_i[29] wb_dat_i[28] wb_dat_i[27] wb_dat_i[26] wb_dat_i[25] wb_dat_i[24] wb_dat_i[23] wb_dat_i[22] wb_dat_i[21] wb_dat_i[20] wb_dat_i[19] wb_dat_i[18] wb_dat_i[17] wb_dat_i[16] wb_dat_i[15] wb_dat_i[14] wb_dat_i[13] wb_dat_i[12] wb_dat_i[11] wb_dat_i[10] wb_dat_i[9] wb_dat_i[8] wb_dat_i[7] wb_dat_i[6] wb_dat_i[5] wb_dat_i[4] wb_dat_i[3] wb_dat_i[2] wb_dat_i[1] wb_dat_i[0] wb_sel_i[3] wb_sel_i[2] wb_sel_i[1] wb_sel_i[0] wb_stb_i wb_we_i wb_clk_i wb_rst_i}
+set output_ports [all_outputs]
+{wb_ack_o wb_err_o wb_dat_o[31] wb_dat_o[30] wb_dat_o[29] wb_dat_o[28] wb_dat_o[27] wb_dat_o[26] wb_dat_o[25] wb_dat_o[24] wb_dat_o[23] wb_dat_o[22] wb_dat_o[21] wb_dat_o[20] wb_dat_o[19] wb_dat_o[18] wb_dat_o[17] wb_dat_o[16] wb_dat_o[15] wb_dat_o[14] wb_dat_o[13] wb_dat_o[12] wb_dat_o[11] wb_dat_o[10] wb_dat_o[9] wb_dat_o[8] wb_dat_o[7] wb_dat_o[6] wb_dat_o[5] wb_dat_o[4] wb_dat_o[3] wb_dat_o[2] wb_dat_o[1] wb_dat_o[0] int_o}
+set_input_delay -max 1 [get_ports $input_ports ] -clock CLK
+1
+set_input_delay -min 0 [get_ports $input_ports ] -clock CLK
+1
+set_output_delay -max 1 [get_ports $output_ports ] -clock CLK
+1
+set_output_delay -min 3 [get_ports $output_ports ] -clock CLK
+1
+date
+Wed Jul  4 07:34:08 2018
+#compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -gate_clock
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Loading db file '/opt/programs/synopsys/dc/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.2 |     *     |
+| Licensed DW Building Blocks        | M-2016.12-DWBB_201612.2 |     *     |
+============================================================================
+
+
+Information: There are 46 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'modexp_top'
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'modexp_top'
+Information: Added key list 'DesignWare' to design 'modexp_top'. (DDB-72)
+ Implement Synthetic for 'modexp_top'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'modexp_top_DP_OP_280J1_123_9939_1'
+  Mapping 'modexp_top_DW01_inc_2'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:22:31  852017.0      0.17      25.8       0.4                             24.5896
+    0:22:33  852173.6      0.00       0.0       0.4                             24.5961
+    0:22:33  852173.6      0.00       0.0       0.4                             24.5961
+    0:22:34  852173.6      0.00       0.0       0.4                             24.5961
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:25:22  851749.2      0.18       5.2       0.4                             24.5596
+    0:25:32  850011.1      0.17       5.3       0.4                             24.4424
+    0:25:44  848347.9      0.17      14.4       0.4                             24.3413
+    0:25:55  846788.4      0.17      15.3       0.4                             24.2475
+    0:26:12  845041.0      0.17      15.3       0.4                             24.1358
+    0:26:28  843241.7      0.09      11.4       0.4                             24.0207
+    0:26:33  842875.2      0.09      10.8       0.4                             23.9946
+    0:26:34  842858.6      0.09      12.0       0.4                             23.9936
+    0:26:49  841698.0      0.00       0.0       0.4                             23.9235
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:27:21  841189.0      0.00       0.0       0.4                             23.7613
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:27:28  841189.3      0.00       0.0       0.0                             23.7614
+    0:27:28  841189.3      0.00       0.0       0.0                             23.7614
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:27:28  841189.3      0.00       0.0       0.0                             23.7614
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+    0:28:37  839854.1      0.00       0.0       0.0                             23.6880
+    0:28:37  839854.1      0.00       0.0       0.0                             23.6880
+    0:28:37  839854.1      0.00       0.0       0.0                             23.6880
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:06  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:07  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:07  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:07  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:07  839632.7      0.00       0.0       0.1                             23.6610
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:29:11  839632.7      0.00       0.0       0.1                             23.6610
+    0:29:41  838721.9      0.05      24.7       0.0                             23.6299
+    0:29:47  838756.1      0.00       0.0       0.0                             23.6355
+    0:29:47  838756.1      0.00       0.0       0.0                             23.6355
+    0:30:14  838603.1      0.02       1.3       0.0                             23.6195
+    0:30:22  838507.7      0.02       1.3       0.0                             23.6135
+    0:30:29  838378.8      0.02       1.8       0.0                             23.6055
+    0:30:35  838322.3      0.02       1.8       0.0                             23.6029
+    0:30:50  838244.5      0.02       1.8       0.0                             23.5951
+    0:30:53  838236.2      0.00       0.0       0.0                             23.5943
+    0:30:53  838236.2      0.00       0.0       0.0                             23.5943
+    0:30:54  838236.2      0.00       0.0       0.0                             23.5943
+    0:30:54  838236.2      0.00       0.0       0.0                             23.5943
+    0:31:12  837928.1      0.00       0.0       0.0                             23.5722
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'modexp_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'wb_clk_i': 58073 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+date
+Wed Jul  4 08:05:49 2018
+optimize_netlist -area
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 33 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db.alib'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+
+  Beginning Area Optimization
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:17  837928.1      0.00       0.0       0.0                             23.5722
+    0:04:22  837549.0      0.00       0.0       0.0                             23.5569
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'modexp_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'wb_clk_i': 58073 load(s), 1 driver(s)
+1
+date
+Wed Jul  4 08:10:21 2018
+compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+
+Information: There are 33 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELO_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHI_X1M_A9TH' in the library 'sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:22  837549.0      0.00       0.0       0.0                             23.5569
+    0:00:22  837549.0      0.00       0.0       0.0                             23.5569
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:52  837549.0      0.00       0.0       0.0                             23.5569
+    0:01:03  837549.0      0.00       0.0       0.0                             23.5569
+    0:01:33  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:34  837510.8      0.00       0.0       0.0                             23.5505
+    0:01:38  837512.3      0.00       0.0       0.0                             23.5505
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:38  837512.3      0.00       0.0       0.0                             23.5505
+    0:01:39  837512.3      0.00       0.0       0.0                             23.5505
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:06  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:33  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:34  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:34  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:34  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:34  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:34  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:34  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:34  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:34  837509.4      0.00       0.0       0.0                             23.5501
+    0:02:38  837509.4      0.00       0.0       0.0                             23.5501
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:38  837509.4      0.00       0.0       0.0                             23.5501
+    0:03:05  837509.4      0.00       0.0       0.0                             23.5501
+    0:03:15  837460.8      0.00       0.0       0.0                             23.5475
+    0:03:26  837423.7      0.00       0.0       0.0                             23.5455
+    0:04:13  837380.9      0.00       0.0       0.0                             23.5385
+    0:04:13  837380.9      0.00       0.0       0.0                             23.5385
+    0:04:30  837358.6      0.00       0.0       0.0                             23.5372
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/std_cells/hvt/timing_lib/nldm/db/sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/aragio/io_pads/timing_lib/nldm/db/rgo_csm65_25v33_lpe_50c_ss_108_297_125.db'
+Loading db file '/home/projects/vlsi/libraries/65lpe/ref_lib/arm/memories/sram_sp_hde/timing_lib/USERLIB_ccs_ss_1p08v_1p08v_125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'modexp_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'wb_clk_i': 58073 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+mem -all -verbose
+Multicore compile mem-peak:   3873 Mb
+Main process mem-peak:   1714 Mb
+Child "J1" called 1 time , mem-peak:   1878 Mb
+Child "J2" called 1 time , mem-peak:   1714 Mb
+Child "J10" called 1 time , mem-peak:   1714 Mb
+Child "J11" called 1 time , mem-peak:   1714 Mb
+
+1923072
+change_names -hier -rule verilog
+Warning: In the design modexp_top, net 'wb_err_o' is connecting multiple ports. (UCN-1)
+1
+write_file -hierarchy -format verilog -output "$run_dir/netlist/$design.v"
+Writing verilog file '/home/projects/vlsi/CEP/design/modules/rsa/synth/run_dir/netlist/modexp_top.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc "$run_dir/netlist/$design.sdc"
+1
+set_switching_activity -toggle_rate 5 -period 100  -static_probability 0.50 -type inputs
+set_switching_activity applied to 73 selected objects
+1
+propagate_switching_activity
+Warning: Use of propagate_switching_activity is not recommended. This feature will be obsolete in a future release. Check the man page for more information. (PWR-800)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.500000) for the clock net 'wb_clk_i' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+1
+report_timing -delay max  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_max.rpt
+report_timing -delay min  -nosplit -input -nets -cap -max_path 10 -nworst 10    > $run_dir/reports/report_timing_min.rpt
+report_constraint -all_violators -verbose  -nosplit                             > $run_dir/reports/report_constraint.rpt
+check_design -nosplit                                                           > $run_dir/reports/check_design.rpt
+report_design                                                                   > $run_dir/reports/report_design.rpt
+report_area                                                                     > $run_dir/reports/report_area.rpt
+report_timing -loop                                                             > $run_dir/reports/timing_loop.rpt
+report_power -analysis_effort high                                              > $run_dir/reports/report_power.rpt
+report_qor                                                                      > $run_dir/reports/report_qor.rpt
+sh touch ~/$design
+# 
+#
+#
+#  compile_ultra -no_autoungroup -no_seq_output_inversion -no_boundary_optimization -incremental
+exit
+
+Thank you...

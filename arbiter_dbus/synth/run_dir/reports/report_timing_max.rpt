@@ -1,0 +1,760 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -capacitance
+Design : arbiter_dbus
+Version: M-2016.12-SP2
+Date   : Wed Jul  4 09:43:25 2018
+****************************************
+
+Operating Conditions: ss_nominal_max_1p08v_125c   Library: sc9_cmos10lpe_base_hvt_ss_nominal_max_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[9]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U910/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U910/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n630 (net)                                    1         0.00      0.00       2.85 f
+  U913/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U913/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[9] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[9] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[8]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U898/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U898/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n619 (net)                                    1         0.00      0.00       2.85 f
+  U901/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U901/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[8] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[8] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[7]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U886/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U886/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n608 (net)                                    1         0.00      0.00       2.85 f
+  U889/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U889/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[7] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[7] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[6]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U874/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U874/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n597 (net)                                    1         0.00      0.00       2.85 f
+  U877/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U877/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[6] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[6] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[5]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U862/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U862/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n586 (net)                                    1         0.00      0.00       2.85 f
+  U865/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U865/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[5] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[5] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[4]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U850/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U850/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n575 (net)                                    1         0.00      0.00       2.85 f
+  U853/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U853/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[4] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[4] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[3]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U838/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U838/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n564 (net)                                    1         0.00      0.00       2.85 f
+  U841/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U841/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[3] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[3] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[2]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U826/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U826/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n553 (net)                                    1         0.00      0.00       2.85 f
+  U829/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U829/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[2] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[2] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[1]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U814/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U814/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n542 (net)                                    1         0.00      0.00       2.85 f
+  U817/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U817/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[1] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[1] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+  Startpoint: wb_slave_sel_r_reg_1_/CK
+              (internal path startpoint clocked by CLK)
+  Endpoint: wbm0_dat_i[0]
+            (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                       Fanout       Cap      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.00       0.00 r
+  wb_slave_sel_r_reg_1_/CK (DFFQ_X1M_A9TH)                          0.00       0.00 r
+  wb_slave_sel_r_reg_1_/Q (DFFQ_X1M_A9TH)                           0.64       0.64 f
+  wb_slave_sel_r[1] (net)                      38         0.04      0.00       0.64 f
+  U1089/A (INV_X1B_A9TH)                                            0.00       0.64 f
+  U1089/Y (INV_X1B_A9TH)                                            0.23       0.86 r
+  n495 (net)                                    3         0.00      0.00       0.86 r
+  U594/A (NAND3_X1A_A9TH)                                           0.00       0.86 r
+  U594/Y (NAND3_X1A_A9TH)                                           0.14       1.00 f
+  n515 (net)                                    2         0.00      0.00       1.00 f
+  U627/A (OR2_X1M_A9TH)                                             0.00       1.00 f
+  U627/Y (OR2_X1M_A9TH)                                             0.18       1.19 f
+  n513 (net)                                    2         0.00      0.00       1.19 f
+  U604/B (NOR2_X1A_A9TH)                                            0.00       1.19 f
+  U604/Y (NOR2_X1A_A9TH)                                            0.11       1.29 r
+  n499 (net)                                    2         0.00      0.00       1.29 r
+  U780/A (NAND2_X1M_A9TH)                                           0.00       1.29 r
+  U780/Y (NAND2_X1M_A9TH)                                           0.10       1.39 f
+  n497 (net)                                    2         0.00      0.00       1.39 f
+  U605/BN (NAND2XB_X1M_A9TH)                                        0.00       1.39 f
+  U605/Y (NAND2XB_X1M_A9TH)                                         0.17       1.56 f
+  n517 (net)                                    2         0.00      0.00       1.56 f
+  U608/A (NOR2_X1A_A9TH)                                            0.00       1.56 f
+  U608/Y (NOR2_X1A_A9TH)                                            0.10       1.66 r
+  n501 (net)                                    2         0.00      0.00       1.66 r
+  U610/A (NAND2_X1M_A9TH)                                           0.00       1.66 r
+  U610/Y (NAND2_X1M_A9TH)                                           0.09       1.75 f
+  n524 (net)                                    2         0.00      0.00       1.75 f
+  U606/B (NOR2_X1A_A9TH)                                            0.00       1.75 f
+  U606/Y (NOR2_X1A_A9TH)                                            0.11       1.86 r
+  n504 (net)                                    2         0.00      0.00       1.86 r
+  U609/A (NAND2_X1M_A9TH)                                           0.00       1.86 r
+  U609/Y (NAND2_X1M_A9TH)                                           0.11       1.98 f
+  n522 (net)                                    3         0.00      0.00       1.98 f
+  U790/B (NOR2_X1A_A9TH)                                            0.00       1.98 f
+  U790/Y (NOR2_X1A_A9TH)                                            0.11       2.08 r
+  n508 (net)                                    1         0.00      0.00       2.08 r
+  U791/A (NAND2_X1M_A9TH)                                           0.00       2.08 r
+  U791/Y (NAND2_X1M_A9TH)                                           0.09       2.18 f
+  n526 (net)                                    2         0.00      0.00       2.18 f
+  U782/A (NOR2XB_X2M_A9TH)                                          0.00       2.18 f
+  U782/Y (NOR2XB_X2M_A9TH)                                          0.36       2.54 r
+  n886 (net)                                   32         0.03      0.00       2.54 r
+  U800/A0 (AOI211_X1M_A9TH)                                         0.00       2.54 r
+  U800/Y (AOI211_X1M_A9TH)                                          0.31       2.85 f
+  n531 (net)                                    1         0.00      0.00       2.85 f
+  U805/B (NAND4_X1A_A9TH)                                           0.00       2.85 f
+  U805/Y (NAND4_X1A_A9TH)                                           0.13       2.98 r
+  wbm0_dat_i[0] (net)                           2         0.00      0.00       2.98 r
+  wbm0_dat_i[0] (out)                                               0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock CLK (rise edge)                                             4.00       4.00
+  clock network delay (ideal)                                       0.00       4.00
+  output external delay                                            -1.00       3.00
+  data required time                                                           3.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           3.00
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.02
+
+
+1
